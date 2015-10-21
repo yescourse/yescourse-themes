@@ -1,0 +1,239 @@
+@import "compass";
+
+$DOWNLOAD_VEIL_Z_INDEX: 2;
+$VIDEO_POSTER_Z_INDEX: 5;
+
+// responsive layout for embedded videos
+.video_container {
+  max-width: 854px;
+  margin: 0 auto;
+  .wrap {
+    position: relative;
+    padding: 0 0 56.21% 0; /* 16:9 */
+    height: 0;
+    margin: 0 auto;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+    }
+  }
+}
+
+.media_block {
+    padding: 20px;
+    margin: 20px 0;
+    //background: #f0f0f0;
+    //border-radius: 4px;
+    @include clearfix;
+
+  &.quiz {
+    padding: 24px; // allow more padding for the numbering to appear in
+  }
+}
+
+.transcript {
+    height:150px;
+    overflow-y:scroll;
+    padding:10px;
+    margin-bottom:10px;
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+audio {
+  width: 100%;
+}
+
+//noinspection CssInvalidPseudoSelector
+audio::-webkit-media-controls-enclosure {
+    max-width: 100%; // webkit has this set to 800px for some reason
+}
+
+video {
+  margin: 0 auto;
+  width: 854px;
+  display: block;
+  max-width:100%;
+    height:auto !important;
+  background-color: #000000;
+}
+
+.cont {
+    position: relative;
+    padding-top: 25px;
+    height: 0;
+}
+.player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video_link {
+    display: block;
+    margin: 12px auto 0;
+    padding: 8px;
+    background-color: #0999D6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+a.media_download {
+  display: block;
+    margin: 12px auto 0;
+    width: 130px;
+    padding: 6px 8px 6px image-width('download_button.png')+8px;
+    background: #0999D6 image-url('download_button.png') no-repeat 0 center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+}
+
+.slideshow {
+    //background: #f0f0f0 !important;
+    border: none !important;
+}
+
+.description .media {
+  visibility: hidden;
+}
+
+.generic_container {
+    //width: 196px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+
+    .generic_link {
+        display: block;
+        height: 100%;
+        padding-top: 82px;
+        border: none !important;
+        color: black;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+      background: image-url('file_icon.png') no-repeat 50% 20px;
+
+      .download_veil {
+            display: none;
+            &:after {
+                content: 'DOWNLOAD';
+            }
+            text-align: center;
+            color: white;
+        }
+        &.xls, &.xlsx, &.csv {
+          background-image: image-url('excel.png');
+        }
+        &.pdf {
+          background-image: image-url('pdf_icon.png');
+        }
+        &.doc, &.docx {
+          background-image: image-url('ms_docx.png');
+        }
+
+        &:hover {
+            .download_veil {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+
+              background: rgba(30, 30, 30, 0.4) image-url('download_button.png') no-repeat 50% 50%;
+              z-index: $DOWNLOAD_VEIL_Z_INDEX;
+            }
+        }
+    }
+    .command {
+      display: block;
+      width: 124px;
+      margin: 0 auto;
+    }
+}
+
+.media_block.pdf {
+  .wrap {
+    position: relative;
+    height: 0;
+    margin: 0 auto;
+    object {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+#resources { // display files centered
+  text-align: center;
+  &> div {
+    //display: inline-block;
+  }
+
+  .generic_container {
+    margin-right: 18px;
+    display: inline-block;
+  }
+}
+
+  #yc-completion {
+    display: inline-block;
+  }
+
+.mark_lesson_read {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  input[type=submit] {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    height: auto;
+    width: auto;
+    padding: 8px;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+  .next-locked .mark_lesson_read {
+    display: none;
+  }
+
+  .next-locked.should-be-unlocked .mark_lesson_read {
+    display: inline-block;
+  }
+
+.quiz {
+  ol {
+    background-color: transparent;
+    padding: 0;
+    &> li {
+      list-style-position: outside;
+      padding: 16px 20px;
+    }
+  }
+}

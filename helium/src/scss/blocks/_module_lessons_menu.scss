@@ -1,0 +1,8 @@
+@import "compass";
+@import "constants";
+@import "shared";
+
+.yc-module-lessons-menu {
+  padding: 0;
+  @include menu_entry;
+}

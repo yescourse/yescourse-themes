@@ -1,0 +1,179 @@
+@import "compass";
+@import "ycthemelib/responsive";
+@import "constants";
+
+// mobile first
+
+#header {
+  background-color: black;
+  height: $SITE_HEADER_HEIGHT;
+  padding: 0 4px 0 0;
+
+  #branding {
+    margin: 0 auto;
+  }
+
+  h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    //background: #3B3B3B;
+
+    line-height: $SITE_HEADER_HEIGHT;
+    height: $SITE_HEADER_HEIGHT;
+    font-size: 18px;
+
+    img.academy-logo {
+      height: $SITE_HEADER_HEIGHT;
+      margin: 0;
+      vertical-align: top;
+    }
+  }
+
+  #academy_title {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: $SITE_HEADER_HEIGHT;
+    width: 800px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 0 0 8px;
+    @include respond_to(tablet_landscape) {
+      display: inline-block;
+    }
+  }
+
+  @include respond_to(tablet_landscape) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: $SITE_HEADER_Z_INDEX;
+  }
+}
+
+#user_links {
+  display: inline-block;
+  height: $SITE_HEADER_HEIGHT;
+  text-align: right;
+  max-width: 200px;
+  float: right;
+  padding: 0 12px 0 12px;
+  background-color: rgba(255, 255, 255, 0.231);
+
+  @include respond_to(tablet_landscape) {
+    max-width: 600px;
+  }
+
+  #login_links {
+    //display: inline-block;
+    position: relative;
+    background: image-url('dropdown.png') right 50% no-repeat;
+    padding-right: image-width('dropdown.png') + 4px;
+
+    .profile {
+      display: inline-block;
+      padding-top: 4px;
+      height: $SITE_HEADER_HEIGHT;
+      img {
+        height: 26px;
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+    }
+
+    .username {
+      display: none;
+      vertical-align: top;
+      text-overflow: ellipsis;
+      max-width: 150px;
+      white-space: nowrap;
+      height: $SITE_HEADER_HEIGHT;
+      overflow: hidden;
+      color: white;
+
+      @include respond_to(tablet_landscape) {
+        max-width: 550px;
+        display: inline-block;
+      }
+    }
+
+    span, a {
+      @include adjust-font-size-to(14px);
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    a span {
+      font-size: 1.0em; // don't further reduce font size of login link span as it is within an anchor
+      font-weight: bold;
+    }
+
+    .user_menu {
+      padding: 0;
+      margin: 0;
+      min-width: 240px;
+      display: none;
+      opacity: 0;
+      transition: opacity 1s;
+      z-index: $USER_MENU_DROPDOWN_Z_INDEX;
+      position: absolute;
+      top: $SITE_HEADER_HEIGHT;
+      right: -12px;
+      border: 1px solid #bbbbbb;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      @include box-shadow(#333 2px 2px 10px);
+
+      li {
+        list-style: none;
+        height: 42px;
+        text-align: left;
+
+        &:not(:first-child) {
+          border-top: 1px solid #c2c2c2;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid #959595;
+        }
+
+        a {
+          color: #181818;
+          font-size: 14px;
+          line-height: 14px;
+          display: block; // occupy entire area
+          height: 100%;
+          padding: 13px 0 0 34px;
+
+          // icon properties common to all links in this menu
+          background: #bbbbbb no-repeat 10px 50%;
+
+          &:hover {
+            background-color: #eeeddb !important;
+          }
+        }
+
+        a.logout_link {
+          background-image: image-url('log_out.png');
+        }
+        a.account_link {
+          background-image: image-url('account_setting.png');
+        }
+      }
+    }
+
+    &:hover {
+      .user_menu {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include respond_to(tablet_landscape) {
+  #content_wrap {
+    margin: $SITE_HEADER_HEIGHT 0 0 0;
+  }
+}

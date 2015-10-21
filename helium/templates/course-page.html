@@ -1,0 +1,17 @@
+{% setTitle "{{ course.title }} - Preface" %}
+{% addClasses "has-sidebar" %}
+
+<div id="content_wrap">
+    <nav id="module_nav">{% course_banner %}</nav>
+
+    <div class="wrap">
+        <article>
+            <div class="description">{% page_content %}</div>
+            <div class="course_tree">{% course_tree %}</div>
+        </article>
+        <aside>
+            {% breadcrumbs %}
+            {% trainer_profiles %}
+        </aside>
+    </div>
+</div>

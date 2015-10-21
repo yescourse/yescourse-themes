@@ -1,0 +1,8 @@
+@import "compass";
+@import "constants";
+@import "shared";
+
+.yc-modules-menu {
+  padding: 0;
+  @include menu_entry;
+}

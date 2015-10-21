@@ -1,0 +1,55 @@
+@import "compass";
+
+@mixin menu_entry {
+  li.yc-menu-entry {
+    list-style: none;
+    display: block;
+    height: 57px;
+
+    border-bottom: 1px solid #60606c;
+
+    &.lesson {
+      background: #32323a image-url('lesson_icon.png') no-repeat 10px center;
+    }
+
+    &.read {
+      background: #32323a image-url('lesson_green_icon.png') no-repeat 10px center;
+    }
+
+    &.locked {
+      background-image: image-url('lock.png');
+      a {
+        padding-left: 42px;
+      }
+    }
+
+    &.selected {
+      background-color: #0999d6;
+      a {
+        color: #000;
+      }
+    }
+
+    // hover should be styled after the .read & .locked so that it gets applied
+    &:hover {
+      opacity: 0.8;
+    }
+
+    a {
+      color: #fefefe;
+      font-size: 18px;
+      line-height: 57px;
+
+      display: inline-block;
+      padding: 0 36px 0 36px;
+      text-overflow: ellipsis;
+      width: 95%;
+      height: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border: none;
+
+      background: image-url('side_arrow.png') no-repeat right 50%;
+    }
+  }
+}

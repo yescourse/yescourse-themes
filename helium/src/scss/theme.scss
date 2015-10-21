@@ -1,0 +1,23 @@
+@import "ycthemelib/normalize";
+@import "ycthemelib/responsive";
+@import "ycthemelib/media";
+
+@import "typography";
+
+@import "blocks/breadcrumbs";
+@import "blocks/course_list";
+@import "blocks/course_tree";
+@import "blocks/module_lessons_menu";
+@import "blocks/modules_menu";
+@import "blocks/trainer_profiles";
+
+@import "base";
+@import "site_header";
+@import "site_footer";
+
+@import "course_header";
+
+@import "lesson_page";
+
+
+body.loaded #yc-wrap {display: block;}

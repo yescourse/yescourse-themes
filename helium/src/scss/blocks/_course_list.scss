@@ -1,0 +1,70 @@
+@import "compass";
+@import "ycthemelib/responsive";
+@import "constants";
+
+.yc-course-list {
+  text-align: left;
+  li {
+    display: inline-block;
+    max-width: 300px;
+    list-style: none;
+    background-color: #EEEEEE;
+    margin: 0 0 32px 32px;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+  }
+  a.course {
+    font-size: 22px;
+    line-height: 36px;
+    border: none;
+    color: $DEFAULT_TEXT_COLOUR !important;
+    display: block;
+    overflow: hidden;
+    &.free:before {
+      content: "Free";
+      font-size: 14px;
+      background-color: #006600;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 2px;
+      margin: 0;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 34px;
+      line-height: 18px;
+      width: 48px;
+    }
+    /*&.bundle:before {
+      content: "Bundle";
+      font-size: 14px;
+      background-color: blue;
+      border: 1px solid #ffffff;
+      border-radius: 2px;
+      margin: 0;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 34px;
+      line-height: 18px;
+      width: 64px;
+    }*/
+  }
+  img {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 4px;
+    display: block;
+    @include respond_to(tablet_portrait) {
+      width: 300px;
+    }
+  }
+  /*a.bundle {
+    overflow: visible;
+    img {
+      border: 1px solid #444444;
+      box-shadow: white 5px 5px 0;
+    }
+  }*/
+}

@@ -1,0 +1,77 @@
+@import "compass";
+@import "ycthemelib/responsive";
+@import "constants";
+
+#module_nav {
+  background-color: #ffffff; // Old browsers
+  @include filter-gradient(#ffffff, #cdcdcd, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.196) 100%));
+
+  h1, h2 {
+    padding: 0 4px;
+    margin: 0 auto;
+    a {
+      color: #1a1a1a;
+    }
+  }
+
+  .banner_link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    max-width: 100%;
+    img {
+      display: block;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+  @include respond_to(tablet_landscape) {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: $COURSE_HEADER_Z_INDEX;
+
+    h1 {
+      height: $COURSE_HEADER_HEIGHT;
+    }
+
+    h1, h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.page_header {
+  height: $SITE_HEADER_HEIGHT;
+  color: #007C72;
+  background: rgba(0, 0, 0, 0.067);
+  h1 {
+    font-size: 22px;
+    line-height: $SITE_HEADER_HEIGHT;
+    padding: 0 4px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.has-sidebar {
+  @include respond_to(tablet_landscape) {
+    #module_nav, .page_header {
+      h1 {
+        padding-left: 340px;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+$mobile_portrait_width : 320px;
+$mobile_portrait_height : 480px;
+
+$mobile_landscape_width : $mobile_portrait_height;
+$mobile_landscape_height : $mobile_portrait_width;
+
+$small_tablet_portrait_width : 600px;
+$small_tablet_portrait_height : 800px;
+
+$small_tablet_landscape_width : $small_tablet_portrait_height;
+$small_tablet_landscape_height : $small_tablet_portrait_width;
+
+$tablet_portrait_width : 768px;
+$tablet_portrait_height : 1024px;
+
+$tablet_landscape_width : $tablet_portrait_height;
+$tablet_landscape_height : $tablet_portrait_width;
+
+$MODE: "page" !default;
+
+@mixin media_or_class($class, $width) {
+  @if $MODE == "embed" {
+    @at-root (without: media){
+      .#{$class} {
+        @content;
+      }
+    }
+  }
+  @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin respond_to($media) {
+  @if $media == mobile_landscape {
+    @include media_or_class("yc-w480", $mobile_landscape_width) {@content;}
+  }
+  @else if $media == small_tablet_portrait {
+    @include media_or_class("yc-w600", $small_tablet_portrait_width) {@content;}
+  }
+  @else if $media == small_tablet_landscape {
+    @include media_or_class("yc-w800", $small_tablet_landscape_width) {@content;}
+  }
+  @else if $media == tablet_portrait {
+    @include media_or_class("yc-w768", $tablet_portrait_width) {@content;}
+  }
+  @else if $media == tablet_landscape {
+    @include media_or_class("yc-w1024", $tablet_landscape_width) {@content;}
+  }
+}

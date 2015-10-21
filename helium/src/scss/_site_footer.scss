@@ -1,0 +1,98 @@
+@import "compass";
+@import "constants";
+@import "ycthemelib/responsive";
+
+#yc-site-footer {
+  background: #0e0e0e;
+  box-shadow: 0 2px 5px #000;
+  padding: 2px 4px;
+  a {
+    color: #c0c0c0;
+  }
+
+  .promote-course {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+
+  .legals {
+    text-align: center;
+    padding-bottom: 4px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #777;
+      font-size: 0.8em;
+    }
+  }
+
+  #course_settings_link {
+    display: block;
+    text-align: center;
+  }
+
+
+  a.as_admin, #course_settings_link {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #f9e59c;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #3b3b3b;
+    text-align: center;
+    @include background-image(
+            linear-gradient(
+                    top, #f9e59c 0%, #f1d351 3%, #efc62c 5%,
+                    #e38f13 100%)
+    );
+  }
+
+  @include respond_to(tablet_landscape) {
+    clear: both;
+    height: $ACADEMY_FOOTER_HEIGHT;
+    min-height: $ACADEMY_FOOTER_HEIGHT;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $ACADEMY_FOOTER_Z_INDEX;
+    margin: 0;
+    display: table;
+    width: 100%;
+
+    & > .wrap {
+      margin: 0 auto;
+      max-width: 100%; //override setting for basic footer
+      display: table-row;
+      width: 100%;
+    }
+
+    #academy_footer {
+      display: table-cell;
+    }
+
+    #yc_footer {
+      text-align: right;
+      font-size: 12px;
+      display: table-cell;
+      .legals {
+        display: inline-block;
+        ul, li {
+          display: inline-block;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
