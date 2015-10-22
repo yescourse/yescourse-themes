@@ -5,6 +5,7 @@
 @import "typography";
 
 @import "blocks/breadcrumbs";
+@import "blocks/comments";
 @import "blocks/course_list";
 @import "blocks/course_tree";
 @import "blocks/module_lessons_menu";
@@ -18,6 +19,7 @@
 @import "course_header";
 
 @import "lesson_page";
+@import "lesson_exam";
 
 
 body.loaded #yc-wrap {display: block;}

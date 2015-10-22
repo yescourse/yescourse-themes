@@ -214,6 +214,10 @@ aside {
   visibility: hidden;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 @include respond_to(tablet_landscape) {
   #content_wrap > div.wrap {
     margin-top: $CONTENT_SEPARATION_MARGIN;

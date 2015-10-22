@@ -1,0 +1,345 @@
+@import "compass/utilities";
+@import "ycthemelib/responsive";
+@import "constants";
+
+$LEFT_INDENT_SUBCOMMENT: 24px;
+
+#comments {
+  padding-left: 34px;
+  padding-right: 20px;
+
+  & > ul {
+    padding: 0 !important;
+    > li.private {
+      padding: 8px 8px 8px 40px;
+      background: image-url('lock.png') no-repeat 8px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  & > form {
+    padding: 8px;
+    background-color: transparent;
+    textarea {
+      background-color: white;
+      color: #000000;
+    }
+  }
+
+  li {
+    border: none;
+    @include respond_to(small_tablet_landscape) {
+      &.l1 {
+        padding: 0 0 0 $LEFT_INDENT_SUBCOMMENT;
+      }
+      &.l2 {
+        padding: 0 0 0 2*$LEFT_INDENT_SUBCOMMENT;
+      }
+      &.l3 {
+        padding: 0 0 0 3*$LEFT_INDENT_SUBCOMMENT;
+      }
+      &.l4 {
+        padding: 0 0 0 4*$LEFT_INDENT_SUBCOMMENT;
+      }
+      &.l5 {
+        padding: 0 0 0 5*$LEFT_INDENT_SUBCOMMENT;
+      }
+    }
+  }
+
+  .comment_container {
+    position: relative;
+    margin: 0 0 8px 0;
+  }
+
+  .reply_block {
+    padding: 0 0 0 $LEFT_INDENT_SUBCOMMENT;
+  }
+
+  .profile {
+    display: block;
+    float: left;
+    img {
+      width: 40px;
+      padding: 4px;
+      display: block;
+      float: left;
+    }
+
+    .username {
+      display: block;
+      float: left;
+      padding-left: 24px;
+      max-width: 150px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @include respond_to(mobile_landscape) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .posted_on {
+    display: none; // not visible by default on small devices
+    padding-right: 10px;
+  }
+
+  .comment_text {
+    margin-left: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    p {
+      clear: both;
+      text-align: left;
+      width: 87%;
+    }
+    ol {
+      li {
+        list-style: inside decimal;
+        margin: 0;
+      }
+    }
+  }
+
+  .comment_reply {
+    display: block;
+    margin-left: 60px;
+    margin-top: 4px;
+    width: 44px;
+    padding: 1px 6px;
+  }
+
+  .comment_edit {
+    display: block;
+    text-align: right;
+    margin-top: -20px;
+    a {
+      margin-top: -20px;
+    }
+  }
+
+  ul {
+    background: transparent;
+    padding: 0;
+    @include respond_to(small_tablet_landscape) {
+      padding: 0 0 0 $LEFT_INDENT_SUBCOMMENT;
+    }
+
+    ul {
+      background: transparent;
+
+      ul {
+        background: transparent;
+        li {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+#root_comment_form, #comment_form {
+  .new_comment_submit {
+    margin-top: 8px;
+    height: 36px;
+    display: inline-block;
+    color: #6c2f06;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    background-image: none;
+    &[name=private] {
+      background: image-url('lock.png') no-repeat 4px center;
+      text-align: left;
+      padding-left: 36px;
+    }
+    //noinspection CssUnknownProperty
+    &:disabled {
+      -webkit-filter: grayscale(100%) blur(1px);
+      -moz-filter: grayscale(100%) blur(1px);
+      -o-filter: grayscale(100%) blur(1px);
+      filter: grayscale(100%) blur(1px);
+    }
+  }
+}
+
+#new_comment_box, .reply_comment_box {
+  textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  @include clearfix;
+}
+
+.reply_comment_box {
+  textarea {
+    background-color: #aaeeaa;
+    margin-bottom: 12px;
+  }
+}
+
+#comments {
+  background: rgba(0, 0, 0, 0.059);
+  //border: 1px solid #e1dbb7;
+  //border-radius: 2px;
+  margin-top: 36px;
+  padding-bottom: 36px;
+
+  form {
+    margin-bottom: 24px;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 12px;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .profile {
+    img {
+      background: white;
+      border: 1px solid #e6e4d7;
+      border-radius: 4px;
+    }
+  }
+
+  .comment_text {
+    //border: 1px solid #c0b891;
+    border-radius: 3px;
+    background: white;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+  }
+
+  .highlight .comment_text {
+    background-color: lightyellow;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+  }
+
+  .comment_reply {
+    background: $DEFAULT_TEXT_COLOUR;
+    color: $DEFAULT_BACKGROUND;
+    border-radius: 2px;
+    border: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    height: 20px;
+  }
+
+  ul.attachments {
+    padding: 4px 0;
+    margin: 0;
+    li {
+      margin: 0;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.3);
+      a {
+        display: inline-block;
+        padding: 2px 4px 2px 26px;
+        background: image-url('clip.png') 4px center no-repeat;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.replying {
+  .comment_reply {
+    visibility: hidden;
+  }
+}
+
+#new_comment_box, .reply_comment_box {
+  textarea {
+    border: 1px solid #c0b891;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px;
+    max-width: none;
+  }
+}
+
+.comment-respond {
+  form {
+    background-color: transparent;
+    textarea {
+      background-color: white;
+      color: #000000;
+    }
+  }
+}
+
+.attach-input {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 36px;
+  p {
+    display: none;
+  }
+  &.revealed {
+    p {
+      display: inline-block;
+      margin: 0 12px;
+      padding: 0;
+    }
+  }
+  label {
+    display: none;
+  }
+  a.attach-reveal {
+    display: inline-block;
+    height: 36px;
+    width: 26px;
+    background: rgba(0, 0, 0, 0.2) image-url('clip.png') 50% no-repeat;
+    border: none;
+    text-indent: -10000px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@mixin desktop_layout {
+  .posted_on {
+    margin-right: 74px;
+  }
+
+  .comment_text {
+    margin-right: 74px;
+  }
+  .comment_reply {
+    float: right;
+    margin-top: -20px !important;
+  }
+}
+
+@include respond_to(mobile_landscape) {
+  .username {
+    clear: none;
+  }
+  .posted_on {
+    display: block !important;
+    float: right;
+  }
+}
+
+@include respond_to(tablet_landscape) {
+  .no-touch {
+    // screens of tablet landscape or larger width without
+    // touch capabilities get the desktop layout
+    @include desktop_layout;
+  }
+}
+
+//--------------------
