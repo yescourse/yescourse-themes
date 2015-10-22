@@ -126,6 +126,7 @@
     }
 
     #exam_questions {
+      background: $DEFAULT_BACKGROUND;
       display: none;
       position: fixed;
       top: 0;
@@ -142,6 +143,8 @@
         left: 0;
         right: 0;
         height: 36px;
+        background-color: $DEFAULT_TEXT_COLOUR;
+        color: $DEFAULT_BACKGROUND;
       }
 
       header {
@@ -153,6 +156,9 @@
 
       footer {
         bottom: 0;
+        display: table;
+        width: 100%;
+        padding: 2px 4px;
       }
 
       #exam_questions_body {
@@ -184,6 +190,7 @@
           min-width: 2px;
         }
         p.count {
+          background-color: $DEFAULT_BACKGROUND;
           position: absolute;
           display: inline-block;
           top: 2px;
@@ -243,5 +250,132 @@
   }
   #exams #exam_questions {
     display: block;
+  }
+}
+
+  #yc-completion {
+    display: inline-block;
+  }
+
+.mark_lesson_read {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  input[type=submit] {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    height: auto;
+    width: auto;
+    padding: 8px;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+  .next-locked .mark_lesson_read {
+    display: none;
+  }
+
+  .next-locked.should-be-unlocked .mark_lesson_read {
+    display: inline-block;
+  }
+
+.quiz {
+  ol {
+    background-color: transparent;
+    padding: 0;
+    &> li {
+      list-style-position: outside;
+      padding: 16px 20px;
+    }
+  }
+}
+
+.lesson_completed {
+  color: green;
+  font-size: 12px;
+  margin-left: 12px;
+  display: inline-block;
+  padding-left: image-width('lesson_green_icon.png') +4px;
+  background: image-url('lesson_green_icon.png') left center no-repeat;
+}
+
+.question {
+  margin: 8px 0;
+  padding: 4px;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 4px;
+
+  ul {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 0 0 0 16px;
+  }
+  .msg {
+    display: none;
+    padding: 0 0 0 24px;
+    font-size: 12px;
+  }
+  input[type=radio] {
+    margin: 0 12px 0 0;
+  }
+  input[type=text] {
+    display: inline-block;
+  }
+  table {
+    width: 100%;
+  }
+}
+
+.question_text {
+  font-size: 1.2em;
+  p:nth-child(1) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.quiz.checked .question {
+  ul {
+    li {
+      input, .choice {
+        display: inline-block;
+      }
+    }
+  }
+
+  input {
+    width: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  .correct {
+    background-color: #688241;
+    color: white;
+    msg {
+      color: #b9d193;
+    }
+  }
+  .wrong {
+    background-color: #edbab9;
+  }
+  .correct, .wrong {
+    .msg {
+      display: block;
+    }
+  }
+}
+
+.quiz {
+  &.invalid, &.checked {
+    button {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   }
 }
