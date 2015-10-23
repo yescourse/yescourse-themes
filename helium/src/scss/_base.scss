@@ -4,40 +4,62 @@
 
 #veil {
   display: none;
-  #veil_content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(120, 120, 120, 0.3);
+  z-index: $VEIL_Z_INDEX;
+  #veil-content {
     display: none;
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
+    width: 300px;
+    height: 200px;
+    padding: 50px 10px 10px;
+    border-radius: 8px;
+    background: #ffffff image-url('loading.gif') no-repeat center 30px;
+    color: #000000;
+    z-index: $VEIL_CONTENT_Z_INDEX;
+    p {
+      text-align: center;
+    }
   }
 }
 
 body.loading {
   #veil {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(120, 120, 120, 0.3);
-    z-index: $VEIL_Z_INDEX;
     #veil-content {
       display: block;
-      position: fixed;
-      top: auto;
-      bottom: auto;
-      left: 0;
-      right: 0;
-      margin: 10% auto;
-      width: 300px;
-      height: 200px;
-      padding: 50px 10px 10px;
-      border-radius: 8px;
-      background: #ffffff image-url('loading.gif') no-repeat center 30px;
-      color: #000000;
-      z-index: $VEIL_CONTENT_Z_INDEX;
-      p {
-        text-align: center;
-      }
     }
+  }
+}
+
+iframe.dialog {
+  z-index: $MODAL_DIALOG_Z_INDEX;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $DEFAULT_BACKGROUND;
+  border: 1px solid $DEFAULT_TEXT_COLOUR;
+}
+
+body.dialog-active {
+  #veil {
+    display: block;
+    z-index: $VEIL_CONTENT_Z_INDEX;
+  }
+  iframe.dialog {
+    display: block;
   }
 }
 
