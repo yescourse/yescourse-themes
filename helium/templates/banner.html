@@ -1,0 +1,10 @@
+{%  addClasses themeconfig.banner_background_scaling %}
+<div id="sales_banner"
+        style="background-image: {{ theme_config.banner_background_image }};">
+    <div class="wrap">
+        {% sales_page_visual onlyIf=theme_config.banner_show_visual %}
+
+        {% include "-std-banner-text" notIf=theme_config.banner_has_custom_text %}
+        {% sales_page_custom_banner_text onlyIf=theme_config.banner_has_custom_text %}
+    </div>
+</div>

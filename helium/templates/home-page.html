@@ -1,5 +1,7 @@
 {% setTitle "{{ academy.title }} - Home Page" %}
+{% include "-site-header" %}
 <article>
     <div class="description">{% page_content %}</div>
     {% course_list %}
 </article>
+{% include "-site-footer" %}

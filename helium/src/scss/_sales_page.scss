@@ -1,0 +1,237 @@
+@import "compass";
+@import "ycthemelib/responsive";
+@import "constants";
+
+.sales-page {
+  #header {
+    display: none; // don't show site header unless page has-page-header class
+  }
+
+  &.has-page-header #header {
+    display: block;
+    @include respond_to(tablet_landscape) {
+      position: static !important; // no fixed header for sales page
+    }
+  }
+
+  &.guest {
+    #user_links {
+      display: none; // don't show the user login links to unauthenticated user
+    }
+  }
+
+  #prebanner {
+    padding: 12px 0;
+    @include respond_to(tablet_landscape) {
+      width: $MAX_CONTENT_WIDTH;
+      margin: 0 auto;
+    }
+  }
+
+  #sales_banner {
+    display: block;
+    margin: 10px 0 0 0;
+    background: no-repeat 50% 0;
+    overflow: hidden;
+
+    @include respond_to(tablet_landscape) {
+      margin: 0;
+      padding: 80px 0 (80px - 24px) 0;
+    }
+
+    .wrap {
+      @include respond_to(tablet_landscape) {
+        width: $MAX_CONTENT_WIDTH;
+        margin: 0 auto;
+      }
+    }
+
+    .course_visual {
+      max-width: 854px;
+      margin: 0 auto 24px;
+      img, #videobox {
+        display: block;
+        width: 854px;
+        height: auto;
+        max-width: 100%;
+        max-height: 480px;
+        margin: 0 auto;
+      }
+
+      // make the videos responsive by maintaining a ratio of 16:9
+      #videobox {
+        position: relative; // allow the iframe to be positioned absolute within
+        padding-bottom: 56.25% !important;  // 9/16*100
+        height: 0 !important;  // effective height determined by padding
+        iframe { // fill up the parent
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .banner_text {
+      max-width: 854px;
+      margin: 0 auto;
+
+      &.custom { // custom text added by user
+        padding: 14px;
+      }
+
+      .course_buy, .social {
+        margin: 0 auto;
+      }
+
+      .social {
+        max-width: 240px;
+      }
+
+      .course_headline {
+        margin: 0 auto;
+        clear:none;
+
+        h1 {
+          display: block;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 30px;
+          line-height: 30px;
+          padding: 0;
+          margin: 0 0 12px 0;
+        }
+        .tag_line {
+          text-align: center;
+          font-size: 16px;
+          line-height: 16px;
+          margin: 0 0 30px 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  // -----------------------
+  // Handle banner options
+  &.banner-bg-cover #sales_banner {
+    background-size: cover;
+  }
+
+  &.banner-bg-contain #sales_banner {
+    background-size: contain;
+  }
+
+  &.banner-text-pos-left #sales_banner {
+    @include respond_to(tablet_landscape) {
+      .course_visual {
+        float: right;
+        width: 480px;
+      }
+      .banner_text {
+        margin: 0;
+        width: 1024px - 480px - 12px;
+      }
+    }
+  }
+
+  &.banner-text-pos-right #sales_banner {
+    .banner_text {
+      @include respond_to(tablet_landscape) {
+        margin: 0 0 0 538px;
+      }
+    }
+    .course_visual {
+      @include respond_to(tablet_landscape) {
+        float:left;
+        clear:none;
+        width: 480px;
+        height: 270px;
+      }
+    }
+  }
+
+  #content_wrap {
+    @include respond_to(tablet_landscape) {
+      max-width: $MAX_CONTENT_WIDTH;
+      margin: 0 auto 40px auto;
+      > div.wrap {
+        margin-top: 30px;
+        display: table;
+        width: 100%;
+        min-height: 400px;
+      }
+    }
+  }
+
+  article {
+
+    h2 {
+        border: none;
+    }
+
+    @include respond_to(tablet_landscape) {
+      display: table-cell;
+      vertical-align: top;
+      padding-left: 10px;
+      margin-bottom: 70px;
+    }
+  }
+
+  #description {
+    margin: 0 auto;
+    .yc-rego-button {
+      a {
+        border: none !important; // need important as this needs to override the
+        // local custom style
+      }
+    }
+  }
+
+  aside {
+    display: none; // only show if page has-sidebar
+  }
+
+  &.has-sidebar aside {
+    display: block;
+    position: static;
+    padding-top: 0;
+    margin-bottom: 70px;
+    @include respond_to(tablet_landscape) {
+      display: table-cell;
+      width: 240px;
+    }
+  }
+
+  // ------- Widgets ----------------
+
+  .fb-like {
+    margin-top: 10px;
+  }
+}
+
+.enrol {
+    input.invalid {
+        background: red;
+    }
+}
+
+.yc-free-course-enrol-button {
+  display:block;
+  @include replace-text-with-dimensions('free_course_enrol.png');
+  border: none;
+  background-color: transparent;
+}
+
+@mixin paypal_button {
+  display:block;
+  width: 171px;
+  height: 47px;
+  background: url('https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif') no-repeat;
+  text-indent: -10000px;
+}
+
+.yc-buy-now-button {
+  @include paypal_button;
+}

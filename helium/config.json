@@ -4,8 +4,22 @@
     "author": "YesCourse Pty Ltd",
     "description": "A simple light weight theme - the default for YesCourse Courses"
   },
-  "css" : [
+  "templates": {
+    "home-page": "home-page.html",
+    "course-page": "course-page.html",
+    "module-page": "module-page.html",
+    "lesson-page": "lesson-page.html",
+    "sales-page": "sales-page.html",
+
+    "404-page": "404.html",
+    "-site-header": "site-header.html",
+    "-site-footer": "site-footer.html",
+    "-pre-banner": "pre-banner.html",
+    "-banner": "banner.html",
+    "-std-banner-text": "std-banner-text.html"
+  },
+  "extcss" : [
      "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700"
   ],
-  "js" : []
+  "extjs" : []
 }

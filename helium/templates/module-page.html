@@ -1,6 +1,8 @@
 {% setTitle "{{ module.title }} - {{ course.title }}" %}
 {% addClasses "has-sidebar" %}
 
+{% include "-site-header" %}
+
 <div id="content_wrap">
     <nav id="module_nav">{% course_banner %}</nav>
     <div class="page_header">
@@ -18,3 +20,5 @@
         </aside>
     </div>
 </div>
+
+{% include "-site-footer" %}
