@@ -32,13 +32,17 @@
   }
 }
 
-body.loading {
+#yc-root.loading {
   #veil {
     display: block;
     #veil-content {
       display: block;
     }
   }
+}
+
+#yc-root {
+  overflow: auto;  // clearfix
 }
 
 iframe.dialog {
@@ -56,7 +60,7 @@ iframe.dialog {
   height: 480px;
 }
 
-body.dialog-active {
+#yc-root.dialog-active {
   #veil {
     display: block;
     z-index: $VEIL_CONTENT_Z_INDEX;
@@ -66,7 +70,7 @@ body.dialog-active {
   }
 }
 
-body {
+#yc-root {
   // apply a natural box layout model to all elements
   // NOTE: this will affect ALL layout, so remember that all widths/heights are
   // inclusive of border and padding
