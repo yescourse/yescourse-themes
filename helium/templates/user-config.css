@@ -1,8 +1,8 @@
 /*noinspection ALL*/
 
-body {
-    background-color: {{ theme_config.background_color }} !important;
-    color: {{ theme_config.text_color }} !important;
+#yc-root {
+    background-color: {{ theme_config.background_color }};
+    color: {{ theme_config.text_color }};
 }
 
 a {
@@ -10,168 +10,168 @@ a {
 }
 
 #header, header, footer, .course-sales-page #header #branding {
-    background-color: {{ theme_config.header_background_color }} !important;
-    color: {{ theme_config.header_text_color }} !important;
+    background-color: {{ theme_config.header_background_color }};
+    color: {{ theme_config.header_text_color }};
 }
 
 #academy_title, #header .username {
-    color: {{ theme_config.header_text_color }} !important;
+    color: {{ theme_config.header_text_color }};
 }
 
 
 article a, article h1, article h2, article h3, article h4, article h5 {
-    color: {{ theme_config.link_text_color }} !important;
+    color: {{ theme_config.link_text_color }};
 }
 
 article a.coupon_code_link {
-    color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.text_color }};
 }
 
 .description a, #description a {
-    border-bottom: 1px dotted {{ theme_config.link_text_color }} !important;
+    border-bottom: 1px dotted {{ theme_config.link_text_color }};
 }
 
 
 /*.lesson-page article h2 {
-    color: {{ theme_config.link_text_color }} !important;
+    color: {{ theme_config.link_text_color }};
 }*/
 
 article ul, article ol {
-    color: {{ theme_config.text_color }} !important;
-    border: none !important;
+    color: {{ theme_config.text_color }};
+    border: none;
 }
 
 article th {
-    background-color: {{ theme_config.menu_selected_background_color }} !important;
+    background-color: {{ theme_config.menu_selected_background_color }};
 }
 
 #comments {
-    color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.text_color }};
 }
 
 .comment_text {
-    background-color: {{ theme_config.background_color }} !important;
+    background-color: {{ theme_config.background_color }};
 }
 
 .comment_reply, .new_comment_submit {
-    color: {{ theme_config.background_color }} !important;
-    background-color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.background_color }};
+    background-color: {{ theme_config.text_color }};
 }
 
 #module_nav {
-    background-color: {{ theme_config.background_color }} !important;
+    background-color: {{ theme_config.background_color }};
 }
 
 #module_nav a {
-    color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.text_color }};
 }
 
 #lesson_header {
-    color: {{ theme_config.link_text_color }} !important;
+    color: {{ theme_config.link_text_color }};
 }
 
 #exams #attempt_exam {
-  color: {{ theme_config.menu_selected_text_color }} !important;
-  background: {{ theme_config.menu_selected_background_color }} !important;
+  color: {{ theme_config.menu_selected_text_color }};
+  background: {{ theme_config.menu_selected_background_color }};
 }
 
 #exam_questions {
-    background-color: {{ theme_config.background_color }} !important;
+    background-color: {{ theme_config.background_color }};
 }
 
 #exam_questions header h3 {
-    color: {{ theme_config.header_text_color }} !important;
+    color: {{ theme_config.header_text_color }};
 }
 
 #exams #exam_questions .graph {
-    background-color: {{ theme_config.header_text_color }} !important;
-    border: 1px solid {{ theme_config.header_text_color }} !important;
+    background-color: {{ theme_config.header_text_color }};
+    border: 1px solid {{ theme_config.header_text_color }};
 }
 
 #exams #exam_questions .bar {
-    background-color: {{ theme_config.header_background_color }} !important;
+    background-color: {{ theme_config.header_background_color }};
 }
 
 #exams #exam_questions p.count {
-    background-color: {{ theme_config.header_text_color }} !important;
-    color: {{ theme_config.header_background_color }} !important;
+    background-color: {{ theme_config.header_text_color }};
+    color: {{ theme_config.header_background_color }};
 }
 
 #exam_questions li.selected {
-    background-color: {{ theme_config.header_background_color }} !important;
-    color: {{ theme_config.header_text_color }} !important;
+    background-color: {{ theme_config.header_background_color }};
+    color: {{ theme_config.header_text_color }};
 }
 
 #exam_questions .remaining {
-    background-color: {{ theme_config.header_text_color }} !important;
-    color: {{ theme_config.header_background_color }} !important;
+    background-color: {{ theme_config.header_text_color }};
+    color: {{ theme_config.header_background_color }};
 }
 
 aside, .course_tree ul.modules > li {
-    background-color: {{ theme_config.menu_background_color }} !important;
-    color: {{ theme_config.menu_text_color }} !important;
+    background-color: {{ theme_config.menu_background_color }};
+    color: {{ theme_config.menu_text_color }};
 }
 
 aside .breadcrumbs a {
-    color: {{ theme_config.menu_text_color }} !important;
+    color: {{ theme_config.menu_text_color }};
 }
 
 aside ul a, .course_tree ul a, .tutor_info a, .tutor_info .username, aside h2 {
-    color: {{ theme_config.menu_text_color }} !important;
+    color: {{ theme_config.menu_text_color }};
 }
 
-aside ul li, .course_tree ul.lessons li, .tutor_info {
+aside ul li, li.yc-menu-entry, .tutor_info {
     background-color: {{ theme_config.menu_item_background_color }} !important;
 }
 
-aside ul li.selected {
+.yc-module-lessons-menu li.yc-menu-entry.selected {
     background-color: {{ theme_config.menu_selected_background_color }} !important;
 }
 
-aside ul li.selected a {
-    color: {{ theme_config.menu_selected_text_color }} !important;
+.yc-module-lessons-menu li.yc-menu-entry.selected a {
+    color: {{ theme_config.menu_selected_text_color }};
 }
 
 aside h2.lessons::before, aside h2.modules::before {
-    background-color: {{ theme_config.menu_selected_background_color }} !important;
+    background-color: {{ theme_config.menu_selected_background_color }};
 }
 
 #sales_banner, #sales_banner h1, #sales_banner p.tag_line, #sales_banner a.yc-coupon-code-link {
-    color: {{ theme_config.banner_text_color }} !important;
+    color: {{ theme_config.banner_text_color }};
 }
 
 #sales_banner {
-    background-color: {{ theme_config.banner_background_color }} !important;
+    background-color: {{ theme_config.banner_background_color }};
 }
 
 #sales_banner .banner_text.custom {
-    background-color: {{ theme_config.banner_custom_text_background_color }} !important;
+    background-color: {{ theme_config.banner_custom_text_background_color }};
 }
 
 .course-sales-page .yc-rego-button .yc-rego-wrap {
-    background-color: {{ theme_config.rego_button_background_color }} !important;
+    background-color: {{ theme_config.rego_button_background_color }};
 }
 
 form, form ul, form label, form p {
-    background-color: {{ theme_config.background_color }} !important;
-    color: {{ theme_config.text_color }} !important;
-    font-size: 1em !important;
+    background-color: {{ theme_config.background_color }};
+    color: {{ theme_config.text_color }};
+    font-size: 1em;
 }
 
 input {
-    font-size: 1em !important;
-    background-color: transparent !important;
-    color: {{ theme_config.text_color }} !important;
+    font-size: 1em;
+    background-color: transparent;
+    color: {{ theme_config.text_color }};
 }
 
 input[type=text], input[type=password] {
-    background-color: transparent !important;
-    color: {{ theme_config.text_color }} !important;
-    border: 1px solid {{ theme_config.text_color }} !important;
+    background-color: transparent;
+    color: {{ theme_config.text_color }};
+    border: 1px solid {{ theme_config.text_color }};
 }
 
 textarea {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #ffffff;
+    color: #000000;
 }
 
