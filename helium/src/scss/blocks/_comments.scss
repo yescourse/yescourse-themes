@@ -59,7 +59,6 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     float: left;
     img {
       width: 40px;
-      padding: 4px;
       display: block;
       float: left;
     }
@@ -207,6 +206,17 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
       border: 1px solid #e6e4d7;
       border-radius: 4px;
     }
+    span.char {
+      background: red;
+      color: white;
+      width: 40px;
+      height: 40px;
+      display: block;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      font-size: 28px;
+    }
   }
 
   .comment_text {
@@ -267,6 +277,8 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     line-height: 18px;
     padding: 8px;
     max-width: none;
+    display: block;
+    width: 100%;
   }
 }
 

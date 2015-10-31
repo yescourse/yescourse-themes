@@ -53,6 +53,22 @@ $USER_FORMS_FIELD_HEIGHT: 37px;
     }
   }
 
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 160px;
+    margin: 12px 0;
+  }
+
+  img.profile_img {
+    vertical-align: middle;
+    margin: 0 12px 0 0;
+  }
+
+  ul.reply {
+    padding: 0;
+  }
+
   .error {
     border: 2px solid red;
   }
