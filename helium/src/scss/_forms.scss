@@ -1,0 +1,327 @@
+@import 'compass';
+@import "constants";
+@import "ycthemelib/responsive";
+
+$USER_FORMS_FIELD_HEIGHT: 37px;
+
+.user_form {
+  padding: 0;
+  background: transparent;
+  .user_field {
+    $height: 37px;
+    height: $USER_FORMS_FIELD_HEIGHT;
+    max-width: 100%;
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    margin: 0 0 16px 0;
+    label {
+      display: table-cell;
+      width: 36px;
+      max-width: 36px;
+      height: $USER_FORMS_FIELD_HEIGHT;
+      vertical-align: top;
+      background-color: #343e59;
+    }
+    input {
+      display: table-cell;
+      width: 100%;
+      height: $USER_FORMS_FIELD_HEIGHT;
+      vertical-align: top;
+      background-color: #5a688b !important;
+      color: white;
+      border: none;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: bold;
+      padding: 0 12px;
+      border-radius: 0;
+    }
+
+    .wrap {
+      display: table-cell;
+      width: auto;
+      height: $USER_FORMS_FIELD_HEIGHT;
+      vertical-align: top;
+      background-color: #5a688b;
+      padding: 9px 12px;
+      .sublabel {
+        color: #aaaaaa;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .error {
+    border: 2px solid red;
+  }
+  .errorlist {
+    margin: 0;
+    padding: 0 12px;
+    border-radius: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  .email {
+    label {
+      @include replace-text('mail_icon.png');
+    }
+  }
+
+  .password {
+    label {
+      @include replace-text('password.png');
+    }
+  }
+
+  .first_name, .last_name {
+    label {
+      @include replace-text('user_icon.png');
+    }
+  }
+
+  .mobile {
+    label {
+      @include replace-text('mobile_icon.png');
+    }
+  }
+
+  .country {
+    label {
+      @include replace-text('country.png');
+    }
+  }
+
+  .timezone {
+    label {
+      @include replace-text('timezone.png');
+    }
+  }
+
+  input[type=submit], button {
+    border: 2px solid #c27a0b;
+    border-top-color: #e5a213;
+    border-bottom-color: #a34d04;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    padding: 0 20px;
+    color: #4a3000;
+    background-color: #fac960; // Old browsers
+    @include filter-gradient(#fac960, #e79317, vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  #fac960 0%,#e79317 100%));
+
+  }
+}
+
+#yc-dialog {
+  display: none; // only show if dialog is active
+  z-index: $MODAL_DIALOG_Z_INDEX;;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 0 0 30px 0;
+  overflow: hidden;
+  h1, h3 {
+    background-color: #616c88; // Old browsers
+    @include filter-gradient(#616c88, #3f4c6c, vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  #616c88 0%,#3f4c6c 100%));
+    color: white;
+    font-size: 28px;
+    line-height: 64px;
+    font-weight: bold;
+    //height: 64px;
+    border-top: 1px solid #6d718a;
+    border-bottom: 4px solid #e9e9e9;
+    padding: 0 27px 0 27px;
+    margin: 0 0 30px 0;
+    width: 610px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  h4 {
+    padding: 0 0 0 27px;
+  }
+
+  &>form, &>p {
+    padding: 0 27px;
+  }
+
+  .terms {
+    color: #444;
+    background-color: #fefacb;
+    margin: 26px;
+    padding: 14px;
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+
+  .form_errors_nonfield {
+    margin: 0 27px 12px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    p {
+      padding: 0 12px;
+      margin: 0;
+      background-color: #343e59;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  li {
+    display: block;
+  }
+
+  #enrol_block {
+    background-color: #616c88;
+    color: #ffffff;
+    a {
+      margin: 0 0 24px 27px;
+      color: #000000;
+      background-color: #fac960;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 8px;
+      border-radius: 12px;
+    }
+  }
+
+  table.user_details {
+    margin: 27px;
+    width: auto;
+
+    th {
+      height: 36px;
+      background-color: #343e59;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 10px 8px 0 36px;
+
+      @include respond_to(mobile_landscape) {
+        min-width: 150px;
+      }
+
+      &.full_name {
+        background: #343e59 image-url('user_icon.png') no-repeat 10px 50%;
+      }
+
+      &.email {
+        background: #343e59 image-url('mail_icon.png') no-repeat 10px 50%;
+      }
+
+      &.country {
+        background: #343e59 image-url('country.png') no-repeat 10px 50%;
+      }
+
+      &.mobile {
+        background: #343e59 image-url('mobile_icon.png') no-repeat 10px 50%;
+      }
+    }
+
+    td {
+      width: 100%;
+      color: #333333;
+    }
+  }
+
+  @include respond_to(tablet_landscape) {
+    width: 610px;
+    margin:  0 auto;
+  }
+}
+
+.dialog-active {
+  #yc-dialog {
+    display: block;
+  }
+}
+
+.enrol {
+  .course_buy {
+    margin: 0 auto;
+    background-color: #616c88;
+    padding: 12px;
+  }
+  .buy_block {
+    margin: 12px auto;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+.registered {
+  .email {
+    color: lime;
+  }
+}
+
+.activate {
+  article {
+    h2, p {
+      text-align: center;
+    }
+    a {
+      font-size: 24px;
+      color: #ffff00;
+    }
+  }
+}
+
+// Payment styling
+#PPDGFrame .panel iframe {
+  background: #ffffff url('https://www.paypal.com/en_US/i/icon/icon_animated_prog_42wx42h.gif') no-repeat center center;
+}
+
+button.stripe-checkout { // copied from stripe styling
+  overflow: hidden;
+  display: inline-block;
+  visibility: visible !important;
+  background-image: linear-gradient(#28A0E5, #015E94);
+  border: 0 none;
+  padding: 1px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  -moz-user-select: none;
+  cursor: pointer;
+  span {
+    position: relative;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    background: #1275FF linear-gradient(#7DC5EE, #008CDD 85%, #30A2E4) repeat scroll 0 0;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    border-radius: 4px;
+
+    display: block;
+    min-height: 30px;
+  }
+}
