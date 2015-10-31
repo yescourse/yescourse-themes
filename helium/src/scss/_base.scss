@@ -51,6 +51,9 @@ iframe.dialog {
   margin: auto;
   background: $DEFAULT_BACKGROUND;
   border: 1px solid $DEFAULT_TEXT_COLOUR;
+  display: none;
+  width: 320px;
+  height: 480px;
 }
 
 body.dialog-active {
@@ -58,7 +61,7 @@ body.dialog-active {
     display: block;
     z-index: $VEIL_CONTENT_Z_INDEX;
   }
-  iframe.dialog {
+  #yc-dialog {
     display: block;
   }
 }
