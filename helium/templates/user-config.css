@@ -1,3 +1,5 @@
+/*noinspection ALL*/
+
 body {
     background-color: {{ theme_config.background_color }} !important;
     color: {{ theme_config.text_color }} !important;
@@ -35,7 +37,6 @@ article a.coupon_code_link {
 }*/
 
 article ul, article ol {
-    //background-color: transparent !important;
     color: {{ theme_config.text_color }} !important;
     border: none !important;
 }

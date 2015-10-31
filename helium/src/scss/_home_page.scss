@@ -1,0 +1,22 @@
+.home-page {
+  #branding {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  article {
+    max-width: 1024px;
+    margin: 0 auto;
+    ul {
+      background-color: transparent;
+      padding: 0;
+      border:none;
+      margin: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
+  footer {
+    position: relative !important;
+  }
+}
