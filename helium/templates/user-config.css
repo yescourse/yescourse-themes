@@ -140,7 +140,7 @@ aside h2.lessons::before, aside h2.modules::before {
     color: {{ theme_config.banner_text_color }};
 }
 
-#sales_banner {
+.sales-page #sales_banner {
     background-color: {{ theme_config.banner_background_color }};
 }
 
@@ -175,3 +175,12 @@ textarea {
     color: #000000;
 }
 
+#yc-dialog {
+    background-color: {{ theme_config.background_color }};
+    color: {{ theme_config.text_color }};
+}
+
+#yc-dialog h3 {
+    background: {{ theme_config.header_background_color }};
+    color: {{ theme_config.header_text_color }};
+}
