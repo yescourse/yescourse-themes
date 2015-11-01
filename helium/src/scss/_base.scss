@@ -2,6 +2,10 @@
 @import "constants";
 @import "ycthemelib/responsive";
 
+body {
+  height: auto;
+}
+
 #veil {
   display: none;
   position: fixed;
@@ -42,7 +46,7 @@
 }
 
 #yc-root {
-  overflow: auto;  // clearfix
+  //overflow: auto;  // clearfix
 }
 
 iframe.dialog {

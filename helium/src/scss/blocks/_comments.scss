@@ -11,8 +11,10 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   & > ul {
     padding: 0 !important;
     > li.private {
-      padding: 8px 8px 8px 40px;
-      background: image-url('lock.png') no-repeat 8px 8px rgba(0, 0, 0, 0.2);
+      .comment_container {
+        padding: 8px 8px 8px 40px;
+        background: image-url('lock.png') no-repeat 8px 8px rgba(0, 0, 0, 0.2);
+      }
     }
   }
   & > form {
@@ -193,6 +195,12 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   li {
     list-style: none;
     margin-bottom: 12px;
+    &.selected {
+      .comment_container {
+        padding: 12px;
+        border: 2px solid;
+      }
+    }
   }
 
   a {
