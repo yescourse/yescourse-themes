@@ -1,0 +1,207 @@
+@import "compass";
+
+#slideshows {
+    margin-top:20px;
+}
+
+.slideshow {
+    position: relative;
+    min-height: 200px;
+    border: 1px solid gray;
+    padding: 10px;
+    color: black;
+    margin-bottom: 24px;
+
+  img {
+    display: block;
+  }
+
+    .veil {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index:100;
+        display: none;
+        background-color: rgba(20, 20, 20, 0.3);
+        background-image: image-url('loading.gif');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.loading{
+        .veil{
+            display: block;
+        }
+    }
+
+    .slidewrap {
+        .hidden {
+            display: none;
+        }
+        .loading {
+            visibility: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
+    &.manual {
+        img {
+            cursor: pointer;
+          margin-bottom: 12px;
+        }
+    }
+
+    .slide_indicator{
+        padding: 8px;
+    }
+
+    .slide_controls{
+        text-align: center;
+        button{
+            border: none;
+            background-color: transparent;
+        }
+
+        button:disabled{
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+        }
+
+        .slide_first{
+            @include replace-text-with-dimensions('first_slide_button.png');
+        }
+
+        .slide_prev{
+            @include replace-text-with-dimensions('prev_slide_button.png');
+        }
+
+        .slide_next{
+            @include replace-text-with-dimensions('next_slide_button.png');
+        }
+
+        .slide_last{
+            @include replace-text-with-dimensions('last_slide_button.png');
+        }
+    }
+}
+
+
+
+.aplayer {
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    height: 48px;
+
+    //background: #cecece;
+    background-color: #d2d2d2; // Old browsers
+    @include filter-gradient(#d2d2d2, #bebebe, vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  #d2d2d2 0%,#bebebe 100%));
+
+
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+
+    .wrap {
+        display: table;
+        width: 100%;
+        padding: 14px;
+    }
+    .play_pause {
+        display: table-cell;
+        @include replace-text-with-dimensions('play_button.png');
+        &.playing {
+            @include replace-text-with-dimensions('pause_button.png');
+        }
+        &:hover {
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+        }
+    }
+
+    .volume {
+        width: 90px;
+        padding-left: 42px;
+        vertical-align: middle;
+        display: table-cell;
+        background-image: image-url('speaker.png');
+        background-repeat: no-repeat;
+        background-position: 20px 50%;
+        .goog-slider-thumb {
+            @include replace-text-with-dimensions('player_small.png');
+            padding: 0;
+            top: -2px;
+        }
+        &:focus {
+            outline: 0 !important;
+        }
+        .value {
+            background: #cc1742;
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 3px;
+            z-index: 3;
+        }
+    }
+
+    .seekbar {
+        width: auto;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 18px;
+        .goog-slider-thumb {
+            @include replace-text-with-dimensions('player.png');
+            padding: 0;
+            top: -8px;
+            z-index: 5;
+        }
+        &:focus {
+            outline: 0 !important;
+        }
+        .progress {
+            background: #cc1742;
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 2px;
+            z-index: 3;
+        }
+        .buffer {
+            background: #969696;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+        }
+    }
+
+    .duration {
+        width: 82px;
+        padding-left: 18px;
+        display: table-cell;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .goog-slider-horizontal {
+        background-color: #efefef;
+        position: relative;
+        height: 3px;
+    }
+    .goog-slider-thumb {
+        position: absolute;
+    }
+}
