@@ -10,8 +10,8 @@ a {
 }
 
 #header, header, footer, .course-sales-page #header #branding {
-    background-color: {{ theme_config.header_background_color }};
-    color: {{ theme_config.header_text_color }};
+    background-color: {{ theme_config.header_background_color }} !important;
+    color: {{ theme_config.header_text_color }} !important;
 }
 
 #academy_title, #header .username {
@@ -75,7 +75,7 @@ article th {
   background: {{ theme_config.menu_selected_background_color }};
 }
 
-#exam_questions {
+#exams #exam_questions {
     background-color: {{ theme_config.background_color }};
 }
 
@@ -105,6 +105,15 @@ article th {
 #exam_questions .remaining {
     background-color: {{ theme_config.header_text_color }};
     color: {{ theme_config.header_background_color }};
+}
+
+#exam_questions #submit_exam {
+    color: {{ theme_config.text_color }};
+    background-color: {{ theme_config.background_color }};
+}
+
+#exam_questions #submit_exam:disabled {
+    opacity: 0.5;
 }
 
 aside, .course_tree ul.modules > li {
