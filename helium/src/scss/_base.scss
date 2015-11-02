@@ -36,6 +36,10 @@ body {
   }
 }
 
+#yc-root {
+  background-image: none;
+}
+
 #yc-root.loading {
   #veil {
     display: block;

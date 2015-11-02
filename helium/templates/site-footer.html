@@ -1,27 +1,8 @@
 <footer id="yc-site-footer">
 <div class="wrap">
     <div id="academy_footer">
-    {% if academy %}{% include "yescourse/academy-footer.html" %}{% endif %}
     </div>
     <div id="yc_footer">
-        <div class="legals">
-            {% if pages %}
-                <ul>
-                    {% for page in pages %}
-                        <li>
-                            <a href="{% url 'yescourse:get-academy-page' page.id %}"><b>{{page.get_page_type_display}}</b></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                {% get_flatpages '/legal/' as legal_pages %}
-                <ul>
-                    {% for page in legal_pages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </div>
         <a class="powered" href="/" title="Create your own Course">Powered by YesCourse</a>
     </div>
 </div>

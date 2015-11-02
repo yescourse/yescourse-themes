@@ -1,12 +1,12 @@
 /*noinspection ALL*/
 
 #yc-root {
-    background-color: {{ theme_config.background_color }};
-    color: {{ theme_config.text_color }};
+    background-color: {{ theme_config.background_color }} !important;
+    color: {{ theme_config.text_color }} !important;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 #header, header, footer, .course-sales-page #header #branding {
@@ -15,20 +15,20 @@ a {
 }
 
 #academy_title, #header .username {
-    color: {{ theme_config.header_text_color }};
+    color: {{ theme_config.header_text_color }} !important;
 }
 
 
 article a, article h1, article h2, article h3, article h4, article h5 {
-    color: {{ theme_config.link_text_color }};
+    color: {{ theme_config.link_text_color }} !important;
 }
 
 article a.coupon_code_link {
-    color: {{ theme_config.text_color }};
+    color: {{ theme_config.text_color }} !important;
 }
 
 .description a, #description a {
-    border-bottom: 1px dotted {{ theme_config.link_text_color }};
+    border-bottom: 1px dotted {{ theme_config.link_text_color }} !important;
 }
 
 
@@ -37,96 +37,96 @@ article a.coupon_code_link {
 }*/
 
 article ul, article ol {
-    color: {{ theme_config.text_color }};
-    border: none;
+    color: {{ theme_config.text_color }} !important;
+    border: none !important;
 }
 
 article th {
-    background-color: {{ theme_config.menu_selected_background_color }};
+    background-color: {{ theme_config.menu_selected_background_color }} !important;
 }
 
 #comments {
-    color: {{ theme_config.text_color }};
+    color: {{ theme_config.text_color }} !important;
 }
 
-.comment_text {
-    background-color: {{ theme_config.background_color }};
+#comments .comment_text {
+    background-color: {{ theme_config.background_color }} !important;
 }
 
-.comment_reply, .new_comment_submit {
-    color: {{ theme_config.background_color }};
-    background-color: {{ theme_config.text_color }};
+#comments .comment_reply, #comments .new_comment_submit {
+    color: {{ theme_config.background_color }} !important;
+    background-color: {{ theme_config.text_color }} !important;
 }
 
 #module_nav {
-    background-color: {{ theme_config.background_color }};
+    background-color: {{ theme_config.background_color }} !important;
 }
 
 #module_nav a {
-    color: {{ theme_config.text_color }};
+    color: {{ theme_config.text_color }} !important;
 }
 
 #lesson_header {
-    color: {{ theme_config.link_text_color }};
+    color: {{ theme_config.link_text_color }} !important;
 }
 
 #exams #attempt_exam {
-  color: {{ theme_config.menu_selected_text_color }};
-  background: {{ theme_config.menu_selected_background_color }};
+  color: {{ theme_config.menu_selected_text_color }} !important;
+  background: {{ theme_config.menu_selected_background_color }} !important;
 }
 
 #exams #exam_questions {
-    background-color: {{ theme_config.background_color }};
+    background-color: {{ theme_config.background_color }} !important;
 }
 
 #exam_questions header h3 {
-    color: {{ theme_config.header_text_color }};
+    color: {{ theme_config.header_text_color }} !important;
 }
 
 #exams #exam_questions .graph {
-    background-color: {{ theme_config.header_text_color }};
-    border: 1px solid {{ theme_config.header_text_color }};
+    background-color: {{ theme_config.header_text_color }} !important;
+    border: 1px solid {{ theme_config.header_text_color }} !important;
 }
 
 #exams #exam_questions .bar {
-    background-color: {{ theme_config.header_background_color }};
+    background-color: {{ theme_config.header_background_color }} !important;
 }
 
 #exams #exam_questions p.count {
     background-color: {{ theme_config.header_text_color }};
-    color: {{ theme_config.header_background_color }};
+    color: {{ theme_config.header_background_color }} !important;
 }
 
 #exam_questions li.selected {
     background-color: {{ theme_config.header_background_color }};
-    color: {{ theme_config.header_text_color }};
+    color: {{ theme_config.header_text_color }} !important;
 }
 
 #exam_questions .remaining {
     background-color: {{ theme_config.header_text_color }};
-    color: {{ theme_config.header_background_color }};
+    color: {{ theme_config.header_background_color }} !important;
 }
 
 #exam_questions #submit_exam {
-    color: {{ theme_config.text_color }};
-    background-color: {{ theme_config.background_color }};
+    color: {{ theme_config.text_color }} !important;
+    background-color: {{ theme_config.background_color }} !important;
 }
 
 #exam_questions #submit_exam:disabled {
-    opacity: 0.5;
+    opacity: 0.5 !important;
 }
 
 aside, .course_tree ul.modules > li {
-    background-color: {{ theme_config.menu_background_color }};
-    color: {{ theme_config.menu_text_color }};
+    background-color: {{ theme_config.menu_background_color }} !important;
+    color: {{ theme_config.menu_text_color }} !important;
 }
 
 aside .breadcrumbs a {
-    color: {{ theme_config.menu_text_color }};
+    color: {{ theme_config.menu_text_color }} !important;
 }
 
 aside ul a, .course_tree ul a, .tutor_info a, .tutor_info .username, aside h2 {
-    color: {{ theme_config.menu_text_color }};
+    color: {{ theme_config.menu_text_color }} !important;
 }
 
 aside ul li, li.yc-menu-entry, .tutor_info {
@@ -138,45 +138,45 @@ aside ul li, li.yc-menu-entry, .tutor_info {
 }
 
 .yc-module-lessons-menu li.yc-menu-entry.selected a {
-    color: {{ theme_config.menu_selected_text_color }};
+    color: {{ theme_config.menu_selected_text_color }} !important;
 }
 
 aside h2.lessons::before, aside h2.modules::before {
-    background-color: {{ theme_config.menu_selected_background_color }};
+    background-color: {{ theme_config.menu_selected_background_color }} !important;
 }
 
 #sales_banner, #sales_banner h1, #sales_banner p.tag_line, #sales_banner a.yc-coupon-code-link {
-    color: {{ theme_config.banner_text_color }};
+    color: {{ theme_config.banner_text_color }} !important;
 }
 
 .sales-page #sales_banner {
-    background-color: {{ theme_config.banner_background_color }};
+    background-color: {{ theme_config.banner_background_color }} !important;
 }
 
 #sales_banner .banner_text.custom {
-    background-color: {{ theme_config.banner_custom_text_background_color }};
+    background-color: {{ theme_config.banner_custom_text_background_color }} !important;
 }
 
 .course-sales-page .yc-rego-button .yc-rego-wrap {
-    background-color: {{ theme_config.rego_button_background_color }};
+    background-color: {{ theme_config.rego_button_background_color }} !important;
 }
 
 form, form ul, form label, form p {
-    background-color: {{ theme_config.background_color }};
-    color: {{ theme_config.text_color }};
-    font-size: 1em;
+    background-color: {{ theme_config.background_color }} !important;
+    color: {{ theme_config.text_color }} !important;
+    font-size: 1em !important;
 }
 
 input {
-    font-size: 1em;
-    background-color: transparent;
-    color: {{ theme_config.text_color }};
+    font-size: 1em !important;
+    background-color: transparent !important;
+    color: {{ theme_config.text_color }} !important;
 }
 
 input[type=text], input[type=password] {
-    background-color: transparent;
-    color: {{ theme_config.text_color }};
-    border: 1px solid {{ theme_config.text_color }};
+    background-color: transparent !important;
+    color: {{ theme_config.text_color }} !important;
+    border: 1px solid {{ theme_config.text_color }} !important;
 }
 
 textarea {
@@ -185,11 +185,17 @@ textarea {
 }
 
 #yc-dialog {
-    background-color: {{ theme_config.background_color }};
-    color: {{ theme_config.text_color }};
+    background-color: {{ theme_config.background_color }} !important;
+    color: {{ theme_config.text_color }} !important;
 }
 
 #yc-dialog h3 {
-    background: {{ theme_config.header_background_color }};
-    color: {{ theme_config.header_text_color }};
+    background: {{ theme_config.header_background_color }} !important;
+    color: {{ theme_config.header_text_color }} !important;
+}
+
+#yc-dialog select {
+    color: {{ theme_config.text_color }} !important;
+    background-color: {{ theme_config.background_color }} !important;
+    margin-left: 24px;
 }

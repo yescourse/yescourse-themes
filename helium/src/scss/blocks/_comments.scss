@@ -208,25 +208,6 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     border-bottom: none;
   }
 
-  .profile {
-    img {
-      background: white;
-      border: 1px solid #e6e4d7;
-      border-radius: 4px;
-    }
-    span.char {
-      background: red;
-      color: white;
-      width: 40px;
-      height: 40px;
-      display: block;
-      float: left;
-      text-align: center;
-      line-height: 40px;
-      font-size: 28px;
-    }
-  }
-
   .comment_text {
     //border: 1px solid #c0b891;
     border-radius: 3px;
@@ -362,4 +343,22 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   }
 }
 
+.profile {
+  img {
+    background: white;
+    border: 1px solid #e6e4d7;
+    border-radius: 4px;
+  }
+  span.char {
+    background: red;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+  }
+}
 //--------------------
