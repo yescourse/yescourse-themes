@@ -353,5 +353,20 @@ button.stripe-checkout { // copied from stripe styling
     form {
       margin: 12px;
     }
+    .coupon-code-link {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+#dialog-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: block;
+  @include replace-text-with-dimensions('delete_grey.png');
+  &:hover {
+    opacity: 0.5;
   }
 }
