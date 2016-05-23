@@ -38,5 +38,18 @@
     "menu_selected_background_color": "#0999d6",
     "menu_selected_text_color": "#000000",
     "rego_button_background_color": "rgba(0,0,0,0.52)"
-  }
+  },
+  "images": [
+    "account_setting.png", "default_pic_200.png", "download_button.png",
+    "excel.png", "free_course_enrol.png", "lesson_icon.png", "lock.png",
+    "mobile_icon.png", "next_slide_button.png", "pdf_icon.png",
+    "player_small.png", "side_arrow.png", "user_icon.png", "clip.png",
+    "default_pic.png", "dropdown.png", "file_icon.png", "last_slide_button.png",
+    "lesson.png", "log_out.png", "modules_icon.png", "password.png",
+    "play_button.png", "ppt.jpg", "speaker.png", "country.png",
+    "delete_grey.png", "exam_passed_tick.png", "first_slide_button.png",
+    "lesson_green_icon.png", "loading.gif", "mail_icon.png",
+    "ms_docx.png", "pause_button.png", "player.png", "prev_slide_button.png",
+    "timezone.png"
+  ]
 }
