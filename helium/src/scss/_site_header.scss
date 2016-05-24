@@ -172,6 +172,10 @@
   }
 }
 
+.offline #user_links {
+  display: none;
+}
+
 @include respond_to(tablet_landscape) {
   #content_wrap {
     margin: $SITE_HEADER_HEIGHT 0 0 0;

@@ -252,6 +252,10 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   }
 }
 
+.offline #comments {
+  display: none;
+}
+
 .replying {
   .comment_reply {
     visibility: hidden;
