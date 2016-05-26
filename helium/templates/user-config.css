@@ -199,3 +199,7 @@ textarea {
     background-color: {{ theme_config.background_color }} !important;
     margin-left: 24px;
 }
+
+#tutors h2 {
+    text-align: center;
+}
