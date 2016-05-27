@@ -1,5 +1,3 @@
-/*noinspection ALL*/
-
 #yc-root {
     background-color: {{ theme_config.background_color }} !important;
     color: {{ theme_config.text_color }} !important;
