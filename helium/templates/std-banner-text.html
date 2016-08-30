@@ -3,6 +3,5 @@
         <h1 itemprop="name">{{ course.title }}</h1>
         <p class="tag_line">{{ course_page.tag_line }}</p>
     </div>
-{%  rego_button onlyIf=theme_config.registration_button_in_banner %}
-    {% include 'yescourse/course-social.html' %}
+    {% rego_button onlyIf=theme_config.registration_button_in_banner %}
 </div>
