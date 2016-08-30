@@ -1,0 +1,20 @@
+@import "compass";
+@import "responsive";
+@import "constants";
+
+#yc_root aside {
+  padding: 10px;
+  background-color: #4C4C54;
+
+  a {
+    outline: none;
+  }
+
+  h2, ul {
+      margin: 0;
+  }
+
+  @include respond_to(tablet_landscape) {
+    padding: 0;
+  }
+}

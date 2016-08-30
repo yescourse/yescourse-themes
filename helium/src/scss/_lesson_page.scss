@@ -1,42 +1,48 @@
 @import "compass";
 @import "constants";
 
-.lesson-page aside {
-  h2 {
-        color: #fffffd;
-        text-align: center;
-        font-size: 22px;
-        line-height: 26px;
+.lesson-page {
+  aside {
+    h2 {
+      color: #fffffd;
+      text-align: center;
+      font-size: 22px;
+      line-height: 26px;
     }
 
-  h2.lessons, h2.modules {
-    position: relative;
-    padding-top: 40px;
-    margin: 0 12px 20px 12px;
-
-    &::before {
-      content: '';
+    h2.lessons, h2.modules {
       position: relative;
-      top: -10px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      display: block;
-      z-index: -1;
-      width: image-width('lesson.png');
-      height: image-height('lesson.png');
-      background-color: #0999d6;
-      border-radius: 50%;
+      padding-top: 40px;
+      margin: 0 12px 20px 12px;
+
+      &::before {
+        content: '';
+        position: relative;
+        top: -10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        z-index: -1;
+        width: image-width('lesson.png');
+        height: image-height('lesson.png');
+        background-color: #0999d6;
+        border-radius: 50%;
+      }
+      a {
+        color: $DEFAULT_BACKGROUND;
+      }
     }
-    a {
-      color: $DEFAULT_BACKGROUND;
+
+    h2.lessons {
+      background: image-url('lesson.png') no-repeat 50% 30px;
+    }
+    h2.modules {
+      background: image-url('modules_icon.png') no-repeat 50% 30px;
     }
   }
 
-  h2.lessons {
-    background: image-url('lesson.png') no-repeat 50% 30px;
-  }
-  h2.modules {
-    background: image-url('modules_icon.png') no-repeat 50% 30px;
+  form {
+    background-color: transparent;
   }
 }
