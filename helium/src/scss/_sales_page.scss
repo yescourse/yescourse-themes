@@ -2,7 +2,7 @@
 @import "ycthemelib/responsive";
 @import "constants";
 
-.sales-page {
+.course-sales-page {
   #header {
     display: none; // don't show site header unless page has-page-header class
   }
@@ -179,7 +179,7 @@
     }
   }
 
-  #description {
+  .description {
     margin: 0 auto;
     .yc-rego-button {
       a {
@@ -187,6 +187,20 @@
         // local custom style
       }
     }
+
+    ol li {
+      list-style: decimal outside;
+      div {
+        padding-top: 0 !important;
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+
   }
 
   aside {
@@ -217,6 +231,12 @@
     }
 }
 
+.has-sidebar.course-sales-page {
+  article {
+    padding-left: 10px;
+  }
+}
+
 .yc-free-course-enrol-button {
   display:block;
   @include replace-text-with-dimensions('free_course_enrol.png');
@@ -234,4 +254,70 @@
 
 .yc-buy-now-button {
   @include paypal_button;
+}
+
+.yc-custom-image {
+  .yc-buy-now-button {
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+  }
+
+  .yc-free-course-enrol-button {
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+// Show the registration button centered
+.yc-rego-button {
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  text-align: center;
+
+  .yc-rego-wrap {
+    //width: 260px;
+    padding: 24px 0 14px 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.52);
+    border-radius: 4px;
+
+    a {
+      margin: 0 auto;
+      // need important as this needs to override the
+      // local custom style
+      border: none !important;
+    }
+
+    &.yc-custom-image {
+      width: auto;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      padding: 14px;
+      img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &.yc-no-price {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+
+    &.yc-free-course {
+      width: auto;
+      background-color: transparent;
+    }
+  }
 }
