@@ -1,0 +1,23 @@
+{% setTitle "{{ blog.title }}" %}
+{% addClasses "content-page" %}
+
+{% include "-site-header" %}
+
+<div id="content_wrap">
+    <div class="wrap">
+        <article>
+            {% blog_image %}
+            <div id="blog-post">
+                <h1>{{ blog.title }}</h1>
+                {% blog_author_profiles %}
+                <section id="post" class="description">
+                    {% page_content %}
+                </section>
+            </div>
+
+            {% blog_comments %}
+
+        </article>
+</div>
+
+{% include "-site-footer" %}

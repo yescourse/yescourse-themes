@@ -10,6 +10,7 @@
     "module-page": "module-page.html",
     "lesson-page": "lesson-page.html",
     "sales-page": "sales-page.html",
+    "blog-page": "blog-page.html",
     "user-config-css": "user-config.css",
 
     "404-page": "404.html",
