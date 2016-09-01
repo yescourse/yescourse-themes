@@ -2,9 +2,7 @@
 @import "ycthemelib/responsive";
 @import "constants";
 
-// retain use of course_list class only for backwards compatibility with any
-// academies/course with custom css
-.yc-course-list, .course_list {
+.course_list {
   text-align: left;
   li {
     display: inline-block;
