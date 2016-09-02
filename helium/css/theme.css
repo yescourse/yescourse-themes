@@ -544,22 +544,40 @@ a.media_download {
 }
 
 /* line 106, ../../ycthemelib/_media.scss */
+p.poster {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  background-image: url('../images/video_play_button.png?8a5f1ff524ac3f0487552090e6a9ae7b');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 110px;
+  height: 110px;
+  z-index: 5;
+  text-align: center;
+}
+
+/* line 115, ../../ycthemelib/_media.scss */
 .slideshow {
   border: none !important;
 }
 
-/* line 111, ../../ycthemelib/_media.scss */
+/* line 120, ../../ycthemelib/_media.scss */
 .description .media {
   visibility: hidden;
 }
 
-/* line 115, ../../ycthemelib/_media.scss */
+/* line 124, ../../ycthemelib/_media.scss */
 .generic_container {
   margin: 0 auto;
   position: relative;
   padding: 0;
 }
-/* line 121, ../../ycthemelib/_media.scss */
+/* line 130, ../../ycthemelib/_media.scss */
 .generic_container .generic_link {
   display: block;
   height: 100%;
@@ -572,29 +590,33 @@ a.media_download {
   text-overflow: ellipsis;
   background: url('../images/file_icon.png?a468df54773c45b6024e744dd16bb75b') no-repeat 50% 20px;
 }
-/* line 134, ../../ycthemelib/_media.scss */
+/* line 143, ../../ycthemelib/_media.scss */
 .generic_container .generic_link .download_veil {
   display: none;
   text-align: center;
   color: white;
 }
-/* line 136, ../../ycthemelib/_media.scss */
+/* line 145, ../../ycthemelib/_media.scss */
 .generic_container .generic_link .download_veil:after {
   content: 'DOWNLOAD';
 }
-/* line 142, ../../ycthemelib/_media.scss */
+/* line 151, ../../ycthemelib/_media.scss */
 .generic_container .generic_link.xls, .generic_container .generic_link.xlsx, .generic_container .generic_link.csv {
   background-image: url('../images/excel.png?5da3216bb45297860ef18e4a9ca1f619');
 }
-/* line 145, ../../ycthemelib/_media.scss */
+/* line 154, ../../ycthemelib/_media.scss */
 .generic_container .generic_link.pdf {
   background-image: url('../images/pdf_icon.png?3a1fb4291a5ccd17f12b6202574d52a4');
 }
-/* line 148, ../../ycthemelib/_media.scss */
+/* line 157, ../../ycthemelib/_media.scss */
 .generic_container .generic_link.doc, .generic_container .generic_link.docx {
   background-image: url('../images/ms_docx.png?548e4c98107a2fab578154036beaa633');
 }
-/* line 153, ../../ycthemelib/_media.scss */
+/* line 160, ../../ycthemelib/_media.scss */
+.generic_container .generic_link.ppt, .generic_container .generic_link.pptx {
+  background-image: url('../images/ppt.jpg?bca01be3e93cf5603790ae11cb19d2df');
+}
+/* line 166, ../../ycthemelib/_media.scss */
 .generic_container .generic_link:hover .download_veil {
   display: block;
   position: absolute;
@@ -607,20 +629,20 @@ a.media_download {
   background: rgba(30, 30, 30, 0.4) url('../images/download_button.png?12fd49e036530513dcb56918457d9621') no-repeat 50% 50%;
   z-index: 2;
 }
-/* line 168, ../../ycthemelib/_media.scss */
+/* line 181, ../../ycthemelib/_media.scss */
 .generic_container .command {
   display: block;
   width: 124px;
   margin: 0 auto;
 }
 
-/* line 176, ../../ycthemelib/_media.scss */
+/* line 189, ../../ycthemelib/_media.scss */
 .media_block.pdf .wrap {
   position: relative;
   height: 0;
   margin: 0 auto;
 }
-/* line 180, ../../ycthemelib/_media.scss */
+/* line 193, ../../ycthemelib/_media.scss */
 .media_block.pdf .wrap object {
   position: absolute;
   width: 100%;
@@ -631,28 +653,28 @@ a.media_download {
   right: 0;
 }
 
-/* line 192, ../../ycthemelib/_media.scss */
+/* line 205, ../../ycthemelib/_media.scss */
 #resources {
   text-align: center;
 }
-/* line 199, ../../ycthemelib/_media.scss */
+/* line 212, ../../ycthemelib/_media.scss */
 #resources .generic_container {
   margin-right: 18px;
   display: inline-block;
 }
 
-/* line 205, ../../ycthemelib/_media.scss */
+/* line 218, ../../ycthemelib/_media.scss */
 #yc-completion {
   display: inline-block;
 }
 
-/* line 209, ../../ycthemelib/_media.scss */
+/* line 222, ../../ycthemelib/_media.scss */
 .mark_lesson_read {
   margin: 0;
   padding: 0;
   display: inline-block;
 }
-/* line 213, ../../ycthemelib/_media.scss */
+/* line 226, ../../ycthemelib/_media.scss */
 .mark_lesson_read input[type=submit] {
   display: inline-block;
   font-size: 14px;
@@ -664,22 +686,22 @@ a.media_download {
   border-radius: 0;
 }
 
-/* line 225, ../../ycthemelib/_media.scss */
+/* line 238, ../../ycthemelib/_media.scss */
 .next-locked .mark_lesson_read {
   display: none;
 }
 
-/* line 229, ../../ycthemelib/_media.scss */
+/* line 242, ../../ycthemelib/_media.scss */
 .next-locked.should-be-unlocked .mark_lesson_read {
   display: inline-block;
 }
 
-/* line 234, ../../ycthemelib/_media.scss */
+/* line 247, ../../ycthemelib/_media.scss */
 .quiz ol {
   background-color: transparent;
   padding: 0;
 }
-/* line 237, ../../ycthemelib/_media.scss */
+/* line 250, ../../ycthemelib/_media.scss */
 .quiz ol > li {
   list-style-position: outside;
   padding: 16px 20px;
@@ -1944,8 +1966,52 @@ html {
   width: 43px;
   height: 43px;
 }
+/* line 93, ../src/scss/blocks/_slideshow.scss */
+.slideshow:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: table;
+}
+/* line 98, ../src/scss/blocks/_slideshow.scss */
+.slideshow:-webkit-full-screen .slidewrap {
+  display: table-row;
+  height: 100%;
+}
+/* line 102, ../src/scss/blocks/_slideshow.scss */
+.slideshow:-webkit-full-screen .slide_controls {
+  display: table-row;
+}
+/* line 105, ../src/scss/blocks/_slideshow.scss */
+.slideshow:-webkit-full-screen .aplayer {
+  display: table-row;
+}
+/* line 108, ../src/scss/blocks/_slideshow.scss */
+.slideshow:-webkit-full-screen img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* line 115, ../src/scss/blocks/_slideshow.scss */
+.slideshow button.full-screen {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #fff;
+  border-radius: 46px;
+  text-indent: -50000px;
+  background: url('../images/enter_fullscreen.png?b5a96b2310fe0f004aa9cbf3d6d0c19f') no-repeat 50% 50%;
+  background-color: #e0dfe3;
+}
+/* line 125, ../src/scss/blocks/_slideshow.scss */
+.slideshow button.full-screen.entered {
+  background-image: url('../images/exit_fullscreen.png?5bf6e263dbef3eef79f72ced2a211cc6');
+}
+/* line 129, ../src/scss/blocks/_slideshow.scss */
+.slideshow button.full-screen:hover {
+  opacity: 0.6;
+}
 
-/* line 96, ../src/scss/blocks/_slideshow.scss */
+/* line 137, ../src/scss/blocks/_slideshow.scss */
 .aplayer {
   height: 48px;
   background-color: #d2d2d2;
@@ -1960,19 +2026,19 @@ html {
   border: 1px solid #bebebe;
   border-radius: 4px;
 }
-/* line 97, ../src/scss/blocks/_slideshow.scss */
+/* line 138, ../src/scss/blocks/_slideshow.scss */
 .aplayer *, .aplayer *:before, .aplayer *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 116, ../src/scss/blocks/_slideshow.scss */
+/* line 157, ../src/scss/blocks/_slideshow.scss */
 .aplayer .wrap {
   display: table;
   width: 100%;
   padding: 14px;
 }
-/* line 121, ../src/scss/blocks/_slideshow.scss */
+/* line 162, ../src/scss/blocks/_slideshow.scss */
 .aplayer .play_pause {
   display: table-cell;
   text-indent: -119988px;
@@ -1985,7 +2051,7 @@ html {
   width: 13px;
   height: 14px;
 }
-/* line 124, ../src/scss/blocks/_slideshow.scss */
+/* line 165, ../src/scss/blocks/_slideshow.scss */
 .aplayer .play_pause.playing {
   text-indent: -119988px;
   overflow: hidden;
@@ -1997,12 +2063,12 @@ html {
   width: 13px;
   height: 14px;
 }
-/* line 127, ../src/scss/blocks/_slideshow.scss */
+/* line 168, ../src/scss/blocks/_slideshow.scss */
 .aplayer .play_pause:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-/* line 133, ../src/scss/blocks/_slideshow.scss */
+/* line 174, ../src/scss/blocks/_slideshow.scss */
 .aplayer .volume {
   width: 90px;
   padding-left: 42px;
@@ -2012,7 +2078,7 @@ html {
   background-repeat: no-repeat;
   background-position: 20px 50%;
 }
-/* line 141, ../src/scss/blocks/_slideshow.scss */
+/* line 182, ../src/scss/blocks/_slideshow.scss */
 .aplayer .volume .goog-slider-thumb {
   text-indent: -119988px;
   overflow: hidden;
@@ -2026,11 +2092,11 @@ html {
   padding: 0;
   top: -2px;
 }
-/* line 146, ../src/scss/blocks/_slideshow.scss */
+/* line 187, ../src/scss/blocks/_slideshow.scss */
 .aplayer .volume:focus {
   outline: 0 !important;
 }
-/* line 149, ../src/scss/blocks/_slideshow.scss */
+/* line 190, ../src/scss/blocks/_slideshow.scss */
 .aplayer .volume .value {
   background: #cc1742;
   position: absolute;
@@ -2039,14 +2105,14 @@ html {
   height: 3px;
   z-index: 3;
 }
-/* line 159, ../src/scss/blocks/_slideshow.scss */
+/* line 200, ../src/scss/blocks/_slideshow.scss */
 .aplayer .seekbar {
   width: auto;
   display: table-cell;
   vertical-align: middle;
   padding-left: 18px;
 }
-/* line 164, ../src/scss/blocks/_slideshow.scss */
+/* line 205, ../src/scss/blocks/_slideshow.scss */
 .aplayer .seekbar .goog-slider-thumb {
   text-indent: -119988px;
   overflow: hidden;
@@ -2061,11 +2127,11 @@ html {
   top: -8px;
   z-index: 5;
 }
-/* line 170, ../src/scss/blocks/_slideshow.scss */
+/* line 211, ../src/scss/blocks/_slideshow.scss */
 .aplayer .seekbar:focus {
   outline: 0 !important;
 }
-/* line 173, ../src/scss/blocks/_slideshow.scss */
+/* line 214, ../src/scss/blocks/_slideshow.scss */
 .aplayer .seekbar .progress {
   background: #cc1742;
   position: absolute;
@@ -2074,7 +2140,7 @@ html {
   height: 2px;
   z-index: 3;
 }
-/* line 181, ../src/scss/blocks/_slideshow.scss */
+/* line 222, ../src/scss/blocks/_slideshow.scss */
 .aplayer .seekbar .buffer {
   background: #969696;
   position: absolute;
@@ -2083,7 +2149,7 @@ html {
   width: 0;
   height: 1px;
 }
-/* line 191, ../src/scss/blocks/_slideshow.scss */
+/* line 232, ../src/scss/blocks/_slideshow.scss */
 .aplayer .duration {
   width: 82px;
   padding-left: 18px;
@@ -2091,13 +2157,13 @@ html {
   font-size: 12px;
   font-weight: bold;
 }
-/* line 199, ../src/scss/blocks/_slideshow.scss */
+/* line 240, ../src/scss/blocks/_slideshow.scss */
 .aplayer .goog-slider-horizontal {
   background-color: #efefef;
   position: relative;
   height: 3px;
 }
-/* line 204, ../src/scss/blocks/_slideshow.scss */
+/* line 245, ../src/scss/blocks/_slideshow.scss */
 .aplayer .goog-slider-thumb {
   position: absolute;
 }
@@ -2941,20 +3007,31 @@ button.stripe-checkout span {
   }
 }
 
-/* line 6, ../src/scss/_lesson_page.scss */
+/* line 16, ../src/scss/_lesson_page.scss */
+.lesson-page article h2 {
+  color: #007c72;
+  font-size: 22px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 23, ../src/scss/_lesson_page.scss */
+  .lesson-page .page_header h1 {
+    padding-left: 340px;
+  }
+}
+/* line 31, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2 {
   color: #fffffd;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
-/* line 13, ../src/scss/_lesson_page.scss */
+/* line 38, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2.lessons, .lesson-page aside h2.modules {
   position: relative;
   padding-top: 40px;
   margin: 0 12px 20px 12px;
 }
-/* line 18, ../src/scss/_lesson_page.scss */
+/* line 43, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2.lessons::before, .lesson-page aside h2.modules::before {
   content: '';
   position: relative;
@@ -2969,21 +3046,66 @@ button.stripe-checkout span {
   background-color: #0999d6;
   border-radius: 50%;
 }
-/* line 32, ../src/scss/_lesson_page.scss */
+/* line 57, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2.lessons a, .lesson-page aside h2.modules a {
   color: #ffffff;
 }
-/* line 37, ../src/scss/_lesson_page.scss */
+/* line 62, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2.lessons {
   background: url('../images/lesson.png?f6e91ee8fdeaedbac475562d47614f92') no-repeat 50% 30px;
 }
-/* line 40, ../src/scss/_lesson_page.scss */
+/* line 65, ../src/scss/_lesson_page.scss */
 .lesson-page aside h2.modules {
   background: url('../images/modules_icon.png?1fabd1ecbefd8d7ee57956ed3b12bd71') no-repeat 50% 30px;
 }
-/* line 45, ../src/scss/_lesson_page.scss */
+/* line 70, ../src/scss/_lesson_page.scss */
 .lesson-page form {
   background-color: transparent;
+}
+/* line 75, ../src/scss/_lesson_page.scss */
+.lesson-page .lesson_nav li {
+  display: inline-block;
+  height: 32px;
+  width: 100px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 32px;
+}
+/* line 82, ../src/scss/_lesson_page.scss */
+.lesson-page .lesson_nav li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+/* line 89, ../src/scss/_lesson_page.scss */
+.lesson-page .lesson_nav ul {
+  padding: 0;
+}
+/* line 94, ../src/scss/_lesson_page.scss */
+.lesson-page .prev_link a {
+  background-color: #4c526c;
+  color: white;
+}
+/* line 98, ../src/scss/_lesson_page.scss */
+.lesson-page .no_prev_link {
+  background-color: #d6d6d6;
+  color: black;
+}
+/* line 102, ../src/scss/_lesson_page.scss */
+.lesson-page .next_link a {
+  background-color: #4c526c;
+  color: white;
+}
+/* line 106, ../src/scss/_lesson_page.scss */
+.lesson-page .no_next_link {
+  background-color: #d6d6d6;
+  color: black;
+}
+/* line 110, ../src/scss/_lesson_page.scss */
+.lesson-page .all_link a {
+  background-color: #4c526c;
+  color: white;
 }
 
 /* line 5, ../src/scss/_lesson_exam.scss */
@@ -2998,12 +3120,14 @@ button.stripe-checkout span {
 #exams h3 {
   font-size: 24px;
   margin-bottom: 16px;
+  margin-top: 10px;
+  margin-left: 0;
 }
-/* line 16, ../src/scss/_lesson_exam.scss */
+/* line 18, ../src/scss/_lesson_exam.scss */
 #exams p.exam_attrs {
   margin: 0;
 }
-/* line 20, ../src/scss/_lesson_exam.scss */
+/* line 22, ../src/scss/_lesson_exam.scss */
 #exams .action {
   display: block;
   width: 110px;
@@ -3016,35 +3140,39 @@ button.stripe-checkout span {
   border-radius: 4px;
   font-weight: bold;
 }
-/* line 33, ../src/scss/_lesson_exam.scss */
+/* line 35, ../src/scss/_lesson_exam.scss */
+#exams .command {
+  margin-bottom: 20px;
+}
+/* line 39, ../src/scss/_lesson_exam.scss */
 #exams #exam_pwd_block {
   padding: 8px 0;
 }
-/* line 37, ../src/scss/_lesson_exam.scss */
+/* line 43, ../src/scss/_lesson_exam.scss */
 #exams #exam_pwd {
   display: inline-block;
   width: auto;
   height: auto;
 }
-/* line 41, ../src/scss/_lesson_exam.scss */
+/* line 47, ../src/scss/_lesson_exam.scss */
 #exams #exam_pwd.error {
   border-color: red;
 }
-/* line 43, ../src/scss/_lesson_exam.scss */
+/* line 49, ../src/scss/_lesson_exam.scss */
 #exams #exam_pwd.error::after {
   content: "Incorrect";
   padding-left: 12px;
 }
-/* line 50, ../src/scss/_lesson_exam.scss */
+/* line 56, ../src/scss/_lesson_exam.scss */
 #exams label[for=exam_pwd] {
   display: inline-block;
   padding: 0 12px 0 0;
 }
-/* line 55, ../src/scss/_lesson_exam.scss */
+/* line 61, ../src/scss/_lesson_exam.scss */
 #exams .has_passed {
   padding-left: 36px;
 }
-/* line 59, ../src/scss/_lesson_exam.scss */
+/* line 65, ../src/scss/_lesson_exam.scss */
 #exams .attempt_now {
   display: block;
   float: none;
@@ -3052,75 +3180,75 @@ button.stripe-checkout span {
   color: white;
   background: #0999D6;
 }
-/* line 67, ../src/scss/_lesson_exam.scss */
+/* line 73, ../src/scss/_lesson_exam.scss */
 #exams .has_passed {
   border: 1px solid #7eac01;
   background: #8fc400 url('../images/exam_passed_tick.png?b6c8db69377482e03f778d59693a4b68') no-repeat 10px 4px;
 }
-/* line 72, ../src/scss/_lesson_exam.scss */
+/* line 78, ../src/scss/_lesson_exam.scss */
 #exams table {
   border: 2px solid #dddac9;
   border-radius: 4px;
   margin-top: 20px;
 }
-/* line 76, ../src/scss/_lesson_exam.scss */
+/* line 82, ../src/scss/_lesson_exam.scss */
 #exams table thead {
   background: #eeeeee;
 }
-/* line 78, ../src/scss/_lesson_exam.scss */
+/* line 84, ../src/scss/_lesson_exam.scss */
 #exams table thead th {
   border: none;
 }
-/* line 82, ../src/scss/_lesson_exam.scss */
+/* line 88, ../src/scss/_lesson_exam.scss */
 #exams table tbody {
   background: #f8f8f8;
 }
-/* line 85, ../src/scss/_lesson_exam.scss */
+/* line 91, ../src/scss/_lesson_exam.scss */
 #exams table td {
   font-size: 12px;
 }
-/* line 88, ../src/scss/_lesson_exam.scss */
+/* line 94, ../src/scss/_lesson_exam.scss */
 #exams table .graph {
   background: #d7d7d7;
 }
-/* line 92, ../src/scss/_lesson_exam.scss */
+/* line 98, ../src/scss/_lesson_exam.scss */
 #exams table .fail .bar {
   background: #aa0c0d;
 }
-/* line 95, ../src/scss/_lesson_exam.scss */
+/* line 101, ../src/scss/_lesson_exam.scss */
 #exams table .fail .result_str {
   color: #ad0a0d;
 }
-/* line 100, ../src/scss/_lesson_exam.scss */
+/* line 106, ../src/scss/_lesson_exam.scss */
 #exams table .pass .bar {
   background: #79c500;
 }
-/* line 103, ../src/scss/_lesson_exam.scss */
+/* line 109, ../src/scss/_lesson_exam.scss */
 #exams table .pass .result_str {
   color: #4f8002;
 }
 @media screen and (min-width: 1024px) {
-  /* line 110, ../src/scss/_lesson_exam.scss */
+  /* line 116, ../src/scss/_lesson_exam.scss */
   #exams col.date {
     width: 124px;
   }
-  /* line 113, ../src/scss/_lesson_exam.scss */
+  /* line 119, ../src/scss/_lesson_exam.scss */
   #exams col.result {
     width: 100px;
   }
-  /* line 117, ../src/scss/_lesson_exam.scss */
+  /* line 123, ../src/scss/_lesson_exam.scss */
   #exams .graph {
     display: inline-block;
     width: 248px;
     height: 4px;
     vertical-align: middle;
   }
-  /* line 123, ../src/scss/_lesson_exam.scss */
+  /* line 129, ../src/scss/_lesson_exam.scss */
   #exams .bar {
     height: 4px;
   }
 }
-/* line 128, ../src/scss/_lesson_exam.scss */
+/* line 134, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions {
   background: #ffffff;
   display: none;
@@ -3134,7 +3262,7 @@ button.stripe-checkout span {
   margin: 0 auto;
   z-index: 2001;
 }
-/* line 141, ../src/scss/_lesson_exam.scss */
+/* line 147, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions header, #exams #exam_questions footer {
   position: absolute;
   left: 0;
@@ -3143,22 +3271,22 @@ button.stripe-checkout span {
   background-color: #000000;
   color: #ffffff;
 }
-/* line 150, ../src/scss/_lesson_exam.scss */
+/* line 156, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions header {
   top: 0;
 }
-/* line 152, ../src/scss/_lesson_exam.scss */
+/* line 158, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions header h3 {
   margin: 0 0 0 26px;
 }
-/* line 157, ../src/scss/_lesson_exam.scss */
+/* line 163, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions footer {
   bottom: 0;
   display: table;
   width: 100%;
   padding: 2px 4px;
 }
-/* line 164, ../src/scss/_lesson_exam.scss */
+/* line 170, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions #exam_questions_body {
   position: absolute;
   left: 0;
@@ -3167,16 +3295,16 @@ button.stripe-checkout span {
   bottom: 36px;
   overflow-y: scroll;
 }
-/* line 171, ../src/scss/_lesson_exam.scss */
+/* line 177, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions #exam_questions_body ol ul li.selected {
   background-color: black;
   color: #ffffff;
 }
-/* line 176, ../src/scss/_lesson_exam.scss */
+/* line 182, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions .question_text {
   display: inline-block;
 }
-/* line 180, ../src/scss/_lesson_exam.scss */
+/* line 186, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions .graph {
   margin: 0 16px;
   background-color: #ffffff;
@@ -3185,13 +3313,13 @@ button.stripe-checkout span {
   position: relative;
   text-align: center;
 }
-/* line 187, ../src/scss/_lesson_exam.scss */
+/* line 193, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions .graph .bar {
   height: 100%;
   background-color: #000000;
   min-width: 2px;
 }
-/* line 192, ../src/scss/_lesson_exam.scss */
+/* line 198, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions .graph p.count {
   background-color: #ffffff;
   position: absolute;
@@ -3207,7 +3335,7 @@ button.stripe-checkout span {
   line-height: 14px;
   padding: 0 4px;
 }
-/* line 208, ../src/scss/_lesson_exam.scss */
+/* line 214, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions .remaining {
   font-size: 18px;
   font-weight: bold;
@@ -3217,26 +3345,34 @@ button.stripe-checkout span {
   color: black;
   vertical-align: middle;
 }
-/* line 219, ../src/scss/_lesson_exam.scss */
+/* line 225, ../src/scss/_lesson_exam.scss */
 #exams #submit_box, #exams #exam_questions_status {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 224, ../src/scss/_lesson_exam.scss */
+/* line 230, ../src/scss/_lesson_exam.scss */
 #exams #submit_box {
   text-align: left;
 }
-/* line 228, ../src/scss/_lesson_exam.scss */
+/* line 234, ../src/scss/_lesson_exam.scss */
 #exams #exam_questions_status {
   text-align: right;
 }
-/* line 233, ../src/scss/_lesson_exam.scss */
+/* line 236, ../src/scss/_lesson_exam.scss */
+#exams #exam_questions_status > div {
+  display: inline-block;
+}
+/* line 239, ../src/scss/_lesson_exam.scss */
+#exams #exam_questions_status .hhmmss.warn {
+  color: red;
+}
+/* line 245, ../src/scss/_lesson_exam.scss */
 #exams .fitb select, #exams .fitb input {
   display: inline-block;
   width: auto;
 }
 
-/* line 241, ../src/scss/_lesson_exam.scss */
+/* line 253, ../src/scss/_lesson_exam.scss */
 .exam_in_progress #veil {
   display: block;
   position: fixed;
@@ -3247,56 +3383,61 @@ button.stripe-checkout span {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2000;
 }
-/* line 251, ../src/scss/_lesson_exam.scss */
+/* line 263, ../src/scss/_lesson_exam.scss */
 .exam_in_progress #exams #exam_questions {
   display: block;
 }
 
-/* line 256, ../src/scss/_lesson_exam.scss */
-#yc-completion {
-  display: inline-block;
-}
-
-/* line 260, ../src/scss/_lesson_exam.scss */
-.mark_lesson_read {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-/* line 264, ../src/scss/_lesson_exam.scss */
-.mark_lesson_read input[type=submit] {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 14px;
-  height: auto;
-  width: auto;
-  padding: 8px;
-  margin: 0;
-  border-radius: 0;
-}
-
-/* line 276, ../src/scss/_lesson_exam.scss */
-.next-locked .mark_lesson_read {
+/* line 268, ../src/scss/_lesson_exam.scss */
+#exam_answers {
   display: none;
+  color: black;
+  background: #eee;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+  overflow-y: scroll;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+  z-index: 10000;
 }
-
-/* line 280, ../src/scss/_lesson_exam.scss */
-.next-locked.should-be-unlocked .mark_lesson_read {
-  display: inline-block;
+/* line 282, ../src/scss/_lesson_exam.scss */
+#exam_answers .letter {
+  margin-right: 24px;
 }
-
 /* line 285, ../src/scss/_lesson_exam.scss */
-.quiz ol {
-  background-color: transparent;
-  padding: 0;
+#exam_answers header {
+  background: rgba(0, 0, 0, 0.3) !important;
 }
 /* line 288, ../src/scss/_lesson_exam.scss */
-.quiz ol > li {
-  list-style-position: outside;
-  padding: 16px 20px;
+#exam_answers footer {
+  position: static;
+}
+/* line 291, ../src/scss/_lesson_exam.scss */
+#exam_answers .message {
+  background: rgba(0, 0, 0, 0.1) url('../images/hint_icon.png?cbfb983ce0943b6d303862385fce6e48') no-repeat 2px 50%;
+  padding: 4px 0 4px 26px;
+  font-weight: bold;
+}
+/* line 296, ../src/scss/_lesson_exam.scss */
+#exam_answers .question table {
+  max-width: 320px;
+}
+/* line 299, ../src/scss/_lesson_exam.scss */
+#exam_answers video {
+  max-width: 100%;
+  max-height: 600px;
 }
 
-/* line 295, ../src/scss/_lesson_exam.scss */
+/* line 305, ../src/scss/_lesson_exam.scss */
+.showing_answers #exam_answers, #exam_answers.loaded {
+  display: block;
+}
+
+/* line 309, ../src/scss/_lesson_exam.scss */
 .lesson_completed {
   color: green;
   font-size: 12px;
@@ -3306,81 +3447,81 @@ button.stripe-checkout span {
   background: url('../images/lesson_green_icon.png?3fba162fd34609abcd8c2a7ac64b0f44') left center no-repeat;
 }
 
-/* line 304, ../src/scss/_lesson_exam.scss */
+/* line 318, ../src/scss/_lesson_exam.scss */
 .question {
   margin: 8px 0;
   padding: 4px;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
-/* line 310, ../src/scss/_lesson_exam.scss */
+/* line 324, ../src/scss/_lesson_exam.scss */
 .question ul {
   background-color: transparent;
   padding: 0;
 }
-/* line 315, ../src/scss/_lesson_exam.scss */
+/* line 329, ../src/scss/_lesson_exam.scss */
 .question li {
   list-style: none;
   padding: 0 0 0 16px;
 }
-/* line 319, ../src/scss/_lesson_exam.scss */
+/* line 333, ../src/scss/_lesson_exam.scss */
 .question .msg {
   display: none;
   padding: 0 0 0 24px;
   font-size: 12px;
 }
-/* line 324, ../src/scss/_lesson_exam.scss */
+/* line 338, ../src/scss/_lesson_exam.scss */
 .question input[type=radio] {
   margin: 0 12px 0 0;
 }
-/* line 327, ../src/scss/_lesson_exam.scss */
+/* line 341, ../src/scss/_lesson_exam.scss */
 .question input[type=text] {
   display: inline-block;
 }
-/* line 330, ../src/scss/_lesson_exam.scss */
+/* line 344, ../src/scss/_lesson_exam.scss */
 .question table {
   width: 100%;
 }
 
-/* line 335, ../src/scss/_lesson_exam.scss */
+/* line 349, ../src/scss/_lesson_exam.scss */
 .question_text {
   font-size: 1.2em;
 }
-/* line 337, ../src/scss/_lesson_exam.scss */
+/* line 351, ../src/scss/_lesson_exam.scss */
 .question_text p:nth-child(1) {
   padding: 0;
   margin: 0;
 }
 
-/* line 346, ../src/scss/_lesson_exam.scss */
+/* line 360, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question ul li input, .quiz.checked .question ul li .choice {
   display: inline-block;
 }
-/* line 352, ../src/scss/_lesson_exam.scss */
+/* line 366, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question input {
   width: 24px;
   padding: 0;
   margin: 0;
 }
-/* line 357, ../src/scss/_lesson_exam.scss */
+/* line 371, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question .correct {
   background-color: #688241;
   color: white;
 }
-/* line 360, ../src/scss/_lesson_exam.scss */
+/* line 374, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question .correct msg {
   color: #b9d193;
 }
-/* line 364, ../src/scss/_lesson_exam.scss */
+/* line 378, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question .wrong {
   background-color: #edbab9;
 }
-/* line 368, ../src/scss/_lesson_exam.scss */
+/* line 382, ../src/scss/_lesson_exam.scss */
 .quiz.checked .question .correct .msg, .quiz.checked .question .wrong .msg {
   display: block;
 }
 
-/* line 376, ../src/scss/_lesson_exam.scss */
+/* line 390, ../src/scss/_lesson_exam.scss */
 .quiz.invalid button, .quiz.checked button {
   opacity: 0.5;
   cursor: not-allowed;
