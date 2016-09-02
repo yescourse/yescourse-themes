@@ -1514,7 +1514,7 @@ html {
 }
 
 /* line 5, ../src/scss/blocks/_course_list.scss */
-.yc-course-list {
+.course_list {
   text-align: left;
   /*a.bundle {
     overflow: visible;
@@ -1525,7 +1525,7 @@ html {
   }*/
 }
 /* line 7, ../src/scss/blocks/_course_list.scss */
-.yc-course-list li {
+.course_list li {
   display: inline-block;
   max-width: 300px;
   list-style: none;
@@ -1536,7 +1536,7 @@ html {
   position: relative;
 }
 /* line 17, ../src/scss/blocks/_course_list.scss */
-.yc-course-list a.course {
+.course_list a.course {
   font-size: 22px;
   line-height: 36px;
   border: none;
@@ -1559,7 +1559,7 @@ html {
   }*/
 }
 /* line 24, ../src/scss/blocks/_course_list.scss */
-.yc-course-list a.course.free:before {
+.course_list a.course.free:before {
   content: "Free";
   font-size: 14px;
   background-color: #006600;
@@ -1575,7 +1575,7 @@ html {
   width: 48px;
 }
 /* line 54, ../src/scss/blocks/_course_list.scss */
-.yc-course-list img {
+.course_list img {
   width: 220px;
   max-width: 100%;
   border-radius: 4px;
@@ -1583,9 +1583,15 @@ html {
 }
 @media screen and (min-width: 768px) {
   /* line 54, ../src/scss/blocks/_course_list.scss */
-  .yc-course-list img {
+  .course_list img {
     width: 300px;
   }
+}
+
+/* line 72, ../src/scss/blocks/_course_list.scss */
+.course-bundle-page ul.course_list {
+  background-color: transparent;
+  border: none;
 }
 
 /* line 4, ../src/scss/blocks/_course_tree.scss */
@@ -2527,6 +2533,11 @@ button.stripe-checkout span {
 /* line 386, ../src/scss/_forms.scss */
 #dialog-close:hover {
   opacity: 0.5;
+}
+
+/* line 392, ../src/scss/_forms.scss */
+.course_page form {
+  background-color: transparent;
 }
 
 /* line 7, ../src/scss/_site_header.scss */
