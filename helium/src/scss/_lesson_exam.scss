@@ -11,6 +11,8 @@
     h3 {
         font-size: 24px;
         margin-bottom: 16px;
+        margin-top: 10px;
+        margin-left: 0;
     }
 
     p.exam_attrs {
@@ -28,6 +30,10 @@
         color: white;
         border-radius: 4px;
         font-weight: bold;
+    }
+
+    .command {
+      margin-bottom: 20px;
     }
 
   #exam_pwd_block {
@@ -227,6 +233,12 @@
 
     #exam_questions_status {
       text-align: right;
+      &> div {
+        display: inline-block;
+      }
+      .hhmmss.warn {
+        color: red;
+      }
     }
 
     .fitb {
@@ -253,43 +265,45 @@
   }
 }
 
-  #yc-completion {
-    display: inline-block;
+#exam_answers {
+  display: none;
+  color: black;
+  background: #eee;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40px;
+  bottom:0;
+  overflow-y: scroll;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+  z-index: 10000;
+  .letter {
+    margin-right: 24px;
   }
-
-.mark_lesson_read {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  input[type=submit] {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 14px;
-    height: auto;
-    width: auto;
-    padding: 8px;
-    margin: 0;
-    border-radius: 0;
+  header {
+      background: rgba(0,0,0,0.3) !important;  // FIXME: move to theme
+  }
+  footer {
+    position: static;
+  }
+  .message {
+    background: rgba(0,0,0,0.1) image-url('hint_icon.png') no-repeat 2px 50%;
+    padding: 4px 0 4px 26px;
+    font-weight: bold;
+  }
+  .question table {
+    max-width: 320px;
+  }
+  video {
+    max-width: 100%;
+    max-height: 600px;
   }
 }
 
-  .next-locked .mark_lesson_read {
-    display: none;
-  }
-
-  .next-locked.should-be-unlocked .mark_lesson_read {
-    display: inline-block;
-  }
-
-.quiz {
-  ol {
-    background-color: transparent;
-    padding: 0;
-    &> li {
-      list-style-position: outside;
-      padding: 16px 20px;
-    }
-  }
+.showing_answers #exam_answers, #exam_answers.loaded {
+  display: block;
 }
 
 .lesson_completed {

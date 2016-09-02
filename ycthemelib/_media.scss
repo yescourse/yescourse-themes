@@ -103,6 +103,15 @@ a.media_download {
   border: none;
 }
 
+p.poster{
+    position:absolute;
+    top:40%;
+    left:40%;
+    @include replace-text-with-dimensions('video_play_button.png');
+    z-index:$VIDEO_POSTER_Z_INDEX;
+    text-align:center;
+}
+
 .slideshow {
   //background: #f0f0f0 !important;
   border: none !important;
@@ -148,6 +157,10 @@ a.media_download {
     &.doc, &.docx {
       background-image: image-url('ms_docx.png');
     }
+    &.ppt, &.pptx {
+      background-image: image-url('ppt.jpg');
+    }
+
 
     &:hover {
       .download_veil {

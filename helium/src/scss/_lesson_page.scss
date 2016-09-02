@@ -1,7 +1,32 @@
 @import "compass";
 @import "constants";
 
+@mixin show_active_prevnext{
+    background-color: #4c526c;
+    color: white;
+}
+
+@mixin show_inactive_prevnext{
+    background-color: #d6d6d6;
+    color: black;
+}
+
 .lesson-page {
+  article {
+    h2 {
+        color: #007c72;
+        font-size: 22px;
+    }
+  }
+
+  .page_header {
+    h1 {
+      @include respond_to(tablet_landscape) {
+        padding-left: $ASIDE_WIDTH + 36px;
+      }
+    }
+  }
+
   aside {
     h2 {
       color: #fffffd;
@@ -44,5 +69,45 @@
 
   form {
     background-color: transparent;
+  }
+
+  .lesson_nav{
+    li{
+      display:inline-block;
+      height: 32px;
+      width: 100px;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 32px;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+      }
+    }
+    ul{
+      padding:0;
+    }
+  }
+
+  .prev_link a{
+    @include show_active_prevnext;
+  }
+
+  .no_prev_link{
+    @include show_inactive_prevnext;
+  }
+
+  .next_link a{
+    @include show_active_prevnext;
+  }
+
+  .no_next_link{
+    @include show_inactive_prevnext;
+  }
+
+  .all_link a{
+    @include show_active_prevnext;
   }
 }
