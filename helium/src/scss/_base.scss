@@ -306,3 +306,13 @@ iframe {
     padding: 0;
   }
 }
+
+// ensure that images within the description area maintain aspect ratio
+#yc-root .description {
+  img {
+    max-width: 100%;
+    // need the important as ckeditor will add element level height which will
+    //cause wide elements to be stretched to maintain height
+    height: auto !important;
+  }
+}
