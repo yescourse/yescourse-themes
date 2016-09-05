@@ -3,6 +3,12 @@
 @import "ycthemelib/responsive";
 
 #yc-site-footer {
+  @include respond_to(tablet_landscape) {
+    & > .wrap {
+      max-width: $MAX_CONTENT_WIDTH;
+      margin: 0 auto;
+    }
+  }
   background: #0e0e0e;
   box-shadow: 0 2px 5px #000;
   padding: 2px 4px;
@@ -38,6 +44,10 @@
     text-align: center;
   }
 
+  @include respond_to(tablet_landscape) {
+    clear: both;
+    min-height: 56px;
+  }
 
   a.as_admin, #course_settings_link {
     font-size: 14px;
@@ -54,6 +64,16 @@
                     top, #f9e59c 0%, #f1d351 3%, #efc62c 5%,
                     #e38f13 100%)
     );
+  }
+
+  .powered {
+    padding: 0 0 0 24px;
+    background: image-url('logo20.png') no-repeat left center;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    width: 210px;
+    text-decoration: underline;
   }
 
   @include respond_to(tablet_landscape) {
@@ -92,6 +112,14 @@
         a {
           text-decoration: underline;
         }
+      }
+      .powered {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 160px;
       }
     }
   }

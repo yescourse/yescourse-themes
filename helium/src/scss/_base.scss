@@ -289,28 +289,6 @@ iframe {
 
 }
 
-#yc-site-footer {
-  .powered {
-    padding: 0 0 0 24px;
-    //background: image-url('logo20.png') no-repeat left center;
-    font-weight: bold;
-    display: block;
-    margin: 0 auto;
-    width: 210px;
-    text-decoration: underline;
-  }
-  @include respond_to(tablet_landscape) {
-    .powered {
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 160px;
-    }
-  }
-}
-
 // TODO refactor base to consolidate aside styling
 #yc_root aside {
   padding: 10px;

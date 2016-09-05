@@ -997,41 +997,20 @@ iframe {
   }
 }
 /* line 293, ../src/scss/_base.scss */
-#yc-site-footer .powered {
-  padding: 0 0 0 24px;
-  font-weight: bold;
-  display: block;
-  margin: 0 auto;
-  width: 210px;
-  text-decoration: underline;
-}
-@media screen and (min-width: 1024px) {
-  /* line 303, ../src/scss/_base.scss */
-  #yc-site-footer .powered {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 160px;
-  }
-}
-
-/* line 315, ../src/scss/_base.scss */
 #yc_root aside {
   padding: 10px;
   background-color: #4C4C54;
 }
-/* line 319, ../src/scss/_base.scss */
+/* line 297, ../src/scss/_base.scss */
 #yc_root aside a {
   outline: none;
 }
-/* line 323, ../src/scss/_base.scss */
+/* line 301, ../src/scss/_base.scss */
 #yc_root aside h2, #yc_root aside ul {
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  /* line 315, ../src/scss/_base.scss */
+  /* line 293, ../src/scss/_base.scss */
   #yc_root aside {
     padding: 0;
   }
@@ -2829,11 +2808,18 @@ button.stripe-checkout span {
   box-shadow: 0 2px 5px #000;
   padding: 2px 4px;
 }
-/* line 9, ../src/scss/_site_footer.scss */
+@media screen and (min-width: 1024px) {
+  /* line 7, ../src/scss/_site_footer.scss */
+  #yc-site-footer > .wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+/* line 15, ../src/scss/_site_footer.scss */
 #yc-site-footer a {
   color: #c0c0c0;
 }
-/* line 13, ../src/scss/_site_footer.scss */
+/* line 19, ../src/scss/_site_footer.scss */
 #yc-site-footer .promote-course {
   display: block;
   width: 260px;
@@ -2842,28 +2828,35 @@ button.stripe-checkout span {
   color: green;
   font-weight: bold;
 }
-/* line 22, ../src/scss/_site_footer.scss */
+/* line 28, ../src/scss/_site_footer.scss */
 #yc-site-footer .legals {
   text-align: center;
   padding-bottom: 4px;
 }
-/* line 25, ../src/scss/_site_footer.scss */
+/* line 31, ../src/scss/_site_footer.scss */
 #yc-site-footer .legals ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 30, ../src/scss/_site_footer.scss */
+/* line 36, ../src/scss/_site_footer.scss */
 #yc-site-footer .legals a {
   color: #777;
   font-size: 0.8em;
 }
-/* line 36, ../src/scss/_site_footer.scss */
+/* line 42, ../src/scss/_site_footer.scss */
 #yc-site-footer #course_settings_link {
   display: block;
   text-align: center;
 }
-/* line 42, ../src/scss/_site_footer.scss */
+@media screen and (min-width: 1024px) {
+  /* line 5, ../src/scss/_site_footer.scss */
+  #yc-site-footer {
+    clear: both;
+    min-height: 56px;
+  }
+}
+/* line 52, ../src/scss/_site_footer.scss */
 #yc-site-footer a.as_admin, #yc-site-footer #course_settings_link {
   font-size: 14px;
   line-height: 14px;
@@ -2881,6 +2874,16 @@ button.stripe-checkout span {
   background-image: -webkit-linear-gradient(top, #f9e59c 0%, #f1d351 3%, #efc62c 5%, #e38f13 100%);
   background-image: linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%, #efc62c 5%, #e38f13 100%);
 }
+/* line 69, ../src/scss/_site_footer.scss */
+#yc-site-footer .powered {
+  padding: 0 0 0 24px;
+  background: url('../images/logo20.png?28cd0f3453b9c05559ca9a67b3e54691') no-repeat left center;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  width: 210px;
+  text-decoration: underline;
+}
 @media screen and (min-width: 1024px) {
   /* line 5, ../src/scss/_site_footer.scss */
   #yc-site-footer {
@@ -2896,34 +2899,43 @@ button.stripe-checkout span {
     display: table;
     width: 100%;
   }
-  /* line 72, ../src/scss/_site_footer.scss */
+  /* line 92, ../src/scss/_site_footer.scss */
   #yc-site-footer > .wrap {
     margin: 0 auto;
     max-width: 100%;
     display: table-row;
     width: 100%;
   }
-  /* line 79, ../src/scss/_site_footer.scss */
+  /* line 99, ../src/scss/_site_footer.scss */
   #yc-site-footer #academy_footer {
     display: table-cell;
   }
-  /* line 83, ../src/scss/_site_footer.scss */
+  /* line 103, ../src/scss/_site_footer.scss */
   #yc-site-footer #yc_footer {
     text-align: right;
     font-size: 12px;
     display: table-cell;
   }
-  /* line 87, ../src/scss/_site_footer.scss */
+  /* line 107, ../src/scss/_site_footer.scss */
   #yc-site-footer #yc_footer .legals {
     display: inline-block;
   }
-  /* line 89, ../src/scss/_site_footer.scss */
+  /* line 109, ../src/scss/_site_footer.scss */
   #yc-site-footer #yc_footer .legals ul, #yc-site-footer #yc_footer .legals li {
     display: inline-block;
   }
-  /* line 92, ../src/scss/_site_footer.scss */
+  /* line 112, ../src/scss/_site_footer.scss */
   #yc-site-footer #yc_footer .legals a {
     text-decoration: underline;
+  }
+  /* line 116, ../src/scss/_site_footer.scss */
+  #yc-site-footer #yc_footer .powered {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 160px;
   }
 }
 
