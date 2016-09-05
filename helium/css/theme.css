@@ -4288,7 +4288,165 @@ button.stripe-checkout span {
   padding: 8px;
 }
 
-/* line 34, ../src/scss/theme.scss */
+/* line 10, ../src/scss/_certificate.scss */
+#certificate {
+  background: white;
+  padding: 40px;
+  color: #000000;
+  width: 760px;
+  height: 1108px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 18, ../src/scss/_certificate.scss */
+#certificate #certificate_body {
+  border-style: solid;
+  border-color: black;
+  border-width: 10px;
+  position: relative;
+  padding: 40px;
+  height: 1008px;
+}
+/* line 27, ../src/scss/_certificate.scss */
+#certificate h2 {
+  border: none;
+}
+/* line 31, ../src/scss/_certificate.scss */
+#certificate #cert_footer {
+  border-top: 1px solid black;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+}
+/* line 38, ../src/scss/_certificate.scss */
+#certificate #cert_footer p {
+  margin: 4px;
+  font-size: 1em;
+}
+/* line 44, ../src/scss/_certificate.scss */
+#certificate #custom_text {
+  margin: 0 auto;
+  margin-top: 24px;
+  max-height: 340px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: justify;
+}
+/* line 53, ../src/scss/_certificate.scss */
+#certificate #academy_title {
+  margin: 8px;
+  font-size: 3em;
+  line-height: 1.2em;
+  overflow: hidden;
+}
+/* line 59, ../src/scss/_certificate.scss */
+#certificate h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 4em;
+  text-align: center;
+}
+/* line 64, ../src/scss/_certificate.scss */
+#certificate h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+/* line 68, ../src/scss/_certificate.scss */
+#certificate h3 {
+  font-size: 2em;
+  text-align: center;
+}
+/* line 73, ../src/scss/_certificate.scss */
+#certificate p {
+  text-align: center;
+  font-size: 1.5em;
+}
+/* line 78, ../src/scss/_certificate.scss */
+#certificate #signature p {
+  text-align: right;
+}
+
+/* line 83, ../src/scss/_certificate.scss */
+.rating_score {
+  padding: 12px;
+}
+/* line 85, ../src/scss/_certificate.scss */
+.rating_score ul {
+  margin: 12px;
+}
+/* line 88, ../src/scss/_certificate.scss */
+.rating_score li {
+  list-style: none;
+}
+
+@media print {
+  @page {
+    margin: 1.0cm;
+  }
+  /* line 98, ../src/scss/_certificate.scss */
+  #yc-root body {
+    padding: 0;
+    margin: 0;
+  }
+  /* line 103, ../src/scss/_certificate.scss */
+  #yc-root #content_wrap {
+    margin: 0;
+    padding: 0;
+  }
+  /* line 108, ../src/scss/_certificate.scss */
+  #yc-root #header, #yc-root aside, #yc-root footer {
+    display: none;
+  }
+  /* line 111, ../src/scss/_certificate.scss */
+  #yc-root article {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+  /* line 118, ../src/scss/_certificate.scss */
+  #yc-root #certificate {
+    width: auto;
+    height: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  /* line 125, ../src/scss/_certificate.scss */
+  #yc-root #certificate #academy_title {
+    font-size: 20pt;
+  }
+  /* line 128, ../src/scss/_certificate.scss */
+  #yc-root #certificate h1 {
+    font-size: 32pt;
+  }
+  /* line 131, ../src/scss/_certificate.scss */
+  #yc-root #certificate h2 {
+    font-size: 18pt;
+  }
+  /* line 134, ../src/scss/_certificate.scss */
+  #yc-root #certificate h3 {
+    font-size: 16pt;
+  }
+  /* line 138, ../src/scss/_certificate.scss */
+  #yc-root #certificate p {
+    text-align: center;
+    font-size: 14pt;
+  }
+  /* line 143, ../src/scss/_certificate.scss */
+  #yc-root #certificate #cert_footer p {
+    font-size: 12pt;
+  }
+  /* line 147, ../src/scss/_certificate.scss */
+  #yc-root #certificate_body {
+    width: auto;
+    height: 21cm !important;
+  }
+}
+/* line 36, ../src/scss/theme.scss */
 #yc-root.loaded #yc-wrap {
   display: block;
 }
