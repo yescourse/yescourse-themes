@@ -3,7 +3,7 @@
 
 @import "constants";
 
-.content-page {
+#yc-root.content-page {
   #branding, article {
     max-width: 100%;
     margin: 0 auto;
@@ -65,7 +65,7 @@
     }
   }
 
-  .tutor_info {
+  .tutor_info, #recent-posts {
     width: 274px;
     margin: 0 auto;
     a, h2 {
@@ -77,6 +77,13 @@
     @include respond_to(tablet_landscape) {
       float: right;
       margin-left: 24px;
+      clear: right;
+    }
+  }
+  #recent-posts {
+    ul {
+      margin: 0;
+      padding: 8px;
     }
   }
 }

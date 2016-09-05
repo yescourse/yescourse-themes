@@ -1,36 +1,38 @@
-#tutors h2 {
-  padding-top: 8px;
-}
-
-.tutor_info {
-  padding: 16px;
-  background-color: #32323a;
-  border-bottom: 1px solid #666666;
-
-  a {
-    display:block;
-    outline: none;
-    color: white;
+#yc-root {
+  #tutors h2 {
+    padding-top: 8px;
   }
 
-  .username {
-    color: white;
-    padding-left: 8px;
-    text-align: center;
-  }
-  img, .noimg {
-    vertical-align: middle;
-    display: block;
-    margin: 0 auto;
-  }
-  .noimg {
-    background: image-url('default_pic_200.png') no-repeat;
-    width: 200px;
-    height: 200px;
-  }
-  .headline {
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  .tutor_info {
+    padding: 16px;
+    background-color: #32323a;
+    border-bottom: 1px solid #666666;
+
+    a {
+      display: block;
+      outline: none;
+      color: white;
+    }
+
+    .username {
+      color: white;
+      padding-left: 8px;
+      text-align: center;
+    }
+    img, .noimg {
+      vertical-align: middle;
+      display: block;
+      margin: 0 auto;
+    }
+    .noimg {
+      background: image-url('default_pic_200.png') no-repeat;
+      width: 200px;
+      height: 200px;
+    }
+    .headline {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

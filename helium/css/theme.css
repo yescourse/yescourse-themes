@@ -1016,6 +1016,12 @@ iframe {
   }
 }
 
+/* line 312, ../src/scss/_base.scss */
+#yc-root .description img {
+  max-width: 100%;
+  height: auto !important;
+}
+
 /* line 106, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
@@ -1780,43 +1786,42 @@ html {
   background: url('../images/side_arrow.png?e11d73166bd5b211293cf83f5f4e12e3') no-repeat right 50%;
 }
 
-/* line 1, ../src/scss/blocks/_trainer_profiles.scss */
-#tutors h2 {
+/* line 2, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root #tutors h2 {
   padding-top: 8px;
 }
-
-/* line 5, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info {
+/* line 6, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info {
   padding: 16px;
   background-color: #32323a;
   border-bottom: 1px solid #666666;
 }
-/* line 10, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info a {
+/* line 11, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info a {
   display: block;
   outline: none;
   color: white;
 }
-/* line 16, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info .username {
+/* line 17, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info .username {
   color: white;
   padding-left: 8px;
   text-align: center;
 }
-/* line 21, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info img, .tutor_info .noimg {
+/* line 22, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info img, #yc-root .tutor_info .noimg {
   vertical-align: middle;
   display: block;
   margin: 0 auto;
 }
-/* line 26, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info .noimg {
+/* line 27, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info .noimg {
   background: url('../images/default_pic_200.png?bd81b82d253cc92f555c63a1b34a93ee') no-repeat;
   width: 200px;
   height: 200px;
 }
-/* line 31, ../src/scss/blocks/_trainer_profiles.scss */
-.tutor_info .headline {
+/* line 32, ../src/scss/blocks/_trainer_profiles.scss */
+#yc-root .tutor_info .headline {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -4188,82 +4193,82 @@ button.stripe-checkout span {
 }
 
 /* line 7, ../src/scss/_content_page.scss */
-.content-page #branding, .content-page article {
+#yc-root.content-page #branding, #yc-root.content-page article {
   max-width: 100%;
   margin: 0 auto;
 }
 /* line 12, ../src/scss/_content_page.scss */
-.content-page article {
+#yc-root.content-page article {
   padding: 0;
 }
 /* line 15, ../src/scss/_content_page.scss */
-.content-page .post-image {
+#yc-root.content-page .post-image {
   max-height: 600px;
   overflow: hidden;
 }
 /* line 18, ../src/scss/_content_page.scss */
-.content-page .post-image img {
+#yc-root.content-page .post-image img {
   display: block;
   width: 100%;
   height: auto;
 }
 /* line 25, ../src/scss/_content_page.scss */
-.content-page #blog-post {
+#yc-root.content-page #blog-post {
   padding: 10px;
   max-width: 1600px;
   margin: 0 auto;
 }
 /* line 29, ../src/scss/_content_page.scss */
-.content-page #blog-post img {
+#yc-root.content-page #blog-post img {
   display: block;
   margin: 24px auto;
 }
 /* line 34, ../src/scss/_content_page.scss */
-.content-page #reply-template {
+#yc-root.content-page #reply-template {
   display: none;
 }
 /* line 37, ../src/scss/_content_page.scss */
-.content-page label[for="id_html"] {
+#yc-root.content-page label[for="id_html"] {
   display: none;
 }
 /* line 40, ../src/scss/_content_page.scss */
-.content-page #id_html {
+#yc-root.content-page #id_html {
   border: 1px solid #bbbbbb;
 }
 /* line 44, ../src/scss/_content_page.scss */
-.content-page .textarea-wrap {
+#yc-root.content-page .textarea-wrap {
   padding: 0;
 }
 /* line 47, ../src/scss/_content_page.scss */
-.content-page textarea {
+#yc-root.content-page textarea {
   border: 1px solid #b1bad9;
   display: block;
   width: 100%;
 }
 /* line 54, ../src/scss/_content_page.scss */
-.content-page.has-image #blog-post {
+#yc-root.content-page.has-image #blog-post {
   position: relative;
   top: -110px;
 }
 /* line 57, ../src/scss/_content_page.scss */
-.content-page.has-image #blog-post h1 {
+#yc-root.content-page.has-image #blog-post h1 {
   padding: 24px;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
   /* line 57, ../src/scss/_content_page.scss */
-  .content-page.has-image #blog-post h1 {
+  #yc-root.content-page.has-image #blog-post h1 {
     text-align: left;
   }
 }
 /* line 68, ../src/scss/_content_page.scss */
-.content-page .tutor_info {
+#yc-root.content-page .tutor_info, #yc-root.content-page #recent-posts {
   width: 274px;
   margin: 0 auto;
 }
 /* line 71, ../src/scss/_content_page.scss */
-.content-page .tutor_info a, .content-page .tutor_info h2 {
+#yc-root.content-page .tutor_info a, #yc-root.content-page .tutor_info h2, #yc-root.content-page #recent-posts a, #yc-root.content-page #recent-posts h2 {
   border: none;
   text-decoration: none;
   padding: 0;
@@ -4271,10 +4276,16 @@ button.stripe-checkout span {
 }
 @media screen and (min-width: 1024px) {
   /* line 68, ../src/scss/_content_page.scss */
-  .content-page .tutor_info {
+  #yc-root.content-page .tutor_info, #yc-root.content-page #recent-posts {
     float: right;
     margin-left: 24px;
+    clear: right;
   }
+}
+/* line 84, ../src/scss/_content_page.scss */
+#yc-root.content-page #recent-posts ul {
+  margin: 0;
+  padding: 8px;
 }
 
 /* line 34, ../src/scss/theme.scss */
