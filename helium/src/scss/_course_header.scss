@@ -51,18 +51,51 @@
   }
 }
 
-.page_header {
+.course-page, .lesson-page, .module-page {
+  #module_nav {
+    @include respond_to(tablet_landscape) {
+      h1, h2 {
+        padding-left: $ASIDE_WIDTH + 36px;
+      }
+      .banner_link {
+        padding-left: $ASIDE_WIDTH+10px;
+        width: 1024px + $ASIDE_WIDTH+10px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+#yc-page .page_header {
   height: $SITE_HEADER_HEIGHT;
   color: #007C72;
   background: rgba(0, 0, 0, 0.067);
   h1 {
     font-size: 22px;
     line-height: $SITE_HEADER_HEIGHT;
-    padding: 0 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+}
+
+#lesson_header {
+  background: rgba(0,0,0,0.067);
+}
+
+#scrollheader {
+  display: none;
+  @include respond_to(tablet_landscape) {
+    display: block;
+    position: fixed;
+    z-index: $COURSE_HEADER_Z_INDEX + 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 }
 

@@ -23,6 +23,23 @@
     height: $SITE_HEADER_HEIGHT;
     font-size: 18px;
 
+
+    a#logo {
+      font-size: 18px;
+      line-height: $SITE_HEADER_HEIGHT;
+      padding: 0 4px 0 28px;
+      background: image-url('logo20.png') 4px center no-repeat;
+      text-transform: uppercase;
+      color: #959394; // grey for the 'Course' part of the logo
+      .yes {
+        color: #398daf;//#1863a4; // blue for the 'Yes' part of the logo
+      }
+      display: inline-block;
+      width: image-width('logo20.png');
+      height: $SITE_HEADER_HEIGHT;
+      //text-indent: -5000px;
+    }
+
     img.academy-logo {
       height: $SITE_HEADER_HEIGHT;
       margin: 0;
@@ -81,6 +98,14 @@
         height: 26px;
         border: 1px solid white;
         border-radius: 2px;
+      }
+    }
+
+    .login {
+      text-align: center;
+      padding: 0 10px;
+      &:before {
+        display: none;
       }
     }
 
@@ -154,6 +179,10 @@
           }
         }
 
+        a.admin_link {
+          background-color: #d0d8e5;
+          background-image: image-url('admin_icon.png');
+        }
         a.logout_link {
           background-image: image-url('log_out.png');
         }
