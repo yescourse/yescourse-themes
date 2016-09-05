@@ -2145,12 +2145,12 @@ html {
   position: absolute;
 }
 
-/* line 7, ../src/scss/_forms.scss */
+/* line 10, ../src/scss/_forms.scss */
 .user_form {
   padding: 0;
   background: transparent;
 }
-/* line 10, ../src/scss/_forms.scss */
+/* line 13, ../src/scss/_forms.scss */
 .user_form .field {
   height: 37px;
   max-width: 100%;
@@ -2159,7 +2159,7 @@ html {
   width: 100%;
   margin: 0 0 16px 0;
 }
-/* line 18, ../src/scss/_forms.scss */
+/* line 21, ../src/scss/_forms.scss */
 .user_form .field label {
   display: table-cell;
   width: 36px;
@@ -2168,7 +2168,7 @@ html {
   vertical-align: top;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 27, ../src/scss/_forms.scss */
+/* line 30, ../src/scss/_forms.scss */
 .user_form .field input {
   display: table-cell;
   width: 100%;
@@ -2181,7 +2181,7 @@ html {
   padding: 0 12px;
   border-radius: 0;
 }
-/* line 42, ../src/scss/_forms.scss */
+/* line 45, ../src/scss/_forms.scss */
 .user_form .field .wrap {
   display: table-cell;
   width: auto;
@@ -2190,43 +2190,43 @@ html {
   background-color: #5a688b;
   padding: 9px 12px;
 }
-/* line 49, ../src/scss/_forms.scss */
+/* line 52, ../src/scss/_forms.scss */
 .user_form .field .wrap .sublabel {
   color: #aaaaaa;
   font-size: 12px;
   font-weight: bold;
 }
-/* line 57, ../src/scss/_forms.scss */
+/* line 60, ../src/scss/_forms.scss */
 .user_form textarea {
   display: block;
   width: 100%;
   min-height: 160px;
   margin: 12px 0;
 }
-/* line 64, ../src/scss/_forms.scss */
+/* line 67, ../src/scss/_forms.scss */
 .user_form img.profile_img {
   vertical-align: middle;
   margin: 0 12px 0 0;
 }
-/* line 69, ../src/scss/_forms.scss */
+/* line 72, ../src/scss/_forms.scss */
 .user_form ul.reply {
   padding: 0;
 }
-/* line 73, ../src/scss/_forms.scss */
+/* line 76, ../src/scss/_forms.scss */
 .user_form .error {
   border: 2px solid red;
 }
-/* line 76, ../src/scss/_forms.scss */
+/* line 79, ../src/scss/_forms.scss */
 .user_form .errorlist {
   margin: 0;
   padding: 0 12px;
   border-radius: 0;
 }
-/* line 80, ../src/scss/_forms.scss */
+/* line 83, ../src/scss/_forms.scss */
 .user_form .errorlist li {
   list-style: none;
 }
-/* line 86, ../src/scss/_forms.scss */
+/* line 89, ../src/scss/_forms.scss */
 .user_form .email label, .user_form .username label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2236,7 +2236,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 92, ../src/scss/_forms.scss */
+/* line 95, ../src/scss/_forms.scss */
 .user_form .password label, .user_form .password1 label, .user_form .password2 label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2246,7 +2246,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 98, ../src/scss/_forms.scss */
+/* line 101, ../src/scss/_forms.scss */
 .user_form .first_name label, .user_form .last_name label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2256,7 +2256,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 104, ../src/scss/_forms.scss */
+/* line 107, ../src/scss/_forms.scss */
 .user_form .mobile label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2266,7 +2266,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 110, ../src/scss/_forms.scss */
+/* line 113, ../src/scss/_forms.scss */
 .user_form .country label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2276,7 +2276,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 116, ../src/scss/_forms.scss */
+/* line 119, ../src/scss/_forms.scss */
 .user_form .timezone label {
   text-indent: -119988px;
   overflow: hidden;
@@ -2286,7 +2286,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 121, ../src/scss/_forms.scss */
+/* line 124, ../src/scss/_forms.scss */
 .user_form input[type=submit], .user_form button {
   border: 2px solid #c27a0b;
   border-top-color: #e5a213;
@@ -2309,22 +2309,22 @@ html {
   background-image: linear-gradient(to bottom, #fac960 0%, #e79317 100%);
 }
 
-/* line 142, ../src/scss/_forms.scss */
+/* line 145, ../src/scss/_forms.scss */
 ul.form-errors {
   display: none;
 }
 
-/* line 147, ../src/scss/_forms.scss */
+/* line 150, ../src/scss/_forms.scss */
 ul.field-errors {
   display: none;
 }
 
-/* line 152, ../src/scss/_forms.scss */
+/* line 155, ../src/scss/_forms.scss */
 .error ul.form-errors, .error ul.field-errors.active {
   display: block;
 }
 
-/* line 157, ../src/scss/_forms.scss */
+/* line 160, ../src/scss/_forms.scss */
 #yc-dialog {
   display: none;
   z-index: 2100;
@@ -2335,7 +2335,7 @@ ul.field-errors {
   padding: 0 0 30px 0;
   overflow: hidden;
 }
-/* line 167, ../src/scss/_forms.scss */
+/* line 170, ../src/scss/_forms.scss */
 #yc-dialog h1, #yc-dialog h3 {
   background-color: #616c88;
   *zoom: 1;
@@ -2359,15 +2359,15 @@ ul.field-errors {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 188, ../src/scss/_forms.scss */
+/* line 191, ../src/scss/_forms.scss */
 #yc-dialog h4 {
   padding: 0 0 0 27px;
 }
-/* line 192, ../src/scss/_forms.scss */
+/* line 195, ../src/scss/_forms.scss */
 #yc-dialog > form, #yc-dialog > p {
   padding: 0 27px;
 }
-/* line 196, ../src/scss/_forms.scss */
+/* line 199, ../src/scss/_forms.scss */
 #yc-dialog .terms {
   color: #444;
   background-color: #fefacb;
@@ -2376,14 +2376,14 @@ ul.field-errors {
   font-size: 0.8em;
   line-height: 1.5em;
 }
-/* line 205, ../src/scss/_forms.scss */
+/* line 208, ../src/scss/_forms.scss */
 #yc-dialog .form_errors_nonfield {
   margin: 0 27px 12px;
   padding: 0;
   background-color: transparent;
   border: none;
 }
-/* line 210, ../src/scss/_forms.scss */
+/* line 213, ../src/scss/_forms.scss */
 #yc-dialog .form_errors_nonfield p {
   padding: 0 12px;
   margin: 0;
@@ -2391,23 +2391,23 @@ ul.field-errors {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
-/* line 217, ../src/scss/_forms.scss */
+/* line 220, ../src/scss/_forms.scss */
 #yc-dialog .form_errors_nonfield ul {
   padding: 0;
   margin: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-/* line 225, ../src/scss/_forms.scss */
+/* line 228, ../src/scss/_forms.scss */
 #yc-dialog li {
   display: block;
 }
-/* line 229, ../src/scss/_forms.scss */
+/* line 232, ../src/scss/_forms.scss */
 #yc-dialog #enrol_block {
   background-color: #616c88;
   color: #ffffff;
 }
-/* line 232, ../src/scss/_forms.scss */
+/* line 235, ../src/scss/_forms.scss */
 #yc-dialog #enrol_block a {
   margin: 0 0 24px 27px;
   color: #000000;
@@ -2418,12 +2418,12 @@ ul.field-errors {
   padding: 0 8px;
   border-radius: 12px;
 }
-/* line 244, ../src/scss/_forms.scss */
+/* line 247, ../src/scss/_forms.scss */
 #yc-dialog table.user_details {
   margin: 27px;
   width: auto;
 }
-/* line 248, ../src/scss/_forms.scss */
+/* line 251, ../src/scss/_forms.scss */
 #yc-dialog table.user_details th {
   height: 36px;
   background-color: #343e59;
@@ -2433,79 +2433,79 @@ ul.field-errors {
   padding: 10px 8px 0 36px;
 }
 @media screen and (min-width: 480px) {
-  /* line 248, ../src/scss/_forms.scss */
+  /* line 251, ../src/scss/_forms.scss */
   #yc-dialog table.user_details th {
     min-width: 150px;
   }
 }
-/* line 260, ../src/scss/_forms.scss */
+/* line 263, ../src/scss/_forms.scss */
 #yc-dialog table.user_details th.full_name {
   background: #343e59 url('../images/user_icon.png?143bf8d4994a13acee18144b6a1e91a3') no-repeat 10px 50%;
 }
-/* line 264, ../src/scss/_forms.scss */
+/* line 267, ../src/scss/_forms.scss */
 #yc-dialog table.user_details th.email {
   background: #343e59 url('../images/mail_icon.png?493008eb13071da8ef594553fa64ec89') no-repeat 10px 50%;
 }
-/* line 268, ../src/scss/_forms.scss */
+/* line 271, ../src/scss/_forms.scss */
 #yc-dialog table.user_details th.country {
   background: #343e59 url('../images/country.png?481702a26d8f991304ac5e5373883cad') no-repeat 10px 50%;
 }
-/* line 272, ../src/scss/_forms.scss */
+/* line 275, ../src/scss/_forms.scss */
 #yc-dialog table.user_details th.mobile {
   background: #343e59 url('../images/mobile_icon.png?a849ce9ffccf69f29434b0ff9a3afa00') no-repeat 10px 50%;
 }
-/* line 277, ../src/scss/_forms.scss */
+/* line 280, ../src/scss/_forms.scss */
 #yc-dialog table.user_details td {
   width: 100%;
   color: #333333;
 }
 @media screen and (min-width: 1024px) {
-  /* line 157, ../src/scss/_forms.scss */
+  /* line 160, ../src/scss/_forms.scss */
   #yc-dialog {
     width: 610px;
     margin: 0 auto;
   }
 }
 
-/* line 290, ../src/scss/_forms.scss */
+/* line 293, ../src/scss/_forms.scss */
 .dialog-active #yc-dialog {
   display: block;
 }
 
-/* line 296, ../src/scss/_forms.scss */
+/* line 299, ../src/scss/_forms.scss */
 .enrol .course_buy {
   margin: 0 auto;
   background-color: #616c88;
   padding: 12px;
 }
-/* line 301, ../src/scss/_forms.scss */
+/* line 304, ../src/scss/_forms.scss */
 .enrol .buy_block {
   margin: 12px auto;
   max-width: 400px;
   text-align: center;
 }
 
-/* line 309, ../src/scss/_forms.scss */
+/* line 312, ../src/scss/_forms.scss */
 .registered .email {
   color: lime;
 }
 
-/* line 316, ../src/scss/_forms.scss */
+/* line 319, ../src/scss/_forms.scss */
 .activate article h2, .activate article p {
   text-align: center;
 }
-/* line 319, ../src/scss/_forms.scss */
+/* line 322, ../src/scss/_forms.scss */
 .activate article a {
   font-size: 24px;
   color: #ffff00;
 }
 
-/* line 327, ../src/scss/_forms.scss */
+/* line 330, ../src/scss/_forms.scss */
 #PPDGFrame .panel iframe {
   background: #ffffff url("https://www.paypal.com/en_US/i/icon/icon_animated_prog_42wx42h.gif") no-repeat center center;
 }
 
-/* line 331, ../src/scss/_forms.scss */
+/* line 334, ../src/scss/_forms.scss */
 button.stripe-checkout {
   overflow: hidden;
   display: inline-block;
@@ -2519,7 +2519,7 @@ button.stripe-checkout {
   -moz-user-select: none;
   cursor: pointer;
 }
-/* line 343, ../src/scss/_forms.scss */
+/* line 346, ../src/scss/_forms.scss */
 button.stripe-checkout span {
   position: relative;
   padding: 0 12px;
@@ -2537,27 +2537,27 @@ button.stripe-checkout span {
   min-height: 30px;
 }
 
-/* line 363, ../src/scss/_forms.scss */
+/* line 366, ../src/scss/_forms.scss */
 #yc-dialog .course_buy {
   text-align: center;
 }
-/* line 365, ../src/scss/_forms.scss */
+/* line 368, ../src/scss/_forms.scss */
 #yc-dialog .course_buy h4 {
   text-align: center;
   font-size: 24px;
   line-height: 24px;
 }
-/* line 370, ../src/scss/_forms.scss */
+/* line 373, ../src/scss/_forms.scss */
 #yc-dialog .course_buy form {
   margin: 12px;
 }
-/* line 373, ../src/scss/_forms.scss */
+/* line 376, ../src/scss/_forms.scss */
 #yc-dialog .course_buy .coupon-code-link {
   display: block;
   text-align: center;
 }
 
-/* line 380, ../src/scss/_forms.scss */
+/* line 383, ../src/scss/_forms.scss */
 #dialog-close {
   position: absolute;
   right: 12px;
@@ -2573,14 +2573,216 @@ button.stripe-checkout span {
   width: 21px;
   height: 21px;
 }
-/* line 386, ../src/scss/_forms.scss */
+/* line 389, ../src/scss/_forms.scss */
 #dialog-close:hover {
   opacity: 0.5;
 }
 
-/* line 392, ../src/scss/_forms.scss */
+/* line 395, ../src/scss/_forms.scss */
 .course_page form {
   background-color: transparent;
+}
+
+/* line 401, ../src/scss/_forms.scss */
+#yc-root form {
+  background-color: #3c425c;
+  padding: 10px;
+}
+/* line 404, ../src/scss/_forms.scss */
+#yc-root form table, #yc-root form tr, #yc-root form th, #yc-root form td, #yc-root form table, #yc-root form ul, #yc-root form p, #yc-root form label {
+  background-color: #3c425c;
+  color: #d4d4d6;
+  border: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+/* line 411, ../src/scss/_forms.scss */
+#yc-root form select {
+  font-size: 20px;
+  line-height: 20px;
+}
+/* line 415, ../src/scss/_forms.scss */
+#yc-root form textarea {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px;
+}
+/* line 420, ../src/scss/_forms.scss */
+#yc-root form ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 424, ../src/scss/_forms.scss */
+#yc-root form li {
+  list-style: none !important;
+}
+/* line 429, ../src/scss/_forms.scss */
+#yc-root .attach-input label {
+  display: none;
+}
+/* line 433, ../src/scss/_forms.scss */
+#yc-root label {
+  font-weight: bold;
+  display: block;
+}
+/* line 438, ../src/scss/_forms.scss */
+#yc-root input[type=text], #yc-root input[type=password], #yc-root input[type=email], #yc-root input[type=number], #yc-root input[type=url] {
+  background-color: #868eb5;
+  color: white;
+  border-top: 2px solid #22252e;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 44px;
+  padding: 0 0 0 14px;
+}
+/* line 453, ../src/scss/_forms.scss */
+#yc-root textarea {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+}
+/* line 459, ../src/scss/_forms.scss */
+#yc-root input[type=submit], #yc-root #upload_button {
+  color: #0f0e0c;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  height: 36px;
+  padding: 0 32px;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+/* line 468, ../src/scss/_forms.scss */
+#yc-root input[type=submit]:not(.new_comment_submit), #yc-root #upload_button:not(.new_comment_submit) {
+  height: 50px;
+  border-radius: 4px;
+  background-color: #f4d143;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF4D143', endColorstr='#FFE08210');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZDE0MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2UwODIxMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4d143), color-stop(100%, #e08210));
+  background-image: -moz-linear-gradient(top, #f4d143 0%, #e08210 100%);
+  background-image: -webkit-linear-gradient(top, #f4d143 0%, #e08210 100%);
+  background-image: linear-gradient(to bottom, #f4d143 0%, #e08210 100%);
+  border: 1px solid #e9a921;
+  border-top-color: #fbf2b9;
+}
+/* line 479, ../src/scss/_forms.scss */
+#yc-root select {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+}
+/* line 485, ../src/scss/_forms.scss */
+#yc-root input[type="radio"] {
+  vertical-align: middle;
+}
+/* line 489, ../src/scss/_forms.scss */
+#yc-root .field {
+  margin-bottom: 52px;
+}
+/* line 491, ../src/scss/_forms.scss */
+#yc-root .field input, #yc-root .field select, #yc-root .field textarea, #yc-root .field .cke_chrome {
+  margin-top: 12px;
+  max-width: 850px;
+}
+/* line 495, ../src/scss/_forms.scss */
+#yc-root .field ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 498, ../src/scss/_forms.scss */
+#yc-root .field ul label {
+  font-size: 14px;
+  line-height: 14px;
+  padding-top: 3px;
+  color: white;
+  font-weight: normal;
+  margin: 12px 0 0 0;
+}
+/* line 505, ../src/scss/_forms.scss */
+#yc-root .field ul label input {
+  margin: 0;
+}
+/* line 510, ../src/scss/_forms.scss */
+#yc-root .field li {
+  list-style: none !important;
+}
+/* line 514, ../src/scss/_forms.scss */
+#yc-root .field.error input[type=text] {
+  background-color: #c57574;
+}
+/* line 520, ../src/scss/_forms.scss */
+#yc-root .field:not(.required) label:after {
+  content: ' (Optional)';
+  color: #888888;
+}
+/* line 526, ../src/scss/_forms.scss */
+#yc-root .field span.help_text {
+  font-size: 12.5px;
+  line-height: 12px;
+  color: #888888;
+  text-align: left;
+}
+/* line 535, ../src/scss/_forms.scss */
+#yc-root .form_errors_nonfield li, #yc-root .errorlist li {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  height: 28px;
+  padding: 8px;
+  background-color: #c70100;
+  margin: 0;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFC70100', endColorstr='#FF860000');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2M3MDEwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2MDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #c70100), color-stop(100%, #860000));
+  background-image: -moz-linear-gradient(top, #c70100 1%, #860000 100%);
+  background-image: -webkit-linear-gradient(top, #c70100 1%, #860000 100%);
+  background-image: linear-gradient(to bottom, #c70100 1%, #860000 100%);
+}
+/* line 550, ../src/scss/_forms.scss */
+#yc-root .field .errorlist li {
+  position: relative;
+  margin-top: 10px;
+}
+/* line 554, ../src/scss/_forms.scss */
+#yc-root .field .errorlist li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #c70100;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  margin: 0 auto;
+}
+/* line 570, ../src/scss/_forms.scss */
+#yc-root .form_errors_nonfield {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/* line 576, ../src/scss/_forms.scss */
+#yc-root .errorlist {
+  border: none;
+}
+/* line 580, ../src/scss/_forms.scss */
+#yc-root textarea.ckloading {
+  background: url('../images/loading.gif?be1cede97289c13920048f238fd37b85') no-repeat scroll center center transparent;
+  color: transparent;
 }
 
 /* line 7, ../src/scss/_site_header.scss */

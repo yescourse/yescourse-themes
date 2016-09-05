@@ -3,6 +3,9 @@
 @import "ycthemelib/responsive";
 
 $USER_FORMS_FIELD_HEIGHT: 37px;
+$FORM_BACKGROUND_COLOUR: #3c425c;
+$VERTICAL_MARGIN_BETWEEN_FIELDS: 52px;
+$FIELD_MAX_WIDTH: 800px;
 
 .user_form {
   padding: 0;
@@ -391,5 +394,191 @@ button.stripe-checkout { // copied from stripe styling
 .course_page {
   form {
     background-color: transparent;
+  }
+}
+
+#yc-root {
+  form {
+    background-color: $FORM_BACKGROUND_COLOUR;
+    padding: 10px;
+    table, tr, th, td, table, ul, p, label {
+      background-color: $FORM_BACKGROUND_COLOUR;
+      color: #d4d4d6;
+      border: none;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    select {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    textarea {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 8px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      list-style: none !important;
+    }
+  }
+
+  .attach-input label {
+    display: none;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {
+    background-color: #868eb5;
+    color: white;
+    border-top: 2px solid #22252e;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    max-width: $FIELD_MAX_WIDTH;
+    height: 44px;
+    padding: 0 0 0 14px;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: $FIELD_MAX_WIDTH;
+    display: block;
+  }
+
+  input[type=submit], #upload_button {
+    color: #0f0e0c;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 36px;
+    padding: 0 32px;
+    margin-top: 8px;
+    margin-right: 20px;
+    &:not(.new_comment_submit) {
+      height: 50px;
+      border-radius: 4px;
+      background-color: #f4d143; // Old browsers
+      @include filter-gradient(#f4d143, #e08210, vertical); // IE6-9
+      @include background-image(linear-gradient(top, #f4d143 0%, #e08210 100%));
+      border: 1px solid #e9a921;
+      border-top-color: #fbf2b9;
+    }
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    max-width: $FIELD_MAX_WIDTH;
+  }
+
+  input[type="radio"] {
+    vertical-align: middle;
+  }
+
+  .field {
+    margin-bottom: $VERTICAL_MARGIN_BETWEEN_FIELDS;
+    input, select, textarea, .cke_chrome {
+      margin-top: 12px;
+      max-width: 850px;
+    }
+    ul { // radio selects are rendered inside a ul
+      padding: 0;
+      margin: 0;
+      label {
+        font-size: 14px;
+        line-height: 14px;
+        padding-top: 3px;
+        color: white;
+        font-weight: normal;
+        margin: 12px 0 0 0;
+        input {
+          margin: 0;
+        }
+      }
+    }
+    li {
+      list-style: none !important;
+    }
+    &.error { // specific field styles on error
+      input[type=text] {
+        background-color: #c57574;
+      }
+    }
+
+    &:not(.required) {
+      label:after {
+        content: ' (Optional)';
+        color: #888888;
+      }
+    }
+
+    span.help_text {
+      font-size: 12.5px;
+      line-height: 12px;
+      color: #888888;
+      text-align: left;
+    }
+  }
+
+  .form_errors_nonfield, .errorlist {
+    li {
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      height: 28px;
+      padding: 8px;
+      background-color: #c70100; // Old browsers
+      margin: 0;
+      @include filter-gradient(#c70100, #860000, vertical); // IE6-9
+      @include background-image(linear-gradient(top, #c70100 1%, #860000 100%));
+    }
+  }
+
+  .field .errorlist li { // when rendered using the forms template
+    // draw the upward pointing triangle in CSS
+    position: relative;
+    margin-top: 10px;
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #c70100;
+      // position the triangle above the li
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: 8px;
+      margin: 0 auto;
+    }
+  }
+
+  .form_errors_nonfield {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .errorlist {
+    border: none;
+  }
+
+  textarea.ckloading {
+    background: image-url('loading.gif') no-repeat scroll center center transparent;
+    color: rgba(0, 0, 0, 0);
   }
 }
