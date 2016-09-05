@@ -1129,22 +1129,20 @@ html {
 #yc-root form p {
   text-align: left;
 }
-
 /* line 89, ../src/scss/_typography.scss */
-#comments_title {
+#yc-root #comments_title {
   font-size: 1.5em;
   line-height: 2em;
   font-family: "Lemon", "Comic Sans MS", monospace;
 }
-
 /* line 94, ../src/scss/_typography.scss */
-#comments, #comments p {
+#yc-root #comments, #yc-root #comments p {
   font-size: 1em;
   line-height: 1.5em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 98, ../src/scss/_typography.scss */
-#comments .user_name, #comments p .user_name {
+#yc-root #comments .user_name, #yc-root #comments p .user_name {
   font-weight: bold;
 }
 
@@ -3074,31 +3072,31 @@ button.stripe-checkout span {
 }
 
 /* line 16, ../src/scss/_lesson_page.scss */
-.lesson-page article h2 {
+#yc-root.lesson-page article h2 {
   color: #007c72;
   font-size: 22px;
 }
 @media screen and (min-width: 1024px) {
   /* line 23, ../src/scss/_lesson_page.scss */
-  .lesson-page .page_header h1 {
+  #yc-root.lesson-page .page_header h1 {
     padding-left: 340px;
   }
 }
 /* line 31, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2 {
+#yc-root.lesson-page aside h2 {
   color: #fffffd;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
 /* line 38, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2.lessons, .lesson-page aside h2.modules {
+#yc-root.lesson-page aside h2.lessons, #yc-root.lesson-page aside h2.modules {
   position: relative;
   padding-top: 40px;
   margin: 0 12px 20px 12px;
 }
 /* line 43, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2.lessons::before, .lesson-page aside h2.modules::before {
+#yc-root.lesson-page aside h2.lessons::before, #yc-root.lesson-page aside h2.modules::before {
   content: '';
   position: relative;
   top: -10px;
@@ -3113,23 +3111,23 @@ button.stripe-checkout span {
   border-radius: 50%;
 }
 /* line 57, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2.lessons a, .lesson-page aside h2.modules a {
+#yc-root.lesson-page aside h2.lessons a, #yc-root.lesson-page aside h2.modules a {
   color: #ffffff;
 }
 /* line 62, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2.lessons {
+#yc-root.lesson-page aside h2.lessons {
   background: url('../images/lesson.png?f6e91ee8fdeaedbac475562d47614f92') no-repeat 50% 30px;
 }
 /* line 65, ../src/scss/_lesson_page.scss */
-.lesson-page aside h2.modules {
+#yc-root.lesson-page aside h2.modules {
   background: url('../images/modules_icon.png?1fabd1ecbefd8d7ee57956ed3b12bd71') no-repeat 50% 30px;
 }
 /* line 70, ../src/scss/_lesson_page.scss */
-.lesson-page form {
+#yc-root.lesson-page form {
   background-color: transparent;
 }
 /* line 75, ../src/scss/_lesson_page.scss */
-.lesson-page .lesson_nav li {
+#yc-root.lesson-page .lesson_nav li {
   display: inline-block;
   height: 32px;
   width: 100px;
@@ -3138,38 +3136,38 @@ button.stripe-checkout span {
   line-height: 32px;
 }
 /* line 82, ../src/scss/_lesson_page.scss */
-.lesson-page .lesson_nav li a {
+#yc-root.lesson-page .lesson_nav li a {
   display: inline-block;
   width: 100%;
   height: 100%;
   border-radius: 4px;
 }
 /* line 89, ../src/scss/_lesson_page.scss */
-.lesson-page .lesson_nav ul {
+#yc-root.lesson-page .lesson_nav ul {
   padding: 0;
 }
 /* line 94, ../src/scss/_lesson_page.scss */
-.lesson-page .prev_link a {
+#yc-root.lesson-page .prev_link a {
   background-color: #4c526c;
   color: white;
 }
 /* line 98, ../src/scss/_lesson_page.scss */
-.lesson-page .no_prev_link {
+#yc-root.lesson-page .no_prev_link {
   background-color: #d6d6d6;
   color: black;
 }
 /* line 102, ../src/scss/_lesson_page.scss */
-.lesson-page .next_link a {
+#yc-root.lesson-page .next_link a {
   background-color: #4c526c;
   color: white;
 }
 /* line 106, ../src/scss/_lesson_page.scss */
-.lesson-page .no_next_link {
+#yc-root.lesson-page .no_next_link {
   background-color: #d6d6d6;
   color: black;
 }
 /* line 110, ../src/scss/_lesson_page.scss */
-.lesson-page .all_link a {
+#yc-root.lesson-page .all_link a {
   background-color: #4c526c;
   color: white;
 }
