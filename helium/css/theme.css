@@ -3295,13 +3295,13 @@ button.stripe-checkout span {
 }
 
 /* line 69, ../src/scss/_course_header.scss */
-#yc-page .page_header {
+#yc-root .page_header {
   height: 36px;
   color: #007C72;
   background: rgba(0, 0, 0, 0.067);
 }
 /* line 73, ../src/scss/_course_header.scss */
-#yc-page .page_header h1 {
+#yc-root .page_header h1 {
   font-size: 22px;
   line-height: 36px;
   padding-top: 4px;
@@ -3922,32 +3922,36 @@ button.stripe-checkout span {
 .course-sales-page #header {
   display: none;
 }
-/* line 10, ../src/scss/_sales_page.scss */
+/* line 9, ../src/scss/_sales_page.scss */
+.course-sales-page #module_nav {
+  display: none;
+}
+/* line 13, ../src/scss/_sales_page.scss */
 .course-sales-page.has-page-header #header {
   display: block;
 }
 @media screen and (min-width: 1024px) {
-  /* line 10, ../src/scss/_sales_page.scss */
+  /* line 13, ../src/scss/_sales_page.scss */
   .course-sales-page.has-page-header #header {
     position: static !important;
   }
 }
-/* line 18, ../src/scss/_sales_page.scss */
+/* line 21, ../src/scss/_sales_page.scss */
 .course-sales-page.guest #user_links {
   display: none;
 }
-/* line 23, ../src/scss/_sales_page.scss */
+/* line 26, ../src/scss/_sales_page.scss */
 .course-sales-page #prebanner {
   padding: 12px 0;
 }
 @media screen and (min-width: 1024px) {
-  /* line 23, ../src/scss/_sales_page.scss */
+  /* line 26, ../src/scss/_sales_page.scss */
   .course-sales-page #prebanner {
     width: 1024px;
     margin: 0 auto;
   }
 }
-/* line 31, ../src/scss/_sales_page.scss */
+/* line 34, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner {
   display: block;
   margin: 10px 0 0 0;
@@ -3955,25 +3959,25 @@ button.stripe-checkout span {
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
-  /* line 31, ../src/scss/_sales_page.scss */
+  /* line 34, ../src/scss/_sales_page.scss */
   .course-sales-page #sales_banner {
     margin: 0;
     padding: 80px 0 56px 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 42, ../src/scss/_sales_page.scss */
+  /* line 45, ../src/scss/_sales_page.scss */
   .course-sales-page #sales_banner .wrap {
     width: 1024px;
     margin: 0 auto;
   }
 }
-/* line 49, ../src/scss/_sales_page.scss */
+/* line 52, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .course_visual {
   max-width: 854px;
   margin: 0 auto 24px;
 }
-/* line 52, ../src/scss/_sales_page.scss */
+/* line 55, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .course_visual img, .course-sales-page #sales_banner .course_visual #videobox {
   display: block;
   width: 854px;
@@ -3982,13 +3986,13 @@ button.stripe-checkout span {
   max-height: 480px;
   margin: 0 auto;
 }
-/* line 62, ../src/scss/_sales_page.scss */
+/* line 65, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .course_visual #videobox {
   position: relative;
   padding-bottom: 56.25% !important;
   height: 0 !important;
 }
-/* line 66, ../src/scss/_sales_page.scss */
+/* line 69, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .course_visual #videobox iframe {
   position: absolute;
   top: 0;
@@ -3996,29 +4000,29 @@ button.stripe-checkout span {
   width: 100%;
   height: 100%;
 }
-/* line 76, ../src/scss/_sales_page.scss */
+/* line 79, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text {
   max-width: 854px;
   margin: 0 auto;
 }
-/* line 80, ../src/scss/_sales_page.scss */
+/* line 83, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text.custom {
   padding: 14px;
 }
-/* line 84, ../src/scss/_sales_page.scss */
+/* line 87, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text .course_buy, .course-sales-page #sales_banner .banner_text .social {
   margin: 0 auto;
 }
-/* line 88, ../src/scss/_sales_page.scss */
+/* line 91, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text .social {
   max-width: 240px;
 }
-/* line 92, ../src/scss/_sales_page.scss */
+/* line 95, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text .course_headline {
   margin: 0 auto;
   clear: none;
 }
-/* line 96, ../src/scss/_sales_page.scss */
+/* line 99, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text .course_headline h1 {
   display: block;
   text-transform: uppercase;
@@ -4028,7 +4032,7 @@ button.stripe-checkout span {
   padding: 0;
   margin: 0 0 12px 0;
 }
-/* line 105, ../src/scss/_sales_page.scss */
+/* line 108, ../src/scss/_sales_page.scss */
 .course-sales-page #sales_banner .banner_text .course_headline .tag_line {
   text-align: center;
   font-size: 16px;
@@ -4036,34 +4040,34 @@ button.stripe-checkout span {
   margin: 0 0 30px 0;
   padding: 0;
 }
-/* line 118, ../src/scss/_sales_page.scss */
+/* line 121, ../src/scss/_sales_page.scss */
 .course-sales-page.banner-bg-cover #sales_banner {
   background-size: cover;
 }
-/* line 122, ../src/scss/_sales_page.scss */
+/* line 125, ../src/scss/_sales_page.scss */
 .course-sales-page.banner-bg-contain #sales_banner {
   background-size: contain;
 }
 @media screen and (min-width: 1024px) {
-  /* line 128, ../src/scss/_sales_page.scss */
+  /* line 131, ../src/scss/_sales_page.scss */
   .course-sales-page.banner-text-pos-left #sales_banner .course_visual {
     float: right;
     width: 480px;
   }
-  /* line 132, ../src/scss/_sales_page.scss */
+  /* line 135, ../src/scss/_sales_page.scss */
   .course-sales-page.banner-text-pos-left #sales_banner .banner_text {
     margin: 0;
     width: 532px;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 140, ../src/scss/_sales_page.scss */
+  /* line 143, ../src/scss/_sales_page.scss */
   .course-sales-page.banner-text-pos-right #sales_banner .banner_text {
     margin: 0 0 0 538px;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 145, ../src/scss/_sales_page.scss */
+  /* line 148, ../src/scss/_sales_page.scss */
   .course-sales-page.banner-text-pos-right #sales_banner .course_visual {
     float: left;
     clear: none;
@@ -4072,12 +4076,12 @@ button.stripe-checkout span {
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 155, ../src/scss/_sales_page.scss */
+  /* line 158, ../src/scss/_sales_page.scss */
   .course-sales-page #content_wrap {
     max-width: 1024px;
     margin: 0 auto 40px auto;
   }
-  /* line 159, ../src/scss/_sales_page.scss */
+  /* line 162, ../src/scss/_sales_page.scss */
   .course-sales-page #content_wrap > div.wrap {
     margin-top: 30px;
     display: table;
@@ -4085,12 +4089,12 @@ button.stripe-checkout span {
     min-height: 400px;
   }
 }
-/* line 170, ../src/scss/_sales_page.scss */
+/* line 173, ../src/scss/_sales_page.scss */
 .course-sales-page article h2 {
   border: none;
 }
 @media screen and (min-width: 1024px) {
-  /* line 168, ../src/scss/_sales_page.scss */
+  /* line 171, ../src/scss/_sales_page.scss */
   .course-sales-page article {
     display: table-cell;
     vertical-align: top;
@@ -4098,34 +4102,34 @@ button.stripe-checkout span {
     margin-bottom: 70px;
   }
 }
-/* line 182, ../src/scss/_sales_page.scss */
+/* line 185, ../src/scss/_sales_page.scss */
 .course-sales-page .description {
   margin: 0 auto;
 }
-/* line 185, ../src/scss/_sales_page.scss */
+/* line 188, ../src/scss/_sales_page.scss */
 .course-sales-page .description .yc-rego-button a {
   border: none !important;
 }
-/* line 191, ../src/scss/_sales_page.scss */
+/* line 194, ../src/scss/_sales_page.scss */
 .course-sales-page .description ol li {
   list-style: decimal outside;
 }
-/* line 193, ../src/scss/_sales_page.scss */
+/* line 196, ../src/scss/_sales_page.scss */
 .course-sales-page .description ol li div {
   padding-top: 0 !important;
   vertical-align: top;
   display: inline-block;
   width: 100%;
 }
-/* line 200, ../src/scss/_sales_page.scss */
+/* line 203, ../src/scss/_sales_page.scss */
 .course-sales-page .description h2 {
   margin-bottom: 0;
 }
-/* line 206, ../src/scss/_sales_page.scss */
+/* line 209, ../src/scss/_sales_page.scss */
 .course-sales-page aside {
   display: none;
 }
-/* line 210, ../src/scss/_sales_page.scss */
+/* line 213, ../src/scss/_sales_page.scss */
 .course-sales-page.has-sidebar aside {
   display: block;
   position: static;
@@ -4133,28 +4137,28 @@ button.stripe-checkout span {
   margin-bottom: 70px;
 }
 @media screen and (min-width: 1024px) {
-  /* line 210, ../src/scss/_sales_page.scss */
+  /* line 213, ../src/scss/_sales_page.scss */
   .course-sales-page.has-sidebar aside {
     display: table-cell;
     width: 240px;
   }
 }
-/* line 223, ../src/scss/_sales_page.scss */
+/* line 226, ../src/scss/_sales_page.scss */
 .course-sales-page .fb-like {
   margin-top: 10px;
 }
 
-/* line 229, ../src/scss/_sales_page.scss */
+/* line 232, ../src/scss/_sales_page.scss */
 .enrol input.invalid {
   background: red;
 }
 
-/* line 235, ../src/scss/_sales_page.scss */
+/* line 238, ../src/scss/_sales_page.scss */
 .has-sidebar.course-sales-page article {
   padding-left: 10px;
 }
 
-/* line 240, ../src/scss/_sales_page.scss */
+/* line 243, ../src/scss/_sales_page.scss */
 .yc-free-course-enrol-button {
   display: block;
   text-indent: -119988px;
@@ -4170,7 +4174,7 @@ button.stripe-checkout span {
   background-color: transparent;
 }
 
-/* line 255, ../src/scss/_sales_page.scss */
+/* line 258, ../src/scss/_sales_page.scss */
 .yc-buy-now-button {
   display: block;
   width: 171px;
@@ -4179,7 +4183,7 @@ button.stripe-checkout span {
   text-indent: -10000px;
 }
 
-/* line 260, ../src/scss/_sales_page.scss */
+/* line 263, ../src/scss/_sales_page.scss */
 .yc-custom-image .yc-buy-now-button {
   display: block;
   background: none;
@@ -4187,7 +4191,7 @@ button.stripe-checkout span {
   height: auto;
   text-indent: 0;
 }
-/* line 268, ../src/scss/_sales_page.scss */
+/* line 271, ../src/scss/_sales_page.scss */
 .yc-custom-image .yc-free-course-enrol-button {
   display: block;
   background: none;
@@ -4195,28 +4199,28 @@ button.stripe-checkout span {
   height: auto;
 }
 
-/* line 277, ../src/scss/_sales_page.scss */
+/* line 280, ../src/scss/_sales_page.scss */
 .yc-rego-button {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 279, ../src/scss/_sales_page.scss */
+/* line 282, ../src/scss/_sales_page.scss */
 .yc-rego-button * {
   box-sizing: border-box;
 }
-/* line 284, ../src/scss/_sales_page.scss */
+/* line 287, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap {
   padding: 24px 0 14px 0;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.52);
   border-radius: 4px;
 }
-/* line 291, ../src/scss/_sales_page.scss */
+/* line 294, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap a {
   margin: 0 auto;
   border: none !important;
 }
-/* line 298, ../src/scss/_sales_page.scss */
+/* line 301, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap.yc-custom-image {
   width: auto;
   max-width: 100%;
@@ -4224,20 +4228,20 @@ button.stripe-checkout span {
   display: inline-block;
   padding: 14px;
 }
-/* line 304, ../src/scss/_sales_page.scss */
+/* line 307, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap.yc-custom-image img {
   display: block;
   max-width: 100%;
   width: auto;
   height: auto;
 }
-/* line 312, ../src/scss/_sales_page.scss */
+/* line 315, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap.yc-no-price {
   padding: 0;
   border: none;
   background-color: transparent;
 }
-/* line 318, ../src/scss/_sales_page.scss */
+/* line 321, ../src/scss/_sales_page.scss */
 .yc-rego-button .yc-rego-wrap.yc-free-course {
   width: auto;
   background-color: transparent;
