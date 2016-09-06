@@ -1068,7 +1068,7 @@ iframe {
 }
 
 /* line 353, ../src/scss/_base.scss */
-#yc-root .description img {
+#yc-root .description img, #all_resources img {
   max-width: 100%;
   height: auto !important;
 }
