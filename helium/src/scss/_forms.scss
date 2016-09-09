@@ -3,7 +3,8 @@
 @import "ycthemelib/responsive";
 
 $USER_FORMS_FIELD_HEIGHT: 37px;
-$FORM_BACKGROUND_COLOUR: #3c425c;
+//$FORM_BACKGROUND_COLOUR: #3c425c;
+$FORM_BACKGROUND_COLOUR: #FFF;
 $VERTICAL_MARGIN_BETWEEN_FIELDS: 52px;
 $FIELD_MAX_WIDTH: 800px;
 
@@ -47,8 +48,9 @@ $FIELD_MAX_WIDTH: 800px;
       width: auto;
       height: $USER_FORMS_FIELD_HEIGHT;
       vertical-align: top;
-      background-color: #5a688b;
-      padding: 9px 12px;
+      //background-color: #5a688b;
+      background-color: #FFFF;
+      //padding: 9px 12px;
       .sublabel {
         color: #aaaaaa;
         font-size: 12px;
@@ -160,19 +162,20 @@ ul.field-errors {
 #yc-dialog {
   display: none; // only show if dialog is active
   z-index: $MODAL_DIALOG_Z_INDEX;;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   //background-color: #ffffff;
   padding: 0 0 30px 0;
-  overflow: hidden;
+  overflow: auto;
   h1, h3 {
-    background-color: #616c88; // Old browsers
+    //background-color: #616c88; // Old browsers
+    background-color: #000;
     @include filter-gradient(#616c88, #3f4c6c, vertical); // IE6-8
     // IE9 SVG, needs conditional override of 'filter' to 'none'
     $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(top,  #616c88 0%,#3f4c6c 100%));
+    //@include background-image(linear-gradient(top,  #616c88 0%,#3f4c6c 100%));
     color: white;
     font-size: 28px;
     line-height: 64px;
@@ -181,7 +184,7 @@ ul.field-errors {
     border-top: 1px solid #6d718a;
     border-bottom: 4px solid #e9e9e9;
     padding: 0 27px 0 27px;
-    margin: 0 0 30px 0;
+    //margin: 0 0 30px 0;
     width: 610px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -432,16 +435,19 @@ button.stripe-checkout { // copied from stripe styling
 
   label {
     font-weight: bold;
-    display: block;
+    //display: block;
+    display: none;
   }
 
   input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {
-    background-color: #868eb5;
+    //background-color: #868eb5;
+    background-color: #FFF;
     color: white;
-    border-top: 2px solid #22252e;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+    //border-top: 2px solid #22252e;
+    //border-left: none;
+    //border-right: none;
+    //border-bottom: none;
+    border: 1px solid #22252e;
     border-radius: 4px;
     display: block;
     width: 100%;
@@ -487,7 +493,7 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   .field {
-    margin-bottom: $VERTICAL_MARGIN_BETWEEN_FIELDS;
+    //margin-bottom: $VERTICAL_MARGIN_BETWEEN_FIELDS;
     input, select, textarea, .cke_chrome {
       margin-top: 12px;
       max-width: 850px;
