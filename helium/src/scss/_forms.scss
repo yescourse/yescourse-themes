@@ -290,6 +290,10 @@ ul.field-errors {
     width: 610px;
     margin:  0 auto;
   }
+
+  select {
+    margin-left: 0 !important;
+  }
 }
 
 .dialog-active {
@@ -435,8 +439,8 @@ button.stripe-checkout { // copied from stripe styling
 
   label {
     font-weight: bold;
-    //display: block;
-    display: none;
+    display: block;
+    background-color: #EEE !important;
   }
 
   input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {

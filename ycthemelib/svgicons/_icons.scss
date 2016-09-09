@@ -1,0 +1,104 @@
+@import "fa";
+
+$YC_ICON_DATA: (
+  fa: $YC-FA-DATA
+);
+
+@function yc-get-icon-data($path) {
+  $sep_index: str-index($path, "/");
+  @if not $sep_index {
+    @error "The icon path `#{$path}` does not include a / separator";
+  }
+  $prefix: str_slice($path, 0, $sep_index - 1);
+  $name: str_slice($path, $sep_index + 1);
+  @if map_has_key($YC_ICON_DATA, $prefix) {
+    $prefix_data: map_get($YC_ICON_DATA, $prefix);
+    @if map_has_key($prefix_data, $name) {
+      @return map_get($prefix_data, $name);
+    }
+    @else {
+      @error "Could not locate `#{$name}` within `#{$prefix}`";
+    }
+  }
+  @else {
+    @error "Could not locate `#{$path}`";
+  }
+}
+
+
+//  Helper function to replace characters in a string
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace +
+            str-replace(str-slice($string, $index +
+            str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+
+
+//
+//  Function to create an optimized svg url
+//  http://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+//
+@function yc-encoded-svg-url($svg) {
+    //
+    //  Chunk up string in order to avoid
+    //  "stack level too deep" error
+    //
+    $encoded:'';
+    $slice: 2000;
+    $index: 0;
+    $loops: ceil(str-length($svg)/$slice);
+    @for $i from 1 through $loops {
+        $chunk: str-slice($svg, $index, $index + $slice - 1);
+        //
+        //   Encode (may need a few extra replacements)
+        //
+        $chunk: str-replace($chunk,'"','\'');
+        $chunk: str-replace($chunk,'<','%3C');
+        $chunk: str-replace($chunk,'>','%3E');
+        $chunk: str-replace($chunk,'&','%26');
+        $chunk: str-replace($chunk,'#','%23');
+        $encoded: #{$encoded}#{$chunk};
+        $index: $index + $slice;
+    }
+    @return url("data:image/svg+xml;charset=utf8,#{$encoded}");
+}
+
+@function yc-icon-url($path, $fill: null) {
+  $data: yc-get-icon-data($path);
+  @if $fill {
+    $data: map_merge($data, ("fill": $fill));
+  }
+  @else {
+    $data: map_merge($data, ("fill": ""));
+  }
+
+  $width: map_get($data, "width");
+  $height: map_get($data, "height");
+  $view_box: map_get($data, "view_box");
+  $path: map_get($data, "path");
+  $fill: map_get($data, "fill");
+  $transform: "";
+  @if map_has_key($data, "transform") {
+    $transform: map_get($data, "transform");
+  }
+
+  $style: "";
+
+  @if $fill {
+    $style: $style + "fill:" + $fill + ";";
+  }
+
+  @return yc-encoded-svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='#{$width}' height='#{$height}' viewBox='#{$view_box}'><path d='#{$path}' style='#{$style}' transform='#{$transform}'/></svg>");
+}
+
+
+@mixin yc-left-icon($path, $fill: null) {
+  background: yc-icon-url($path, $fill) no-repeat 0 50%;
+  background-size: 1em;
+  padding-left: 1.1em;
+}
