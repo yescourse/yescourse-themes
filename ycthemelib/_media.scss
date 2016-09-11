@@ -237,11 +237,11 @@ p.poster{
   }
 }
 
-.next-locked .mark_lesson_read {
+#yc-root.next-locked #yc-completion .mark_lesson_read {
   display: none;
 }
 
-.next-locked.should-be-unlocked .mark_lesson_read {
+#yc-root.next-locked.should-be-unlocked #yc-completion .mark_lesson_read {
   display: inline-block;
 }
 
