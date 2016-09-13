@@ -35,7 +35,7 @@ $FIELD_MAX_WIDTH: 800px;
 .user_form {
   padding: 0;
   background: transparent;
-  .field {
+  .user_field {
     max-width: 100%;
     display: table;
     width: 100%;
@@ -506,7 +506,7 @@ button.stripe-checkout { // copied from stripe styling
     display: block;
   }
 
-  input[type=submit], #upload_button {
+  input[type=submit], #upload_button, #email_next {
     color: #0f0e0c;
     display: inline-block;
     font-size: 18px;
@@ -536,7 +536,7 @@ button.stripe-checkout { // copied from stripe styling
     vertical-align: middle;
   }
 
-  .field {
+  .user_field {
     input, select, textarea, .cke_chrome {
       margin-top: 12px;
       max-width: 850px;
@@ -596,7 +596,7 @@ button.stripe-checkout { // copied from stripe styling
     }
   }
 
-  .field .errorlist li { // when rendered using the forms template
+  .user_field .errorlist li { // when rendered using the forms template
     // draw the upward pointing triangle in CSS
     position: relative;
     margin-top: 10px;
