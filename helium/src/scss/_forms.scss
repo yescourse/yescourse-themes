@@ -7,14 +7,36 @@ $FORM_BACKGROUND_COLOUR: #FFF;
 $VERTICAL_MARGIN_BETWEEN_FIELDS: 52px;
 $FIELD_MAX_WIDTH: 800px;
 
+
+// Chrome/Opera/Safari
+::-webkit-input-placeholder {
+  color: #969696;
+  font-weight: bold;
+}
+
+// Firefox 19+
+::-moz-placeholder {
+  color: #969696;
+  font-weight: bold;
+}
+
+// IE 10+ ??
+:-ms-input-placeholder {
+  color: #969696 !important;
+  font-weight: bold;
+}
+
+// Firefox 18-
+:-moz-placeholder {
+  color: #969696;
+  font-weight: bold;
+}
+
 .user_form {
   padding: 0;
   background: transparent;
   .field {
-    //$height: 37px;
-    //height: $USER_FORMS_FIELD_HEIGHT;
     max-width: 100%;
-    //overflow: hidden;
     display: table;
     width: 100%;
     margin: 0 0 16px 0;
@@ -24,7 +46,6 @@ $FIELD_MAX_WIDTH: 800px;
       max-width: 36px;
       height: $USER_FORMS_FIELD_HEIGHT;
       vertical-align: top;
-      //background-color: #343e59;
       background-color: rgba(0,0,0,0.5);
     }
     input {
@@ -32,8 +53,6 @@ $FIELD_MAX_WIDTH: 800px;
       width: 100%;
       height: $USER_FORMS_FIELD_HEIGHT;
       vertical-align: top;
-      // background-color: #5a688b !important;
-      // color: white;
       border: rgba(0,0,0,0.2);
       font-size: 14px;
       line-height: 14px;
@@ -44,13 +63,10 @@ $FIELD_MAX_WIDTH: 800px;
 
     .wrap {
       position: relative;
-      //display: table-cell;
       width: auto;
       height: $USER_FORMS_FIELD_HEIGHT;
       vertical-align: top;
-      //background-color: #5a688b;
       background-color: #FFFF;
-      //padding: 9px 12px;
       .sublabel {
         color: #aaaaaa;
         font-size: 14px;
@@ -60,7 +76,7 @@ $FIELD_MAX_WIDTH: 800px;
       }
 
       select {
-        padding: 5px 38px 5px;
+        padding: 5px 5px 5px 38px;
         margin-top: 0;
       }
     }
@@ -96,35 +112,30 @@ $FIELD_MAX_WIDTH: 800px;
 
   .email, .username {
     label {
-      //@include replace-text('mail_icon.png');
       @include yc-left-icon('fa/envelope');
     }
   }
 
   .password, .password1, .password2 {
     label {
-      //@include replace-text('password.png');
       @include yc-left-icon('fa/eye');
     }
   }
 
   .first_name, .last_name {
     label {
-      //@include replace-text('user_icon.png');
       @include yc-left-icon('fa/user');
     }
   }
 
   .mobile {
     label {
-      //@include replace-text('mobile_icon.png');
       @include yc-left-icon('fa/mobile-phone');
     }
   }
 
   .country {
     label {
-      //@include replace-text('country.png');
       @include yc-left-icon('fa/globe');
       left: 0 !important;
     }
@@ -132,7 +143,6 @@ $FIELD_MAX_WIDTH: 800px;
 
   .timezone {
     label {
-      //@include replace-text('timezone.png');
       @include yc-left-icon('fa/clock-o');
       left: 0 !important;
     }
@@ -195,23 +205,19 @@ ul.field-errors {
   right: 0;
   background-color: #ffffff;
   padding: 0 0 30px 0;
-  //overflow: auto;
+
   h1, h3 {
-    //background-color: #616c88; // Old browsers
     background-color: #000;
     @include filter-gradient(#616c88, #3f4c6c, vertical); // IE6-8
     // IE9 SVG, needs conditional override of 'filter' to 'none'
     $experimental-support-for-svg: true;
-    //@include background-image(linear-gradient(top,  #616c88 0%,#3f4c6c 100%));
     color: white;
     font-size: 28px;
     line-height: 64px;
     font-weight: bold;
-    //height: 64px;
     border-top: 1px solid #6d718a;
     border-bottom: 4px solid #e9e9e9;
     padding: 0 27px 0 27px;
-    //margin: 0 0 30px 0;
     width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -482,13 +488,8 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {
-    //background-color: #868eb5;
     background-color: #FFF;
     color: #22252e;
-    //border-top: 2px solid #22252e;
-    //border-left: none;
-    //border-right: none;
-    //border-bottom: none;
     border: 1px solid #22252e;
     border-radius: 4px;
     display: block;
@@ -536,7 +537,6 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   .field {
-    //margin-bottom: $VERTICAL_MARGIN_BETWEEN_FIELDS;
     input, select, textarea, .cke_chrome {
       margin-top: 12px;
       max-width: 850px;
