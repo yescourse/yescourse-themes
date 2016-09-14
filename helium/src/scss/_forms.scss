@@ -530,6 +530,9 @@ button.stripe-checkout { // copied from stripe styling
     display: block;
     width: 100%;
     max-width: $FIELD_MAX_WIDTH;
+    border: 1px solid #22252e;
+    border-radius: 4px;
+
   }
 
   input[type="radio"] {
