@@ -1,5 +1,6 @@
-@import 'compass';
+@import "compass";
 @import "constants";
+@import "ycthemelib/responsive";
 
 $USER_FORMS_FIELD_HEIGHT: 37px;
 //$FORM_BACKGROUND_COLOUR: #3c425c;
@@ -8,26 +9,8 @@ $VERTICAL_MARGIN_BETWEEN_FIELDS: 52px;
 $FIELD_MAX_WIDTH: 800px;
 
 
-// Chrome/Opera/Safari
-::-webkit-input-placeholder {
-  color: #969696;
-  font-weight: bold;
-}
-
-// Firefox 19+
-::-moz-placeholder {
-  color: #969696;
-  font-weight: bold;
-}
-
-// IE 10+ ??
-:-ms-input-placeholder {
-  color: #969696 !important;
-  font-weight: bold;
-}
-
-// Firefox 18-
-:-moz-placeholder {
+// Proposed, Chrome/Opera/Safari, Firefox 19+, IE 10+, Firefox 18-
+::placeholder, ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
   color: #969696;
   font-weight: bold;
 }
@@ -118,7 +101,7 @@ $FIELD_MAX_WIDTH: 800px;
 
   .password, .password1, .password2 {
     label {
-      @include yc-left-icon('fa/eye');
+      @include yc-left-icon('fa/lock');
     }
   }
 
