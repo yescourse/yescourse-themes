@@ -45,6 +45,12 @@ body {
     display: block;
     #veil-content {
       display: block;
+      padding: 70px 10px 10px;
+      progress {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+      }
     }
   }
 }
@@ -90,7 +96,7 @@ iframe.dialog {
 }
 
 .loading article {
-  //visibility: hidden;
+  visibility: hidden;
 }
 
 a {
