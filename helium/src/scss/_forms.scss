@@ -459,16 +459,7 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   label {
-    font-weight: bold;
-    display: block;
-    text-indent: -119988px;
-    height: auto;
-    width: auto;
-    line-height: 23px !important;
-    position: relative;
-    top: 33px;
-    left: 11px;
-    background-color: transparent !important;
+
   }
 
   input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {
@@ -527,6 +518,18 @@ button.stripe-checkout { // copied from stripe styling
     input, select, textarea, .cke_chrome {
       margin-top: 12px;
       max-width: 850px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      text-indent: -119988px;
+      height: auto;
+      width: auto;
+      line-height: 23px !important;
+      position: relative;
+      top: 33px;
+      left: 11px;
+      background-color: transparent !important;
     }
     ul { // radio selects are rendered inside a ul
       padding: 0;
