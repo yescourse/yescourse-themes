@@ -124,3 +124,10 @@
     }
   }
 }
+
+// hide as admin button when inside frame
+.in-frame #yc-site-footer {
+  a.as_admin {
+    display: none;
+  }
+}
