@@ -16,20 +16,13 @@ $tablet_portrait_height : 1024px;
 $tablet_landscape_width : $tablet_portrait_height;
 $tablet_landscape_height : $tablet_portrait_width;
 
+$desktop_landscape_width: 1440px;
+
 $MODE: "page" !default;
 
 @mixin media_or_class($class, $width) {
-  @if $MODE == "embed" {
-    @at-root (without: media){
-      .#{$class} {
-        @content;
-      }
-    }
-  }
-  @else {
-    @media screen and (min-width: $width) {
-      @content;
-    }
+  @media screen and (min-width: $width) {
+    @content;
   }
 }
 
@@ -48,5 +41,8 @@ $MODE: "page" !default;
   }
   @else if $media == tablet_landscape {
     @include media_or_class("yc-w1024", $tablet_landscape_width) {@content;}
+  }
+  @else if $media == desktop_landscape {
+    @include media_or_class("yc-w1440", $desktop_landscape_width) {@content;}
   }
 }
