@@ -234,6 +234,20 @@ p.poster{
         border-radius: 0;
       }
     }
+    a#mark_lesson_read {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 14px;
+      height: auto;
+      width: auto;
+      padding: 8px;
+      margin: 0 4px;
+      border-radius: 0;
+      border: 1px solid #3b3b3b;
+    }
+    #yc-time-display {
+      margin: 0 4px;
+    }
   }
 }
 
