@@ -183,7 +183,7 @@ ul.field-errors {
 #yc-dialog {
   display: none; // only show if dialog is active
   z-index: $MODAL_DIALOG_Z_INDEX;;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
