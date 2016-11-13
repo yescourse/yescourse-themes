@@ -16,6 +16,10 @@
       background: #32323a image-url('lesson_green_icon.png') no-repeat 10px center;
     }
 
+    &.unpublished {
+      background: #32323a image-url('lesson_warn_icon.png') no-repeat 10px center;
+    }
+
     &.locked {
       background-image: image-url('lock.png');
       a {
