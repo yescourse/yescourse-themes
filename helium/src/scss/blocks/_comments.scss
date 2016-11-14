@@ -137,9 +137,26 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
       }
     }
   }
+
+  input[type=button].comment_cancel {
+    margin-top: 8px;
+    margin-right: 20px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    background-image: none;
+    font-weight: bold;
+    padding: 0 32px;
+    opacity: 0.5;
+    vertical-align: top;
+  }
 }
 
-#root_comment_form, #comment_form {
+#root_comment_form, #comment_form, #yc-comment-form, .comment_form {
   .new_comment_submit {
     margin-top: 8px;
     height: 36px;
