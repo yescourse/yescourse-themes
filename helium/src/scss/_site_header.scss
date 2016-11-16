@@ -118,6 +118,7 @@
       height: $SITE_HEADER_HEIGHT;
       overflow: hidden;
       color: white;
+      margin: 0 4px;
 
       @include respond_to(tablet_landscape) {
         max-width: 550px;

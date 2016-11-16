@@ -94,6 +94,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
       clear: both;
       text-align: left;
       width: 87%;
+      margin-bottom: 0;
     }
     ol {
       li {
@@ -261,7 +262,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     padding: 4px 0;
     margin: 0;
     li {
-      margin: 0;
+      margin: 0 4px 0 0;
       display: inline-block;
       background: rgba(0, 0, 0, 0.3);
       a {
@@ -337,7 +338,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   }
 }
 
-@mixin desktop_layout {
+@include respond_to(tablet_landscape) {
   .posted_on {
     margin-right: 74px;
   }
@@ -358,14 +359,6 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   .posted_on {
     display: block !important;
     float: right;
-  }
-}
-
-@include respond_to(tablet_landscape) {
-  .no-touch {
-    // screens of tablet landscape or larger width without
-    // touch capabilities get the desktop layout
-    @include desktop_layout;
   }
 }
 
