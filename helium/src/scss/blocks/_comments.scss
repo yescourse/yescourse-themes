@@ -387,42 +387,4 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     font-size: 28px;
   }
 }
-
-#iframe-cuser-container {
-  position: fixed;
-  top: 15vh;
-  left: 0;
-  right: 0;
-  margin-left: $CONTENT_SEPARATION_MARGIN;
-  margin-right: $CONTENT_SEPARATION_MARGIN;
-  max-width: $MAX_CONTENT_WIDTH;
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 70vh;
-  z-index: $VEIL_Z_INDEX;
-  box-shadow: 8px 10px 16px 4px rgba(30,30,30,0.5);
-  @include respond_to(tablet_landscape) {
-    margin-left: $ASIDE_WIDTH + 10px + $CONTENT_SEPARATION_MARGIN;
-  }
-
-  #cuser-close {
-    position: absolute;
-    background: yc-icon-url('fa/times', #bbb) no-repeat 1px 1px;
-    background-size: 1em;
-    padding-left: 1.1em;
-    z-index: $VEIL_Z_INDEX + 1;
-  }
-
-  #iframe-cuser {
-    flex-grow: 1;
-    align-self: stretch;
-    border: 1px solid green;
-    margin: 0;
-
-    &[src=""] {
-      display: none;
-    }
-  }
-}
 //--------------------

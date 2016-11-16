@@ -74,6 +74,10 @@ iframe.dialog {
   height: 480px;
 }
 
+#iframe-popup {
+  border: 5px solid green;
+}
+
 #yc-root.dialog-active {
   #veil {
     display: block;
@@ -81,6 +85,27 @@ iframe.dialog {
   }
   #yc-dialog {
     display: block;
+  }
+}
+
+#yc-root.popup-active {
+  #veil {
+    display: block;
+    z-index: $VEIL_CONTENT_Z_INDEX;
+  }
+  #yc-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    height: 70vh;
+  }
+  #dialog-inner {
+    display: none;
+  }
+  #yc-iframe-popup {
+    flex-grow: 1;
+    align-self: stretch;
   }
 }
 
