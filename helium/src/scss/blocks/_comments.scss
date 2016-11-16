@@ -350,6 +350,9 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     float: right;
     margin-top: -20px !important;
   }
+  .comment_reply_form {
+    margin-right: 74px;
+  }
 }
 
 @include respond_to(mobile_landscape) {
