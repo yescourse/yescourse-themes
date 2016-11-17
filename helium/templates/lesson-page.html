@@ -13,10 +13,13 @@
         <article>
             <section id="lesson_contents">
                 <div class="description">{% page_content %}</div>
+                {% course_social %}
                 {% lesson_media %}
             </section>
 
+            {% course_social %}
             {% comments %}
+            {% course_social %}
 
         </article>
 
