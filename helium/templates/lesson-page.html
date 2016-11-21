@@ -25,7 +25,7 @@
 
         <aside>
             {% breadcrumbs %}
-            {% module_title %}
+            {% module_title_as_link onlyIf=course.is_modular %}
             {% module_lessons_menu %}
             {% modules_menu %}
         </aside>

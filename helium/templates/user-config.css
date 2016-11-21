@@ -139,7 +139,7 @@ aside ul li, li.yc-menu-entry, .tutor_info {
     color: {{ theme_config.menu_selected_text_color }} !important;
 }
 
-aside h2.lessons::before, aside ul.yc-module-lessons-menu:not(.modular)::before, aside ul.yc-modules-menu::before {
+aside h2.module-title::before, aside ul.yc-module-lessons-menu::before, aside ul.yc-modules-menu::before {
     background-color: {{ theme_config.menu_selected_background_color }} !important;
 }
 

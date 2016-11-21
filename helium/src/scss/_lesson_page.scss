@@ -35,7 +35,7 @@
       line-height: 26px;
     }
 
-    h2.lessons {
+    h2.module-title {
       position: relative;
       margin: 0 12px 20px 12px;
 
@@ -44,7 +44,7 @@
       }
     }
 
-    h2.lessons, ul.yc-module-lessons-menu:not(.modular), ul.yc-modules-menu {
+    p.breadcrumbs + h2.module-title, p.breadcrumbs + ul.yc-module-lessons-menu, ul.yc-modules-menu {
       &::before {
         content: '';
         position: relative;
@@ -54,11 +54,13 @@
       }
     }
 
-    h2.lessons, ul.yc-module-lessons-menu:not(.modular)  {
-      &::before {
-        width: image-width('lesson.png');
-        height: image-height('lesson.png');
-        background: image-url('lesson.png') no-repeat 50% #0999d6;
+    p.breadcrumbs + {
+      h2.module-title, ul.yc-module-lessons-menu {
+        &::before {
+          width: image-width('lesson.png');
+          height: image-height('lesson.png');
+          background: image-url('lesson.png') no-repeat 50% #0999d6;
+        }
       }
     }
 
