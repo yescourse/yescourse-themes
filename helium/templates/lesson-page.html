@@ -1,5 +1,6 @@
 {% setTitle "{{ lesson.title }} - {{ course.title }}" %}
 {% addClasses "has-sidebar" %}
+{% addClasses "is-modular" onlyIf=course.is_modular %}
 
 {% include "-site-header" %}
 
@@ -25,7 +26,9 @@
 
         <aside>
             {% breadcrumbs %}
-            {% module_title_as_link onlyIf=course.is_modular %}
+            <h2 class="module-title">
+                <a href="{% module_url onlyIf=course.is_modular %}">{{ module.title }}</a>
+            </h2>
             {% module_lessons_menu %}
             {% modules_menu %}
         </aside>

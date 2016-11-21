@@ -38,36 +38,44 @@
     h2.module-title {
       position: relative;
       margin: 0 12px 20px 12px;
+      visibility: hidden;
+      height: image-height('lesson.png');
 
       a {
         color: $DEFAULT_BACKGROUND;
       }
     }
 
-    p.breadcrumbs + h2.module-title, p.breadcrumbs + ul.yc-module-lessons-menu, ul.yc-modules-menu {
+    h2.module-title, ul.yc-modules-menu {
       &::before {
         content: '';
         position: relative;
         margin: 24px auto;
         display: block;
+        visibility: visible;
         border-radius: 50%;
       }
     }
 
-    p.breadcrumbs + {
-      h2.module-title, ul.yc-module-lessons-menu {
-        &::before {
-          width: image-width('lesson.png');
-          height: image-height('lesson.png');
-          background: image-url('lesson.png') no-repeat 50% #0999d6;
-        }
-      }
+    h2.module-title::before {
+      width: image-width('lesson.png');
+      height: image-height('lesson.png');
+      background: image-url('lesson.png') no-repeat 50% #0999d6;
     }
 
     ul.yc-modules-menu::before {
       width: image-width('modules_icon.png');
       height: image-height('modules_icon.png');
       background: image-url('modules_icon.png') no-repeat 50% #0999d6;
+    }
+  }
+
+  &#yc-root.is-modular {
+    aside {
+      h2.module-title {
+        visibility: visible;
+        height: auto;
+      }
     }
   }
 
