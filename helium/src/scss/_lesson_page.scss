@@ -35,35 +35,37 @@
       line-height: 26px;
     }
 
-    h2.lessons, h2.modules {
+    h2.lessons {
       position: relative;
-      padding-top: 40px;
       margin: 0 12px 20px 12px;
 
-      &::before {
-        content: '';
-        position: relative;
-        top: -10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        display: block;
-        z-index: -1;
-        width: image-width('lesson.png');
-        height: image-height('lesson.png');
-        background-color: #0999d6;
-        border-radius: 50%;
-      }
       a {
         color: $DEFAULT_BACKGROUND;
       }
     }
 
-    h2.lessons {
-      background: image-url('lesson.png') no-repeat 50% 30px;
+    h2.lessons, ul.yc-module-lessons-menu:not(.modular), ul.yc-modules-menu {
+      &::before {
+        content: '';
+        position: relative;
+        margin: 24px auto;
+        display: block;
+        border-radius: 50%;
+      }
     }
-    h2.modules {
-      background: image-url('modules_icon.png') no-repeat 50% 30px;
+
+    h2.lessons, ul.yc-module-lessons-menu:not(.modular)  {
+      &::before {
+        width: image-width('lesson.png');
+        height: image-height('lesson.png');
+        background: image-url('lesson.png') no-repeat 50% #0999d6;
+      }
+    }
+
+    ul.yc-modules-menu::before {
+      width: image-width('modules_icon.png');
+      height: image-height('modules_icon.png');
+      background: image-url('modules_icon.png') no-repeat 50% #0999d6;
     }
   }
 
