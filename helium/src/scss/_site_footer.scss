@@ -110,7 +110,8 @@
           display: inline-block;
         }
         a {
-          text-decoration: underline;
+          text-decoration: underline !important;
+          margin-right: 3px;
         }
       }
       .powered {
