@@ -57,6 +57,21 @@
         }
     }
 
+  &.auto {
+    .slide_controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      audio {
+        flex-grow: 1;
+        width: auto;
+      }
+      .full-screen {
+        margin-left: 8px;
+      }
+    }
+  }
+
     .slide_indicator{
         padding: 8px;
     }
@@ -88,27 +103,24 @@
         .slide_last{
             @include replace-text-with-dimensions('last_slide_button.png');
         }
+
+
     }
 
-  &:-webkit-full-screen {
+  &.full-screen {
     width: 100%;
     height: 100%;
     background: #000;
-    display: table;
+    display: flex;
+    flex-direction: column;
     .slidewrap {
-      display: table-row;
-      height: 100%;
-    }
-    .slide_controls {
-      display: table-row;
-    }
-    .aplayer {
-      display: table-row;
+      flex-grow: 1;
+      display: flex;
     }
     img {
       object-fit: contain;
-      width: 100%;
-      height: 100%;
+      width: 95%; // 100% makes the image too big in firefox, need a better solution
+      height: auto;
     }
   }
 
