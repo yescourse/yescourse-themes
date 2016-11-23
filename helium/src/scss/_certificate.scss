@@ -94,12 +94,11 @@ $page_height: $total_height - 2*$padding;
     @page {
         margin: 1.0cm;
     }
+    body{
+      padding: 0;
+      margin: 0;
+    }
     #yc-root{
-        body{
-          padding: 0;
-          margin: 0;
-        }
-
         #content_wrap{
             margin: 0;
             padding: 0;
