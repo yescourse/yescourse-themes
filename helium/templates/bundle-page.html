@@ -1,0 +1,22 @@
+{% setTitle "{{ course.title }}" %}
+{% addClasses "has-sidebar" %}
+
+{% include "-site-header" %}
+
+<div id="content_wrap">
+    <nav id="module_nav">{% course_banner %}</nav>
+
+    <div class="wrap">
+        <article>
+            <div class="description">{% page_content %}</div>
+            {% course_social %}
+            <div class="course_list">{% course_list %}</div>
+        </article>
+        <aside>
+            {% breadcrumbs %}
+            {% trainer_profiles %}
+        </aside>
+    </div>
+</div>
+
+{% include "-site-footer" %}
