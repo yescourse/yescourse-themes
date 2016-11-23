@@ -132,3 +132,8 @@
     display: none;
   }
 }
+
+// hide footer when in iframe
+.in-frame #yc-site-footer {
+  display: none;
+}

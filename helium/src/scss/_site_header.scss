@@ -211,3 +211,8 @@
     margin: $SITE_HEADER_HEIGHT 0 0 0;
   }
 }
+
+// hide header when in iframe
+.in-frame #header {
+  display: none;
+}
