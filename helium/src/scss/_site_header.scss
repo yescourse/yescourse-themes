@@ -99,6 +99,14 @@
         border: 1px solid white;
         border-radius: 2px;
       }
+      span.char {
+        border: 1px solid white;
+        border-radius: 2px;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 16px;
+      }
     }
 
     .login {
