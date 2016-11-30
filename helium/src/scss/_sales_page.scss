@@ -221,6 +221,13 @@
     }
   }
 
+  span.yc-price {
+    > span {
+      margin-right: 4px;
+    }
+  }
+
+
   // ------- Widgets ----------------
 
   .fb-like {
