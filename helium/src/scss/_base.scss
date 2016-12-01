@@ -90,17 +90,19 @@ iframe.dialog {
     }
   }
 
-  // dialog only
-  &.dialog-active {
-    #yc-dialog {
-      display: block;
-    }
+  &:not(.popup-active) {
     #yc-iframe-popup {
       display: none;
     }
   }
 
-  // popup iframe only
+  &.dialog-active {
+    #yc-dialog {
+      display: block;
+    }
+  }
+
+  // assume popups override dialogs, as they can be trigger from dialogs
   &.popup-active {
     #yc-dialog {
       display: flex;
