@@ -23,7 +23,6 @@ $FIELD_MAX_WIDTH: 800px;
     max-width: 100%;
     display: table;
     width: 100%;
-    margin: 0 0 16px 0;
     label {
       display: table-cell;
       width: 36px;
@@ -31,6 +30,8 @@ $FIELD_MAX_WIDTH: 800px;
       height: $USER_FORMS_FIELD_HEIGHT;
       vertical-align: top;
       background-color: rgba(0,0,0,0.5);
+      text-indent: -119988px;
+      position: relative;
     }
     input {
       display: table-cell;
@@ -41,7 +42,7 @@ $FIELD_MAX_WIDTH: 800px;
       font-size: 14px;
       line-height: 14px;
       font-weight: bold;
-      padding: 0 12px;
+      padding: 0 12px 0 38px;
       border-radius: 0;
     }
 
@@ -132,14 +133,27 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
+  // country and timezone field workarounds
   .country,
   .timezone {
     label {
-      top: 53px !important;
+      top: 38px !important;
       z-index: 20;
       left: 10px !important;
     }
+    select {
+      margin-top: 0 !important;
+    }
   }
+
+  // user_form with non user_fields - e.g. password change form (labels shown)
+  div:not(.user_field) {
+    margin-top: 12px;
+    input {
+      padding: 0 12px;
+    }
+  }
+
 
   input[type=submit], button {
     border: 2px solid #c27a0b;
@@ -316,8 +330,8 @@ ul.field-errors {
     margin-left: 0 !important;
   }
 
-  .buy_block {
-    margin: 12px auto;
+  .course_buy h4 {
+    margin: 24px auto 12px auto;
   }
 }
 
@@ -475,7 +489,6 @@ button.stripe-checkout { // copied from stripe styling
     width: 100%;
     max-width: $FIELD_MAX_WIDTH;
     height: 44px;
-    padding: 0 0 0 42px;
     margin-top: 0 !important;
   }
 
@@ -519,18 +532,17 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   .user_field {
+    margin: 0 0 16px 0;
     input, select, textarea, .cke_chrome {
       margin-top: 12px;
       max-width: 850px;
     }
     label {
-      font-weight: bold;
+      //font-weight: bold;
       display: block;
-      text-indent: -119988px;
       height: auto;
       width: auto;
       line-height: 23px !important;
-      position: relative;
       top: 33px;
       left: 11px;
       background-color: transparent !important;
@@ -571,6 +583,17 @@ button.stripe-checkout { // copied from stripe styling
       line-height: 12px;
       color: #888888;
       text-align: left;
+    }
+  }
+
+  // non user_form fields (no image displayed instead of label)
+  form:not(.user_form) {
+    .user_field {
+      //margin-top: 30px;
+
+      input {
+        padding: 0 12px;
+      }
     }
   }
 
