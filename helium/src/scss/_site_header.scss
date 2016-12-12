@@ -51,13 +51,14 @@
     color: #ffffff;
     font-size: 18px;
     line-height: $SITE_HEADER_HEIGHT;
-    width: 800px;
+    max-width: 200px;
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     padding: 0 0 0 8px;
     @include respond_to(tablet_landscape) {
-      display: inline-block;
+      max-width: 100%;
     }
   }
 
