@@ -268,3 +268,51 @@ p.poster{
     }
   }
 }
+
+.yc-countdown {
+  display: none; // hide by default, show when the root element has-countdown
+  margin: 16px 0;
+  justify-content: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //margin: 4px;
+    font-size: 40px;
+    padding: 16px 16px 8px 16px;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.2);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    &:last-of-type {
+      border-right: none;
+    }
+    &:after {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    &.days {
+      &:after {
+        content: 'days';
+      }
+    }
+    &.hours {
+      &:after {
+        content: 'hours';
+      }
+    }
+    &.minutes {
+      &:after {
+        content: 'minutes';
+      }
+    }
+    &.seconds {
+      &:after {
+        content: 'seconds';
+      }
+    }
+  }
+}
+
+.has-countdown .yc-countdown {
+  display: flex;
+}
