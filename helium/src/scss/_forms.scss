@@ -437,6 +437,10 @@ button.stripe-checkout { // copied from stripe styling
   }
 }
 
+.dialog-no-cancel #dialog-close {
+  display: none;
+}
+
 .course_page {
   form {
     background-color: transparent;
