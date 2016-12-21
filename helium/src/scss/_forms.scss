@@ -230,6 +230,15 @@ ul.field-errors {
     padding: 0;
   }
 
+  a:not(#dialog-close) {
+    border-bottom: 1px dotted #f1b135;
+  }
+
+  p {
+    font-size: 0.875em;
+    padding: 0 27px;
+  }
+
   &>form, &>p {
     padding: 0 27px;
   }

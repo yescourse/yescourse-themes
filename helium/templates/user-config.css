@@ -17,7 +17,7 @@ a {
 }
 
 
-article a, article h1, article h2, article h3, article h4, article h5 {
+article a, article h1, article h2, article h3, article h4, article h5, #yc-dialog a {
     color: {{ theme_config.link_text_color }} !important;
 }
 
