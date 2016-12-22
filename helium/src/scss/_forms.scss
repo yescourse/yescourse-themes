@@ -228,6 +228,7 @@ ul.field-errors {
 
   h4 {
     padding: 0;
+    margin: 27px;
   }
 
   a:not(#dialog-close) {
@@ -298,10 +299,14 @@ ul.field-errors {
     th {
       height: 36px;
       background-color: #343e59;
-      color: #ffffff;
+      //color: #ffffff;
+      color: black;
       font-size: 14px;
-      line-height: 14px;
-      padding: 10px 8px 0 36px;
+      font-weight: bold;
+      text-align: left;
+      padding: 2px 5px 2px 36px;
+      // line-height: 14px;
+      // padding: 10px 8px 0 36px;
 
       @include respond_to(mobile_landscape) {
         min-width: 150px;
@@ -327,6 +332,12 @@ ul.field-errors {
     td {
       width: 100%;
       color: #333333;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.1608);
+      }
     }
   }
 
