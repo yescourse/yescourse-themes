@@ -39,17 +39,12 @@
     }
   }
 
-  #course_settings_link {
-    display: block;
-    text-align: center;
-  }
-
   @include respond_to(tablet_landscape) {
     clear: both;
     min-height: 56px;
   }
 
-  a.as_admin, #course_settings_link {
+  a.as_admin, #course_settings_link, #mark_lesson_read, .command {
     font-size: 14px;
     line-height: 14px;
     font-weight: bold;
@@ -64,6 +59,13 @@
                     top, #f9e59c 0%, #f1d351 3%, #efc62c 5%,
                     #e38f13 100%)
     );
+  }
+
+  .command {
+    // adjust command boxes to fit footer
+    padding-top: 6px;
+    padding-bottom: 3px;
+    margin: 0 0 0 6px;
   }
 
   .powered {
