@@ -11,8 +11,10 @@
 
     <div class="wrap">
         <article>
+            <a href="{% course_url %}">Back to Course</a>
             <div class="description">{% page_content %}</div>
-            {% module_lessons_menu %}
+            <h4>Module Structure</h4>
+            <div class="course_tree">{% module_lessons_menu %}</div>
         </article>
         <aside>
             {% breadcrumbs %}
