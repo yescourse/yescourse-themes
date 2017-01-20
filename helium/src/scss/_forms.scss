@@ -113,7 +113,7 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
-  .mobile {
+  .mobile_number {
     label {
       @include yc-left-icon('fa/mobile-phone');
     }
@@ -300,7 +300,7 @@ ul.field-errors {
       height: 36px;
       background-color: #343e59;
       //color: #ffffff;
-      color: black;
+      color: #fff;
       font-size: 14px;
       font-weight: bold;
       text-align: left;
@@ -324,7 +324,7 @@ ul.field-errors {
         background: #343e59 image-url('country.png') no-repeat 10px 50%;
       }
 
-      &.mobile {
+      &.mobile_number {
         background: #343e59 image-url('mobile_icon.png') no-repeat 10px 50%;
       }
     }
@@ -335,6 +335,7 @@ ul.field-errors {
     }
 
     tr {
+      background-color: rgba(0, 0, 0, 0.05);
       &:nth-child(even) {
         background-color: rgba(0, 0, 0, 0.1608);
       }
@@ -504,7 +505,8 @@ button.stripe-checkout { // copied from stripe styling
 
   }
 
-  input[type=text], input[type=password], input[type=email], input[type=number], input[type=url] {
+  input[type=text], input[type=password], input[type=email], input[type=number],
+  input[type=url], input[type=tel] {
     background-color: #FFF;
     color: #22252e;
     border: 1px solid #22252e;
