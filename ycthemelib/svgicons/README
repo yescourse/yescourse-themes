@@ -1,0 +1,22 @@
+The fa-svg-font-to-scss.py script is a customised version of the
+iconsvg3scss.py script modified to work with the format of the
+Font Awesome library (http://fontawesome.io/)
+
+pre-requisites:
+* python2.7+ (or python3.4+)
+* font-awesome library (v4.7 used when this was written)
+
+usage instructions:
+1. download and extract the font awesome library.
+2. locate the fontswesome-webfont.svg file
+     e.g: <path_to>/font-awesome-4.7.0/fonts/fontawesome-webfont.svg
+3. locate the variable.less file
+     e.g: <path_to>/font-awesome-4.7.0/less/variables.less
+4. run the script with those two files as the arguments,
+   and pipe the output in the desired .scss file:
+     e.g: python fa-svg-font-to-scss.py <path_to>/font-awesome-4.7.0/fonts/fontawesome-webfont.svg <path_to>/font-awesome-4.7.0/less/variables.less > _fa.scss
+
+known limitation:
+#1  Alias' aren't handled well. Each icon extracted is unique and is given only
+    one name - it may be the original or an alias. If you cannot find an icon
+    using the font-awesome default name, try the alias'
