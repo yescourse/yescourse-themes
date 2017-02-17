@@ -1,4 +1,4 @@
-@import "compass";
+@import "ycthemelib/images/mixins";
 
 $DOWNLOAD_VEIL_Z_INDEX: 2;
 $VIDEO_POSTER_Z_INDEX: 5;
@@ -26,9 +26,7 @@ $VIDEO_POSTER_Z_INDEX: 5;
 .media_block {
   padding: 20px;
   margin: 20px 0;
-  //background: #f0f0f0;
-  //border-radius: 4px;
-  @include clearfix;
+  overflow: hidden;
 
   &.quiz {
     padding: 24px; // allow more padding for the numbering to appear in
@@ -107,7 +105,7 @@ p.poster{
     position:absolute;
     top:40%;
     left:40%;
-    @include replace-text-with-dimensions('video_play_button.png');
+    @include yc-replace-text-with-dimensions('video_play_button.png');
     z-index:$VIDEO_POSTER_Z_INDEX;
     text-align:center;
 }

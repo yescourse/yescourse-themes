@@ -1,6 +1,7 @@
-@import "compass";
 @import "constants";
 @import "ycthemelib/responsive";
+@import "ycthemelib/images/mixins";
+@import "ycthemelib/typography/mixins";
 
 body {
   height: auto;
@@ -27,7 +28,7 @@ body {
     height: 200px;
     padding: 50px 10px 10px;
     border-radius: 8px;
-    background: #ffffff image-url('loading.gif') no-repeat center 30px;
+    background: #ffffff yc-image-url('loading.gif') no-repeat center 30px;
     color: #000000;
     z-index: $VEIL_CONTENT_Z_INDEX;
     p {
@@ -152,7 +153,7 @@ a {
 article {
   padding: 10px;
   margin-bottom: 70px;
-  @include clearfix;
+  overflow: hidden;
 
   h2 {
     border-bottom: 2px solid #b8ac92;
@@ -288,7 +289,7 @@ aside {
 }
 
 .description {
-  @include clearfix;
+  overflow: hidden;
   img {
     display: block;
     max-width: 100%;
@@ -320,9 +321,8 @@ aside {
   width: auto;
   border: 1px solid #da920c;
   border-bottom: 1px solid #915107;
-  background-color: #f9e59c;
-  @include filter-gradient(#f9e59c, #e38f13, vertical);
-  @include background-image(linear-gradient(top,  #f9e59c 0%,#f1d351 3%,#efc62c 5%,#e38f13 100%));
+  background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
+                                      #efc62c 5%, #e38f13 100%);
 
   // common styling for command button icons
   // we add the icon before the button text
@@ -335,7 +335,7 @@ aside {
   }
 
   &.view:before {
-    @include replace-text('cmd_view.png');
+    @include yc-replace-text('cmd_view.png');
   }
 
 }
