@@ -8,7 +8,7 @@ export SASS_PATH=".:../../.."
 
 CSS_PATH=../../css
 
-options="--style expanded --line-numbers"
+options="--style compressed"
 
 # FIXME: once sassc is installed in the VM remove this and just use sassc
 if [[ $(type -P sassc) ]]
@@ -18,9 +18,9 @@ else
     compiler=scss
 fi
 
-if [ "$1" = "--compressed" ]
+if [ "$1" = "--expanded" ]
 then
-	options="--style compressed"
+    options="--style expanded --line-numbers"
 fi
 
 function compile()
