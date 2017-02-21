@@ -1,0 +1,12 @@
+
+
+@mixin yc-adjust-font-size-to($size) {
+    font-size: $size;
+    line-height: $size * 1.25;
+}
+
+@mixin truncate-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

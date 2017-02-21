@@ -1,5 +1,5 @@
-@import "compass/utilities";
 @import "ycthemelib/responsive";
+@import "ycthemelib/images/mixins";
 @import "ycthemelib/svgicons/icons";
 @import "../constants";
 
@@ -14,7 +14,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     > li.private {
       .comment_container {
         padding: 8px 8px 8px 40px;
-        background: image-url('lock.png') no-repeat 8px 8px rgba(0, 0, 0, 0.2);
+        background: yc-image-url('lock.png') no-repeat 8px 8px rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -174,7 +174,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     font-size: 16px;
     background-image: none;
     &[name=private] {
-      background: image-url('lock.png') no-repeat 4px center;
+      background: yc-image-url('lock.png') no-repeat 4px center;
       text-align: left;
       padding-left: 36px;
     }
@@ -194,7 +194,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
   }
-  @include clearfix;
+  overflow: hidden;
 }
 
 .reply_comment_box {
@@ -268,7 +268,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
       a {
         display: inline-block;
         padding: 2px 4px 2px 26px;
-        background: image-url('clip.png') 4px center no-repeat;
+        background: yc-image-url('clip.png') 4px center no-repeat;
         line-height: 24px;
       }
     }
@@ -329,7 +329,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     display: inline-block;
     height: 36px;
     width: 26px;
-    background: rgba(0, 0, 0, 0.2) image-url('clip.png') 50% no-repeat;
+    background: rgba(0, 0, 0, 0.2) yc-image-url('clip.png') 50% no-repeat;
     border: none;
     text-indent: -10000px;
     &:hover {

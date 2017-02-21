@@ -1,12 +1,12 @@
-@import "compass/utilities";
 @import "ycthemelib/responsive";
+@import "ycthemelib/images/mixins";
 @import "constants";
 
 #exams {
     padding: 14px;
     background: rgba(0,0,0,0.1);
     margin: 16px 0;
-    @include clearfix;
+    overflow: hidden;
 
     h3 {
         font-size: 24px;
@@ -72,7 +72,7 @@
 
     .has_passed {
       border: 1px solid #7eac01;
-      background: #8fc400 image-url('exam_passed_tick.png') no-repeat 10px 4px;
+      background: #8fc400 yc-image-url('exam_passed_tick.png') no-repeat 10px 4px;
     }
 
     table {
@@ -289,7 +289,7 @@
     position: static;
   }
   .message {
-    background: rgba(0,0,0,0.1) image-url('hint_icon.png') no-repeat 2px 50%;
+    background: rgba(0,0,0,0.1) yc-image-url('hint_icon.png') no-repeat 2px 50%;
     padding: 4px 0 4px 26px;
     font-weight: bold;
   }
@@ -311,8 +311,8 @@
   font-size: 12px;
   margin-left: 12px;
   display: inline-block;
-  padding-left: image-width('lesson_green_icon.png') +4px;
-  background: image-url('lesson_green_icon.png') left center no-repeat;
+  padding-left: yc-image-width('lesson_green_icon.png') +4px;
+  background: yc-image-url('lesson_green_icon.png') left 50% no-repeat;
 }
 
 .question {
@@ -371,7 +371,7 @@
   .correct {
     background-color: #688241;
     color: white;
-    msg {
+    .msg {
       color: #b9d193;
     }
   }

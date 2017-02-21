@@ -1,4 +1,4 @@
-@import "compass";
+@import "ycthemelib/images/mixins";
 
 @mixin menu_entry {
   li.yc-menu-entry {
@@ -9,19 +9,19 @@
     border-bottom: 1px solid #60606c;
 
     &.lesson {
-      background: #32323a image-url('lesson_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_icon.png') no-repeat 10px center;
     }
 
     &.read {
-      background: #32323a image-url('lesson_green_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_green_icon.png') no-repeat 10px center;
     }
 
     &.unpublished {
-      background: #32323a image-url('lesson_warn_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_warn_icon.png') no-repeat 10px center;
     }
 
     &.locked {
-      background-image: image-url('lock.png');
+      background-image: yc-image-url('lock.png');
       a {
         padding-left: 42px;
       }
@@ -53,7 +53,7 @@
       overflow: hidden;
       border: none;
 
-      background: image-url('side_arrow.png') no-repeat right 50%;
+      background: yc-image-url('side_arrow.png') no-repeat right 50%;
     }
   }
 }

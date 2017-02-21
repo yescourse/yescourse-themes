@@ -1,5 +1,5 @@
-@import "compass";
 @import "ycthemelib/responsive";
+@import "ycthemelib/images/mixins";
 @import "constants";
 
 .course-sales-page {
@@ -249,7 +249,7 @@
 
 .yc-free-course-enrol-button {
   display:block;
-  @include replace-text-with-dimensions('free_course_enrol.png');
+  @include yc-replace-text-with-dimensions('free_course_enrol.png');
   border: none;
   background-color: transparent;
 }

@@ -1,3 +1,5 @@
+@import "ycthemelib/images/mixins";
+
 #yc-root {
   #tutors h2 {
     padding-top: 8px;
@@ -25,7 +27,7 @@
       margin: 0 auto;
     }
     .noimg {
-      background: image-url('default_pic_200.png') no-repeat;
+      background: yc-image-url('default_pic_200.png') no-repeat;
       width: 200px;
       height: 200px;
     }

@@ -1,6 +1,6 @@
-@import "compass";
 @import "constants";
 @import "ycthemelib/responsive";
+@import "ycthemelib/images/mixins";
 
 #yc-site-footer {
   @include respond_to(tablet_landscape) {
@@ -49,16 +49,12 @@
     line-height: 14px;
     font-weight: bold;
     color: #000000;
-    background-color: #f9e59c;
     display: inline-block;
     padding: 8px;
     border: 1px solid #3b3b3b;
     text-align: center;
-    @include background-image(
-            linear-gradient(
-                    top, #f9e59c 0%, #f1d351 3%, #efc62c 5%,
-                    #e38f13 100%)
-    );
+    background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
+                                        #efc62c 5%, #e38f13 100%);
   }
 
   .command {
@@ -70,7 +66,7 @@
 
   .powered {
     padding: 0 0 0 24px;
-    background: image-url('logo20.png') no-repeat left center;
+    background: yc-image-url('logo20.png') no-repeat left center;
     font-weight: bold;
     display: block;
     margin: 0 auto;

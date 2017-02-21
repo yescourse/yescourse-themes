@@ -1,0 +1,55 @@
+@import "yc_image_data";
+
+
+@function yc-image($path, $param) {
+  @if map_has_key($YC-IMAGE_DATA, $path) {
+    $image_info: map_get($YC-IMAGE_DATA, $path);
+    @return map_get($image_info, $param);
+  }
+  @else {
+    @error "Could not locate `#{$path}`";
+  }
+}
+
+@function yc-image-url($path) {
+  $url_path: yc-image($path, "url");
+  @return url("#{$url_path}");
+}
+
+@function yc-image-width($path) {
+  $width: yc-image($path, "width");
+  @return $width * 1px;  // convert to pixels
+}
+
+@function yc-image-height($path) {
+  $height: yc-image($path, "height");
+  @return $height * 1px;  // convert to pixels
+}
+
+@function yc-image-md5($path) {
+  @return yc-image($path, "md5");
+}
+
+
+@mixin yc-image-dimensions($path) {
+  width: yc-image-width($path);
+  height: yc-image-height($path);
+}
+
+
+@mixin yc-replace-text($img, $x: 50%, $y: 50%) {
+  text-indent: -9999em;
+  overflow: hidden;
+  text-align: left;
+  background: {
+    image: yc-image-url($img);
+    repeat: no-repeat;
+    position: $x $y;
+  };
+}
+
+
+@mixin yc-replace-text-with-dimensions($img, $x: 50%, $y: 50%, $inline: false) {
+  @include yc-replace-text($img, $x, $y);
+  @include yc-image-dimensions($img);
+}

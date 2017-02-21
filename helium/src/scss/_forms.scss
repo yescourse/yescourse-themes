@@ -1,7 +1,8 @@
-@import "compass";
 @import "constants";
 @import "ycthemelib/responsive";
 @import "ycthemelib/svgicons/icons";
+@import "ycthemelib/images/mixins";
+@import "ycthemelib/typography/mixins";
 
 $USER_FORMS_FIELD_HEIGHT: 37px;
 //$FORM_BACKGROUND_COLOUR: #3c425c;
@@ -156,11 +157,8 @@ $FIELD_MAX_WIDTH: 800px;
     text-align: center;
     padding: 0 20px;
     color: #4a3000;
-    background-color: #fac960; // Old browsers
-    @include filter-gradient(#fac960, #e79317, vertical); // IE6-8
-    // IE9 SVG, needs conditional override of 'filter' to 'none'
-    $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(top,  #fac960 0%,#e79317 100%));
+    background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
+                                        #efc62c 5%, #e38f13 100%);
 
   }
 }
@@ -196,9 +194,6 @@ ul.field-errors {
 
   h1, h3 {
     background-color: #000;
-    @include filter-gradient(#616c88, #3f4c6c, vertical); // IE6-8
-    // IE9 SVG, needs conditional override of 'filter' to 'none'
-    $experimental-support-for-svg: true;
     color: white;
     font-size: 28px;
     line-height: 64px;
@@ -303,19 +298,19 @@ ul.field-errors {
       }
 
       &.full_name {
-        background: #343e59 image-url('user_icon.png') no-repeat 10px 50%;
+        background: #343e59 yc-image-url('user_icon.png') no-repeat 10px 50%;
       }
 
       &.email {
-        background: #343e59 image-url('mail_icon.png') no-repeat 10px 50%;
+        background: #343e59 yc-image-url('mail_icon.png') no-repeat 10px 50%;
       }
 
       &.country {
-        background: #343e59 image-url('country.png') no-repeat 10px 50%;
+        background: #343e59 yc-image-url('country.png') no-repeat 10px 50%;
       }
 
       &.mobile_number {
-        background: #343e59 image-url('mobile_icon.png') no-repeat 10px 50%;
+        background: #343e59 yc-image-url('mobile_icon.png') no-repeat 10px 50%;
       }
     }
 
@@ -442,7 +437,7 @@ button.stripe-checkout { // copied from stripe styling
   right: 12px;
   top: 12px;
   display: block;
-  @include replace-text-with-dimensions('delete_grey.png');
+  @include yc-replace-text-with-dimensions('delete_grey.png');
   &:hover {
     opacity: 0.5;
   }
@@ -526,9 +521,8 @@ button.stripe-checkout { // copied from stripe styling
     &:not(.new_comment_submit) {
       height: 50px;
       border-radius: 4px;
-      background-color: #f4d143; // Old browsers
-      @include filter-gradient(#f4d143, #e08210, vertical); // IE6-9
-      @include background-image(linear-gradient(top, #f4d143 0%, #e08210 100%));
+      background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
+                                      #efc62c 5%, #e38f13 100%);
       border: 1px solid #e9a921;
       border-top-color: #fbf2b9;
     }
@@ -609,10 +603,8 @@ button.stripe-checkout { // copied from stripe styling
       line-height: 12px;
       height: 28px;
       padding: 8px;
-      background-color: #c70100; // Old browsers
+      background: #c70100 linear-gradient(to bottom, #c70100 0%, #860000 100%);
       margin: 0;
-      @include filter-gradient(#c70100, #860000, vertical); // IE6-9
-      @include background-image(linear-gradient(top, #c70100 1%, #860000 100%));
     }
   }
 
@@ -647,7 +639,7 @@ button.stripe-checkout { // copied from stripe styling
   }
 
   textarea.ckloading {
-    background: image-url('loading.gif') no-repeat scroll center center transparent;
+    background: yc-image-url('loading.gif') no-repeat scroll center center transparent;
     color: rgba(0, 0, 0, 0);
   }
 }
