@@ -23,6 +23,12 @@ then
     options="--style expanded --line-numbers"
 fi
 
+if [ ${compiler} = "sassc" ]
+then
+    # sassc does not look at the SASS_PATH env, rather needs to be passed in
+    options="$options --load-path $SASS_PATH"
+fi
+
 function compile()
 {
 	echo "Compiling $1 to ${CSS_PATH}/$2 using ${compiler}"
