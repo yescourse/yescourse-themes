@@ -456,7 +456,7 @@ button.stripe-checkout { // copied from stripe styling
 #yc-root {
   form {
     background-color: $FORM_BACKGROUND_COLOUR;
-    padding: 10px 15px;
+    padding: 16px;
     table, tr, th, td, table, ul, p, label {
       background-color: $FORM_BACKGROUND_COLOUR;
       color: #d4d4d6;
@@ -505,7 +505,6 @@ button.stripe-checkout { // copied from stripe styling
 
   textarea {
     width: 100%;
-    max-width: $FIELD_MAX_WIDTH;
     display: block;
   }
 
@@ -517,15 +516,7 @@ button.stripe-checkout { // copied from stripe styling
     height: 36px;
     padding: 0 32px;
     margin-top: 8px;
-    margin-right: 20px;
-    &:not(.new_comment_submit) {
-      height: 50px;
-      border-radius: 4px;
-      background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
-                                      #efc62c 5%, #e38f13 100%);
-      border: 1px solid #e9a921;
-      border-top-color: #fbf2b9;
-    }
+    margin-right: 24px;
   }
 
   select {

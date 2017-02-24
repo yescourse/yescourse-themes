@@ -47,11 +47,16 @@ article th, #yc-dialog th {
     color: {{ theme_config.text_color }} !important;
 }
 
+#comments header, #comments footer, #comments .yc-comment-container {
+    background-color: {{ theme_config.background_color }} !important;
+    color: {{ theme_config.text_color }} !important;
+}
+
 #comments .comment_text {
     background-color: {{ theme_config.background_color }} !important;
 }
 
-#comments .comment_reply, #comments .new_comment_submit, #comments .comment_cancel {
+#comments input[type=submit], #comments .comment_cancel {
     color: {{ theme_config.background_color }} !important;
     background-color: {{ theme_config.text_color }} !important;
 }
