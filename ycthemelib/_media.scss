@@ -93,8 +93,8 @@ a.media_download {
   display: block;
   margin: 12px auto 0;
   width: 130px;
-  padding: 6px 8px 6px image-width('download_button.png')+8px;
-  background: #0999D6 image-url('download_button.png') no-repeat 0 center;
+  padding: 6px 8px 6px yc-image-width('download_button.png')+8px;
+  background: #0999D6 yc-image-url('download_button.png') no-repeat 0 center;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -136,7 +136,7 @@ p.poster{
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    background: image-url('file_icon.png') no-repeat 50% 20px;
+    background: yc-image-url('file_icon.png') no-repeat 50% 20px;
 
     .download_veil {
       display: none;
@@ -147,16 +147,16 @@ p.poster{
       color: white;
     }
     &.xls, &.xlsx, &.csv {
-      background-image: image-url('excel.png');
+      background-image: yc-image-url('excel.png');
     }
     &.pdf {
-      background-image: image-url('pdf_icon.png');
+      background-image: yc-image-url('pdf_icon.png');
     }
     &.doc, &.docx {
-      background-image: image-url('ms_docx.png');
+      background-image: yc-image-url('ms_docx.png');
     }
     &.ppt, &.pptx {
-      background-image: image-url('ppt.jpg');
+      background-image: yc-image-url('ppt.jpg');
     }
 
 
@@ -171,7 +171,7 @@ p.poster{
         width: 100%;
         height: 100%;
 
-        background: rgba(30, 30, 30, 0.4) image-url('download_button.png') no-repeat 50% 50%;
+        background: rgba(30, 30, 30, 0.4) yc-image-url('download_button.png') no-repeat 50% 50%;
         z-index: $DOWNLOAD_VEIL_Z_INDEX;
       }
     }
