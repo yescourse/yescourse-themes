@@ -873,6 +873,11 @@ p.poster {
   display: none;
 }
 
+/* line 19, ../../../ycthemelib/_tabs.scss */
+.yc-current-tab {
+  border-bottom: 2px solid;
+}
+
 /* line 6, _base.scss */
 body {
   height: auto;
@@ -4679,11 +4684,6 @@ table.yc-inst-price td {
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 0 8px 0;
-}
-
-/* line 74, _widgets.scss */
-.yc-multi-price .yc-current-tab {
-  border-bottom: 2px solid;
 }
 
 /* line 6, _content_page.scss */
