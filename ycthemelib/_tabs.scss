@@ -1,0 +1,19 @@
+
+.yc-tabs {
+  display: flex;
+  flex-flow: row wrap;
+  a {
+    color: inherit;
+    padding: 8px;
+    opacity: 0.5;
+    &.yc-current-tab {
+      opacity: 1;
+    }
+  }
+}
+
+.yc-tab-content:not(.yc-current-tab-content) {
+  display: none;
+}
+
+

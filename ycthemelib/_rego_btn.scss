@@ -11,12 +11,12 @@
 
   .yc-rego-wrap {
     //width: 260px;
-    padding: 24px 0 14px 0;
+    padding: 24px;
     text-align: center;
     background-color: rgba(0,0,0,0.52);
     border-radius: 4px;
 
-    a {
+    .yc-enrol-button {
       margin: 0 auto;
       // need important as this needs to override the
       // local custom style

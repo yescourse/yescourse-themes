@@ -1,0 +1,77 @@
+@import "ycthemelib/images/mixins";
+
+.enrol {
+  input.invalid {
+    background: red;
+  }
+}
+
+.has-sidebar.course-sales-page {
+  article {
+    padding-left: 10px;
+  }
+}
+
+.yc-free-course-enrol-button {
+  display:block;
+  @include yc-replace-text-with-dimensions('free_course_enrol.png');
+  border: none;
+  background-color: transparent;
+}
+
+@mixin paypal_button {
+  display:block;
+  width: 171px;
+  height: 47px;
+  background: url('https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif') no-repeat;
+  text-indent: -10000px;
+}
+
+.yc-buy-now-button {
+  @include paypal_button;
+}
+
+.yc-custom-image {
+  .yc-free-course-enrol-button {
+    display: block;
+    background: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+.yc-prices {
+  margin: 16px;
+}
+
+.yc-price {
+  span {
+    margin: 0 8px 0 0;
+  }
+}
+
+
+table.yc-inst-price {
+  border: 1px solid rgba(255,255,255,0.3);
+  border-collapse: collapse;
+  max-width: 320px;
+  margin: 0 auto;
+  th {
+    background: rgba(255,255,255, 0.4);
+    padding: 8px;
+  }
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+}
+
+.yc-multi-price {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 0 8px 0;
+  .yc-current-tab {
+    border-bottom: 2px solid; // use current text color
+  }
+}

@@ -221,13 +221,6 @@
     }
   }
 
-  span.yc-price {
-    > span {
-      margin-right: 4px;
-    }
-  }
-
-
   // ------- Widgets ----------------
 
   .fb-like {
@@ -235,42 +228,3 @@
   }
 }
 
-.enrol {
-    input.invalid {
-        background: red;
-    }
-}
-
-.has-sidebar.course-sales-page {
-  article {
-    padding-left: 10px;
-  }
-}
-
-.yc-free-course-enrol-button {
-  display:block;
-  @include yc-replace-text-with-dimensions('free_course_enrol.png');
-  border: none;
-  background-color: transparent;
-}
-
-@mixin paypal_button {
-  display:block;
-  width: 171px;
-  height: 47px;
-  background: url('https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif') no-repeat;
-  text-indent: -10000px;
-}
-
-.yc-buy-now-button {
-  @include paypal_button;
-}
-
-.yc-custom-image {
-  .yc-free-course-enrol-button {
-    display: block;
-    background: none;
-    width: auto;
-    height: auto;
-  }
-}
