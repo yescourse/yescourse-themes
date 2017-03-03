@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 #yc-root {
     background-color: {{ theme_config.background_color }} !important;
     color: {{ theme_config.text_color }} !important;
@@ -119,7 +126,7 @@ article th, #yc-dialog th {
     opacity: 0.5 !important;
 }
 
-aside, .course_tree ul.modules > li {
+aside, .course_tree ul.modules {
     background-color: {{ theme_config.menu_background_color }} !important;
     color: {{ theme_config.menu_text_color }} !important;
 }
