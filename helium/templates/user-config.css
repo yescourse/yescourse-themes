@@ -37,10 +37,6 @@ article a.coupon_code_link {
 }
 
 
-/*.lesson-page article h2 {
-    color: {{ theme_config.link_text_color }};
-}*/
-
 article ul, article ol {
     color: {{ theme_config.text_color }} !important;
     border: none !important;
