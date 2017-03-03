@@ -1,14 +1,15 @@
 @import "ycthemelib/responsive";
 @import "ycthemelib/images/mixins";
 @import "constants";
+@import "blocks/shared";
 
 #exams {
   .yc-exam-block, .yc-exam-attempts {
-    padding: 16px;
+    padding: 32px;
   }
 
-    background: rgba(0,0,0,0.1);
-    margin: 16px 0;
+    @include panel_bg_shadow();
+    margin: 32px 0;
     overflow: hidden;
 
     h3 {
@@ -23,20 +24,21 @@
     }
 
     .action {
-        display: block;
-        width: 110px;
-        padding: 8px 0 11px 8px;
+        display: inline-block;
+        padding: 16px;
         font-size: 14px;
         line-height: 1em;
-        margin: 12px auto;
         text-decoration: none;
         color: white;
-        border-radius: 4px;
         font-weight: bold;
+      margin: 16px 0 0 0;
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     .command {
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
     }
 
   #exam_pwd_block {
@@ -51,24 +53,21 @@
       border-color: red;
       &::after {
         content: "Incorrect";
-        padding-left: 12px;
+        padding-left: 16px;
       }
     }
   }
 
   label[for=exam_pwd] {
     display: inline-block;
-    padding: 0 12px 0 0;
+    padding: 0 16px 0 0;
   }
 
     .has_passed {
-        padding-left: 36px;
+        padding-left: 32px;
     }
 
     .attempt_now {
-        display: block;
-        float: none;
-        margin: 0 0 12px 0;
         color: white;
         background: #0999D6;
     }

@@ -2,14 +2,15 @@
 @import "ycthemelib/images/mixins";
 @import "ycthemelib/svgicons/icons";
 @import "../constants";
+@import "shared";
 
 $LEFT_INDENT_SUBCOMMENT: 24px;
 
 #comments {
   padding: 32px;
   margin-top: 36px;
-  background: rgba(0, 0, 0, 0.059);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  @include panel_bg_shadow();
 
   &> h3 {
     margin: 0 0 16px 0;
