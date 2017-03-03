@@ -270,7 +270,12 @@ aside {
 }
 
 .social {
-  margin: 20px 0;
+  margin: 24px 0;
+  .fb-like {
+    iframe {
+      margin: 0;
+    }
+  }
 }
 
 #description {
