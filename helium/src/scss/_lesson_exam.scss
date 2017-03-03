@@ -3,7 +3,10 @@
 @import "constants";
 
 #exams {
-    padding: 14px;
+  .yc-exam-block, .yc-exam-attempts {
+    padding: 16px;
+  }
+
     background: rgba(0,0,0,0.1);
     margin: 16px 0;
     overflow: hidden;
