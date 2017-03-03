@@ -3,21 +3,23 @@
 @mixin menu_entry {
   li.yc-menu-entry {
     list-style: none;
-    display: block;
-    height: 57px;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 8px 0;
 
-    border-bottom: 1px solid #60606c;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 
     &.lesson {
-      background: #32323a yc-image-url('lesson_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_icon.png') no-repeat 8px center;
     }
 
     &.read {
-      background: #32323a yc-image-url('lesson_green_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_green_icon.png') no-repeat 8px center;
     }
 
     &.unpublished {
-      background: #32323a yc-image-url('lesson_warn_icon.png') no-repeat 10px center;
+      background: #32323a yc-image-url('lesson_warn_icon.png') no-repeat 8px center;
     }
 
     &.locked {
@@ -42,18 +44,14 @@
     a {
       color: #fefefe;
       font-size: 18px;
-      line-height: 57px;
+      flex: 1 1 auto;
+      line-height: 28px;
 
       display: inline-block;
-      padding: 0 36px 0 36px;
-      text-overflow: ellipsis;
-      width: 95%;
-      height: 100%;
-      white-space: nowrap;
-      overflow: hidden;
+      padding: 0 32px 0 32px;
       border: none;
 
-      background: yc-image-url('side_arrow.png') no-repeat right 50%;
+      background: yc-image-url('side_arrow.png') no-repeat right 16px top 50%;
     }
   }
 }
