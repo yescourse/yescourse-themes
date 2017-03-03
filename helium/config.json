@@ -44,6 +44,105 @@
     "menu_selected_text_color": "#000000",
     "rego_button_background_color": "rgba(0,0,0,0.52)"
   },
+  "vars": {
+    "header_background_color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "header_text_color": {
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "banner_background_color": {
+      "type": "color",
+      "default": "#3C425C"
+    },
+    "banner_text_color": {
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "banner_custom_text_background_color": {
+      "type": "color",
+      "default": "rgba(0,0,0,0.52)"
+    },
+    "background_color": {
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "text_color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "link_text_color": {
+      "type": "color",
+      "default": "#247ca0"
+    },
+    "menu_background_color": {
+      "type": "color",
+      "default": "#4c4c54"
+    },
+    "menu_item_background_color": {
+      "type": "color",
+      "default": "#32323a"
+    },
+    "menu_text_color": {
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "menu_selected_background_color": {
+      "type": "color",
+      "default": "#0999d6"
+    },
+    "menu_selected_text_color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "rego_button_background_color": {
+      "type": "color",
+      "default": "rgba(0,0,0,0.52)"
+    }
+  },
+  "build_ui": {
+    "sections": [
+      {
+        "name": "Colors",
+        "pages": ["all"],
+        "groups": [
+          {
+            "name": "Header & Footer",
+            "fields": [
+              {
+                "var": "header_background_color",
+                "label": "Header/Footer Background"
+              },
+              {
+                "var": "header_text_color",
+                "label": "Header/Footer Text"
+              }
+            ]
+          },
+          {
+            "name": "Sales Page Banner",
+            "pages": ["sales-page"],
+            "fields": [
+              {
+                "var": "banner_background_color",
+                "label": "Banner Background"
+              },
+              {
+                "var": "banner_text_color",
+                "label": "Banner Text"
+              },
+              {
+                "var": "banner_custom_text_background_color",
+                "label": "Banner Custom Text Background"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "images": [
     "account_setting.png", "default_pic_200.png", "download_button.png",
     "excel.png", "free_course_enrol.png", "lesson_icon.png", "lock.png",
