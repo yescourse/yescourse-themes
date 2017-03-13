@@ -116,7 +116,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   }
 
   .yc-comment-text {
-    flex: 1 0 100%;
+    flex: 1 0 auto;
     padding: 16px;
     p {
       text-align: left;
@@ -131,7 +131,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
     }
   }
   .comment_reply_form {
-    flex: 1 0 100%;
+    flex: 1 0 auto;
   }
 
   input[type=button].comment_cancel {
