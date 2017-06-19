@@ -106,6 +106,23 @@
             ]
           },
           {
+            "name": "Content Area",
+            "fields": [
+              {
+                "var": "header_background_color",
+                "label": "Content Background"
+              },
+              {
+                "var": "header_text_color",
+                "label": "Content Text"
+              },
+              {
+                "var": "header_text_color",
+                "label": "Content Headings & Links"
+              }
+            ]
+          },
+          {
             "name": "Sales Page Banner",
             "levels": ["S"],
             "fields": [
@@ -120,6 +137,59 @@
               {
                 "var": "banner_custom_text_background_color",
                 "label": "Banner Custom Text Background"
+              }
+            ]
+          },
+          {
+            "name": "Registration Button",
+            "levels": ["S"],
+            "fields": [
+              {
+                "var": "rego_button_background_color",
+                "label": "Button Background"
+              }
+            ]
+          },
+          {
+            "name": "Content Area",
+            "fields": [
+              {
+                "var": "background_color",
+                "label": "Content Background"
+              },
+              {
+                "var": "text_color",
+                "label": "Content Text"
+              },
+              {
+                "var": "link_text_color",
+                "label": "Content Headings & Links"
+              }
+            ]
+          },
+          {
+            "name": "Side-bar / Menu Area",
+            "levels": ["C", "L", "S"],
+            "fields": [
+              {
+                "var": "menu_background_color",
+                "label": "Background"
+              },
+              {
+                "var": "menu_text_color",
+                "label": "Text"
+              },
+              {
+                "var": "menu_item_background_color",
+                "label": "Item Background"
+              },
+              {
+                "var": "menu_selected_background_color",
+                "label": "Selected Item Background"
+              },
+              {
+                "var": "menu_selected_text_color",
+                "label": "Selected Item Text"
               }
             ]
           }
