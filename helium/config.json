@@ -28,22 +28,6 @@
      "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700"
   ],
   "extjs" : [],
-  "defaults": {
-    "header_background_color": "#000000",
-    "header_text_color": "#ffffff",
-    "banner_background_color": "#3C425C",
-    "banner_text_color":  "#ffffff",
-    "banner_custom_text_background_color": "rgba(0,0,0,0.52)",
-    "background_color": "#ffffff",
-    "text_color":  "#000000",
-    "link_text_color": "#247ca0",
-    "menu_background_color": "#4c4c54",
-    "menu_item_background_color": "#32323a",
-    "menu_text_color": "#ffffff",
-    "menu_selected_background_color": "#0999d6",
-    "menu_selected_text_color": "#000000",
-    "rego_button_background_color": "rgba(0,0,0,0.52)"
-  },
   "vars": {
     "header_background_color": {
       "type": "color",
@@ -106,7 +90,7 @@
     "sections": [
       {
         "name": "Colors",
-        "pages": ["all"],
+        "levels": ["all"],
         "groups": [
           {
             "name": "Header & Footer",
@@ -123,7 +107,7 @@
           },
           {
             "name": "Sales Page Banner",
-            "pages": ["sales-page"],
+            "levels": ["S"],
             "fields": [
               {
                 "var": "banner_background_color",
