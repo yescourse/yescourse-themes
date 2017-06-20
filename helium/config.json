@@ -46,7 +46,7 @@
       "default": "#ffffff"
     },
     "banner_custom_text_background_color": {
-      "type": "color",
+      "type": "color-alpha",
       "default": "rgba(0,0,0,0.52)"
     },
     "background_color": {
@@ -82,7 +82,7 @@
       "default": "#000000"
     },
     "rego_button_background_color": {
-      "type": "color",
+      "type": "color-alpha",
       "default": "rgba(0,0,0,0.52)"
     }
   },
@@ -102,23 +102,6 @@
               {
                 "var": "header_text_color",
                 "label": "Header/Footer Text"
-              }
-            ]
-          },
-          {
-            "name": "Content Area",
-            "fields": [
-              {
-                "var": "header_background_color",
-                "label": "Content Background"
-              },
-              {
-                "var": "header_text_color",
-                "label": "Content Text"
-              },
-              {
-                "var": "header_text_color",
-                "label": "Content Headings & Links"
               }
             ]
           },
