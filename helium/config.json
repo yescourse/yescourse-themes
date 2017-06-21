@@ -16,7 +16,6 @@
     "blog-page": "blog-page.html",
     "course-thank-you-page": "course-thank-you-page.html",
     "user-config-css": "user-config.css",
-
     "404-page": "404.html",
     "-site-header": "site-header.html",
     "-site-footer": "site-footer.html",
@@ -84,6 +83,34 @@
     "rego_button_background_color": {
       "type": "color-alpha",
       "default": "rgba(0,0,0,0.52)"
+    },
+    "show_page_header": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_pre_banner_text": {
+      "type": "boolean",
+      "default": false
+    },
+    "show_banner": {
+      "type": "boolean",
+      "default": true
+    },
+    "show_sidebar": {
+      "type": "boolean",
+      "default": true
+    },
+    "registration_button_in_banner": {
+      "type": "boolean",
+      "default": true
+    },
+    "registration_button_at_bottom": {
+      "type": "boolean",
+      "default": true
+    },
+    "banner_show_visual": {
+      "type": "boolean",
+      "default": true
     }
   },
   "build_ui": {
@@ -95,6 +122,11 @@
           {
             "name": "Header & Footer",
             "fields": [
+              {
+                "levels": ["S"],
+                "var": "show_page_header",
+                "label": "Show page header"
+              },
               {
                 "var": "header_background_color",
                 "label": "Header/Footer Background"
@@ -109,6 +141,18 @@
             "name": "Sales Page Banner",
             "levels": ["S"],
             "fields": [
+              {
+                "var": "show_pre_banner_text",
+                "label": "Show Pre-Banner Text"
+              },
+              {
+                "var": "show_banner",
+                "label": "Show Banner"
+              },
+              {
+                "var": "banner_show_visual",
+                "label": "Show Image/Video in Banner"
+              },
               {
                 "var": "banner_background_color",
                 "label": "Banner Background"
@@ -127,6 +171,14 @@
             "name": "Registration Button",
             "levels": ["S"],
             "fields": [
+              {
+                "var": "registration_button_in_banner",
+                "label": "Registration Button in Banner"
+              },
+              {
+                "var": "registration_button_at_bottom",
+                "label": "Registration Button at Bottom of Page"
+              },
               {
                 "var": "rego_button_background_color",
                 "label": "Button Background"
@@ -154,6 +206,11 @@
             "name": "Side-bar / Menu Area",
             "levels": ["C", "L", "S"],
             "fields": [
+              {
+                "levels": ["S"],
+                "var": "show_sidebar",
+                "label": "Show Sidebar"
+              },
               {
                 "var": "menu_background_color",
                 "label": "Background"
