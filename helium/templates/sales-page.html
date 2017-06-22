@@ -5,7 +5,7 @@
 
 
 {% include "-site-header" onlyIf=theme_config.show_page_header %}
-{% sales_page_pre_banner_text onlyIf=theme_config.show_pre_banner_text %}
+{% text_div theme_config.pre_banner_text id="prebanner" onlyIf=theme_config.show_pre_banner_text %}
 {% include "-banner" onlyIf=theme_config.show_banner %}
 
 <div id="content_wrap">
