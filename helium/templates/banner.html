@@ -7,6 +7,6 @@
         {% sales_page_visual onlyIf=theme_config.banner_show_visual %}
 
         {% include "-std-banner-text" notIf=theme_config.banner_has_custom_text %}
-        {% text_div theme_config.banner_text class="banner_text custom" onlyIf=theme_config.banner_has_custom_text %}
+        {% theme_text "banner_text" class="banner_text custom" onlyIf=theme_config.banner_has_custom_text %}
     </div>
 </div>

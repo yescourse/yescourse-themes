@@ -143,6 +143,16 @@
       ],
       "levels": ["S"],
       "default": "COVER"
+    },
+    "pre_banner_text": {
+      "type": "text",
+      "levels": ["S"],
+      "default": ""
+    },
+    "banner_text": {
+      "type": "text",
+      "levels": ["S"],
+      "default": ""
     }
   },
   "build_ui": {
