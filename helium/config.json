@@ -118,6 +118,31 @@
       "type": "boolean",
       "levels": ["S"],
       "default": true
+    },
+    "banner_has_custom_text": {
+      "type": "boolean",
+      "levels": ["S"],
+      "default": false
+    },
+    "banner_text_position": {
+      "type": "choice",
+      "choices": [
+        ["LEFT", "Left"],
+        ["RIGHT", "Right"],
+        ["BOT", "Bottom"]
+      ],
+      "levels": ["S"],
+      "default": "RIGHT"
+    },
+    "banner_background_scaling": {
+      "type": "choice",
+      "choices": [
+        ["NO_SCALE", "No Scaling applied"],
+        ["COVER", "Scale Image to cover Banner"],
+        ["CONTAIN", "Scale Image to fit inside Banner"]
+      ],
+      "levels": ["S"],
+      "default": "COVER"
     }
   },
   "build_ui": {
