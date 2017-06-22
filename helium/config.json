@@ -86,30 +86,37 @@
     },
     "show_page_header": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     },
     "show_pre_banner_text": {
       "type": "boolean",
+      "levels": ["S"],
       "default": false
     },
     "show_banner": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     },
     "show_sidebar": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     },
     "registration_button_in_banner": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     },
     "registration_button_at_bottom": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     },
     "banner_show_visual": {
       "type": "boolean",
+      "levels": ["S"],
       "default": true
     }
   },
@@ -123,7 +130,6 @@
             "name": "Header & Footer",
             "fields": [
               {
-                "levels": ["S"],
                 "var": "show_page_header",
                 "label": "Show page header"
               },
@@ -207,7 +213,6 @@
             "levels": ["C", "L", "S"],
             "fields": [
               {
-                "levels": ["S"],
                 "var": "show_sidebar",
                 "label": "Show Sidebar"
               },
