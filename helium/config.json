@@ -145,12 +145,12 @@
       "default": "COVER"
     },
     "pre_banner_text": {
-      "type": "text",
+      "type": "html",
       "levels": ["S"],
       "default": ""
     },
     "banner_text": {
-      "type": "text",
+      "type": "html",
       "levels": ["S"],
       "default": ""
     }
