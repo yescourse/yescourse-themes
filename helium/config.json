@@ -153,6 +153,11 @@
       "type": "html",
       "levels": ["S"],
       "default": ""
+    },
+    "banner_background_image": {
+      "type": "image",
+      "levels": ["S"],
+      "default": null
     }
   },
   "build_ui": {
@@ -213,6 +218,10 @@
               {
                 "var": "banner_custom_text_background_color",
                 "label": "Banner Custom Text Background"
+              },
+              {
+                "var": "banner_background_image",
+                "label": "Banner Background Image"
               },
               {
                 "var": "banner_background_scaling",
