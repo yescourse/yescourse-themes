@@ -25,7 +25,7 @@ $base-line-height: 24px;
     font-family: 'Open Sans', sans-serif;
 
     p {
-        @include yc-adjust-font-size-to(16px);
+        @include yc-adjust-font-size-to($base-font-size);
     }
     // headers
     h1 {
@@ -66,6 +66,16 @@ $base-line-height: 24px;
 
     article h2 {
         @include yc-adjust-font-size-to(24px);
+    }
+
+    article {
+        .description {
+            li {
+                @include yc-adjust-font-size-to($base-font-size);
+                padding: 4px;
+                list-style-position: outside;
+            }
+        }
     }
 
     button,

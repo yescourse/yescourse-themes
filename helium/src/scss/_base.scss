@@ -56,10 +56,6 @@ body {
   }
 }
 
-#yc-root {
-  //overflow: auto;  // clearfix
-}
-
 iframe.dialog {
   z-index: $MODAL_DIALOG_Z_INDEX;
   position: fixed;
@@ -169,25 +165,24 @@ article {
   }
 
   ul {
-    padding: 26px 20px;
+    padding: 24px 32px;
     background-color: rgba(0, 0, 0, 0.0157);
-    border-radius: 4px;
 
     li {
-      list-style: disc inside;
+      list-style: disc outside;
     }
 
     ul {
       border: none;
 
       li {
-        list-style: square inside;
+        list-style: square outside;
       }
 
       ul {
         li {
-          list-style: circle inside;
-          padding: 12px 0;
+          list-style: circle outside;
+          padding: 16px 0;
           border-bottom: 1px dashed inherit;
         }
       }
@@ -195,25 +190,24 @@ article {
   }
 
   ol {
-    padding: 26px 20px;
+    padding: 24px 32px;
     background-color: rgba(0, 0, 0, 0.0157);
-    border-radius: 4px;
 
     li {
-      list-style: decimal inside;
+      list-style: decimal outside;
     }
 
     ol {
       border: none;
 
       li {
-        list-style: lower-alpha inside;
+        list-style: lower-alpha outside;
       }
 
       ol {
         li {
-          list-style: lower-roman inside;
-          padding: 12px 0;
+          list-style: lower-roman outside;
+          padding: 16px 0;
           border-bottom: 1px dashed inherit;
         }
       }
@@ -232,12 +226,10 @@ article {
     padding: 2px 5px;
     font-size: 14px;
     font-weight: bold;
-    //background-color: #0999d6;
     text-align: left;
   }
 
   tr {
-    //background-color: #e7e7e7;
     &:nth-child(even) {
       background-color: rgba(0, 0, 0, 0.1608);
     }
