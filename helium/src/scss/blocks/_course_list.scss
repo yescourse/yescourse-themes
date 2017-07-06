@@ -1,23 +1,32 @@
 @import "ycthemelib/responsive";
 @import "../constants";
+@import "../mixins";
 
 .course_list {
   text-align: left;
+  margin: 32px 0;
+  padding: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: transparent;
   li {
-    display: inline-block;
-    max-width: 300px;
+    max-width: 304px;
     list-style: none;
-    background-color: #EEEEEE;
-    margin: 0 0 32px 32px;
+    background-color: rgba(0,0,0,0.02);
+    margin: 0 16px 32px 0;
     text-align: center;
     vertical-align: top;
     position: relative;
+    @include panel_style;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   a.course {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 36px;
     border: none;
-    color: $DEFAULT_TEXT_COLOUR !important;
     display: block;
     overflow: hidden;
     &.free:before {
