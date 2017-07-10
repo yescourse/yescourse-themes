@@ -32,6 +32,7 @@ fi
 function compile()
 {
 	echo "Compiling $1 to ${CSS_PATH}/$2 using ${compiler}"
+	mkdir -p ${CSS_PATH}
 	${compiler} ${options} $1 ${CSS_PATH}/$2
 }
 
