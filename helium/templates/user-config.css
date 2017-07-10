@@ -115,7 +115,7 @@ article th, #yc-dialog th {
     opacity: 0.5 !important;
 }
 
-aside, .course_tree ul.modules {
+aside, .yc-course-tree ul.modules {
     background-color: {{ theme_config.menu_background_color }} !important;
     color: {{ theme_config.menu_text_color }} !important;
 }
@@ -124,8 +124,12 @@ aside .breadcrumbs a {
     color: {{ theme_config.menu_text_color }} !important;
 }
 
-aside ul a, .course_tree ul a, .tutor_info a, .tutor_info .username, aside h2 {
+aside ul a, .yc-course-tree ul a, .tutor_info a, .tutor_info .username, aside h2 {
     color: {{ theme_config.menu_text_color }} !important;
+}
+
+.yc-course-tree ul a {
+    border: none !important;
 }
 
 aside ul li, li.yc-menu-entry, .tutor_info {
