@@ -118,15 +118,15 @@
 
   // -----------------------
   // Handle banner options
-  &.banner-bg-cover #sales_banner {
+  &[data-banner_background_scaling='cover'] #sales_banner {
     background-size: cover;
   }
 
-  &.banner-bg-contain #sales_banner {
+  &[data-banner_background_scaling='contain'] #sales_banner {
     background-size: contain;
   }
 
-  &.banner-text-pos-left #sales_banner {
+  &[data-banner_text_position='left'] #sales_banner {
     @include respond_to(tablet_landscape) {
       .course_visual {
         float: right;
@@ -139,7 +139,7 @@
     }
   }
 
-  &.banner-text-pos-right #sales_banner {
+  &[data-banner_text_position='right'] #sales_banner {
     .banner_text {
       @include respond_to(tablet_landscape) {
         margin: 0 0 0 538px;
