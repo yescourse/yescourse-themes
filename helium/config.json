@@ -193,7 +193,8 @@
               },
               {
                 "var": "pre_banner_text",
-                "label": "Pre Banner Text"
+                "label": "Pre Banner Text",
+                "show-if-true": "show_pre_banner_text"
               },
               {
                 "var": "show_banner",
@@ -209,7 +210,8 @@
               },
               {
                 "var": "banner_text",
-                "label": "Banner Text"
+                "label": "Banner Text",
+                "show-if-true": "banner_has_custom_text"
               },
               {
                 "var": "banner_text_color",
