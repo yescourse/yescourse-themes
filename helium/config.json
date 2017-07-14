@@ -161,148 +161,142 @@
     }
   },
   "build_ui": {
-    "sections": [
+    "groups": [
       {
-        "name": "Colors",
-        "levels": ["all"],
-        "groups": [
+        "name": "Header & Footer",
+        "fields": [
           {
-            "name": "Header & Footer",
-            "fields": [
-              {
-                "var": "show_page_header",
-                "label": "Show page header"
-              },
-              {
-                "var": "header_background_color",
-                "label": "Header/Footer Background"
-              },
-              {
-                "var": "header_text_color",
-                "label": "Header/Footer Text"
-              }
-            ]
+            "var": "show_page_header",
+            "label": "Show page header"
           },
           {
-            "name": "Sales Page Banner",
-            "levels": ["S"],
-            "fields": [
-              {
-                "var": "show_pre_banner_text",
-                "label": "Show Pre-Banner Text"
-              },
-              {
-                "var": "pre_banner_text",
-                "label": "Pre Banner Text",
-                "show-if-true": "show_pre_banner_text"
-              },
-              {
-                "var": "show_banner",
-                "label": "Show Banner"
-              },
-              {
-                "var": "banner_text_position",
-                "label": "Banner Text Position"
-              },
-              {
-                "var": "banner_has_custom_text",
-                "label": "Custom Banner Text"
-              },
-              {
-                "var": "banner_text",
-                "label": "Banner Text",
-                "show-if-true": "banner_has_custom_text"
-              },
-              {
-                "var": "banner_text_color",
-                "label": "Banner Text Colour"
-              },
-              {
-                "var": "banner_custom_text_background_color",
-                "label": "Banner Custom Text Background"
-              },
-              {
-                "var": "banner_background_image",
-                "label": "Banner Background Image"
-              },
-              {
-                "var": "banner_background_scaling",
-                "label": "Banner Background Scaling"
-              },
-              {
-                "var": "banner_background_color",
-                "label": "Banner Background"
-              },
-              {
-                "var": "banner_show_visual",
-                "label": "Show Image/Video in Banner"
-              }
-            ]
+            "var": "header_background_color",
+            "label": "Header/Footer Background"
           },
           {
-            "name": "Registration Button",
-            "levels": ["S"],
-            "fields": [
-              {
-                "var": "registration_button_in_banner",
-                "label": "Registration Button in Banner"
-              },
-              {
-                "var": "registration_button_at_bottom",
-                "label": "Registration Button at Bottom of Page"
-              },
-              {
-                "var": "rego_button_background_color",
-                "label": "Button Background"
-              }
-            ]
+            "var": "header_text_color",
+            "label": "Header/Footer Text"
+          }
+        ]
+      },
+      {
+        "name": "Sales Page Banner",
+        "levels": ["S"],
+        "fields": [
+          {
+            "var": "show_pre_banner_text",
+            "label": "Show Pre-Banner Text"
           },
           {
-            "name": "Content Area",
-            "fields": [
-              {
-                "var": "background_color",
-                "label": "Content Background"
-              },
-              {
-                "var": "text_color",
-                "label": "Content Text"
-              },
-              {
-                "var": "link_text_color",
-                "label": "Content Headings & Links"
-              }
-            ]
+            "var": "pre_banner_text",
+            "label": "Pre Banner Text",
+            "show-if-true": "show_pre_banner_text"
           },
           {
-            "name": "Side-bar / Menu Area",
-            "levels": ["C", "L", "S"],
-            "fields": [
-              {
-                "var": "show_sidebar",
-                "label": "Show Sidebar"
-              },
-              {
-                "var": "menu_background_color",
-                "label": "Background"
-              },
-              {
-                "var": "menu_text_color",
-                "label": "Text"
-              },
-              {
-                "var": "menu_item_background_color",
-                "label": "Item Background"
-              },
-              {
-                "var": "menu_selected_background_color",
-                "label": "Selected Item Background"
-              },
-              {
-                "var": "menu_selected_text_color",
-                "label": "Selected Item Text"
-              }
-            ]
+            "var": "show_banner",
+            "label": "Show Banner"
+          },
+          {
+            "var": "banner_text_position",
+            "label": "Banner Text Position"
+          },
+          {
+            "var": "banner_has_custom_text",
+            "label": "Custom Banner Text"
+          },
+          {
+            "var": "banner_text",
+            "label": "Banner Text",
+            "show-if-true": "banner_has_custom_text"
+          },
+          {
+            "var": "banner_text_color",
+            "label": "Banner Text Colour"
+          },
+          {
+            "var": "banner_custom_text_background_color",
+            "label": "Banner Custom Text Background"
+          },
+          {
+            "var": "banner_background_image",
+            "label": "Banner Background Image"
+          },
+          {
+            "var": "banner_background_scaling",
+            "label": "Banner Background Scaling"
+          },
+          {
+            "var": "banner_background_color",
+            "label": "Banner Background"
+          },
+          {
+            "var": "banner_show_visual",
+            "label": "Show Image/Video in Banner"
+          }
+        ]
+      },
+      {
+        "name": "Registration Button",
+        "levels": ["S"],
+        "fields": [
+          {
+            "var": "registration_button_in_banner",
+            "label": "Registration Button in Banner"
+          },
+          {
+            "var": "registration_button_at_bottom",
+            "label": "Registration Button at Bottom of Page"
+          },
+          {
+            "var": "rego_button_background_color",
+            "label": "Button Background"
+          }
+        ]
+      },
+      {
+        "name": "Content Area",
+        "fields": [
+          {
+            "var": "background_color",
+            "label": "Content Background"
+          },
+          {
+            "var": "text_color",
+            "label": "Content Text"
+          },
+          {
+            "var": "link_text_color",
+            "label": "Content Headings & Links"
+          }
+        ]
+      },
+      {
+        "name": "Side-bar / Menu Area",
+        "levels": ["C", "L", "S"],
+        "fields": [
+          {
+            "var": "show_sidebar",
+            "label": "Show Sidebar"
+          },
+          {
+            "var": "menu_background_color",
+            "label": "Background"
+          },
+          {
+            "var": "menu_text_color",
+            "label": "Text"
+          },
+          {
+            "var": "menu_item_background_color",
+            "label": "Item Background"
+          },
+          {
+            "var": "menu_selected_background_color",
+            "label": "Selected Item Background"
+          },
+          {
+            "var": "menu_selected_text_color",
+            "label": "Selected Item Text"
           }
         ]
       }
