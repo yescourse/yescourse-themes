@@ -118,39 +118,41 @@
 
   // -----------------------
   // Handle banner options
-  &[data-banner_background_scaling='cover'] #sales_banner {
-    background-size: cover;
-  }
+  #yc-page {
+    &[data-banner_background_scaling='cover'] #sales_banner {
+      background-size: cover;
+    }
 
-  &[data-banner_background_scaling='contain'] #sales_banner {
-    background-size: contain;
-  }
+    &[data-banner_background_scaling='contain'] #sales_banner {
+      background-size: contain;
+    }
 
-  &[data-banner_text_position='left'] #sales_banner {
-    @include respond_to(tablet_landscape) {
-      .course_visual {
-        float: right;
-        width: 480px;
+    &[data-banner_text_position='left'] #sales_banner {
+      @include respond_to(tablet_landscape) {
+        .course_visual {
+          float: right;
+          width: 480px;
+        }
+        .banner_text {
+          margin: 0;
+          width: 1024px - 480px - 12px;
+        }
       }
+    }
+
+    &[data-banner_text_position='right'] #sales_banner {
       .banner_text {
-        margin: 0;
-        width: 1024px - 480px - 12px;
+        @include respond_to(tablet_landscape) {
+          margin: 0 0 0 538px;
+        }
       }
-    }
-  }
-
-  &[data-banner_text_position='right'] #sales_banner {
-    .banner_text {
-      @include respond_to(tablet_landscape) {
-        margin: 0 0 0 538px;
-      }
-    }
-    .course_visual {
-      @include respond_to(tablet_landscape) {
-        float:left;
-        clear:none;
-        width: 480px;
-        height: 270px;
+      .course_visual {
+        @include respond_to(tablet_landscape) {
+          float: left;
+          clear: none;
+          width: 480px;
+          height: 270px;
+        }
       }
     }
   }
