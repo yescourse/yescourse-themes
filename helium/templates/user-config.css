@@ -7,15 +7,15 @@ a {
     text-decoration: none !important;
 }
 
-#header, header, footer, .course-sales-page #header #branding {
+#header, #header a, #header .profile, #header .user-menu, header, footer,
+.course-sales-page #header #branding {
     background-color: {{ theme_config.header_background_color }} !important;
     color: {{ theme_config.header_text_color }} !important;
 }
 
-#academy_title, #header .username {
-    color: {{ theme_config.header_text_color }} !important;
+#header nav.user:before, #header a.show-main-menu {
+    background-color: {{ theme_config.header_text_color }} !important;
 }
-
 
 article a, article h1, article h2, article h3, article h4, article h5, #yc-dialog a, #yc-dialog h4 {
     color: {{ theme_config.link_text_color }} !important;

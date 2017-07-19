@@ -1,5 +1,6 @@
 @import "ycthemelib/responsive";
 @import "ycthemelib/images/mixins";
+@import "ycthemelib/svgicons/icons";
 @import "ycthemelib/typography/mixins";
 @import "constants";
 
@@ -8,11 +9,28 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 // mobile first
 
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: $SITE_HEADER_Z_INDEX;
+
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   height: $SITE_HEADER_HEIGHT;
-  padding: 0 4px 0 0;
+  padding: 0 8px 0 0;
+  overflow: hidden;
+
+  a.show-main-menu {
+    flex: 0 0 32px;
+    display: block;
+    mask: yc-icon-url(fa/reorder) no-repeat center;
+    mask-size: 16px;
+    -webkit-mask: yc-icon-url(fa/reorder) no-repeat center;
+    -webkit-mask-size: 16px;
+  }
 
   h1 {
     display: inline-block;
@@ -23,6 +41,8 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     height: $SITE_HEADER_HEIGHT;
     font-size: 18px;
 
+    @include truncate-ellipsis;
+
     img.academy-logo {
       height: $SITE_HEADER_HEIGHT;
       width: auto;
@@ -31,7 +51,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     }
     &.academy-title {
       a {
-        color: #ffffff;
         font-size: 18px;
         line-height: $SITE_HEADER_HEIGHT;
         max-width: 200px;
@@ -47,15 +66,102 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     }
   }
 
+  nav.user {
+    position: relative; // allow menu to be positioned absolutely inside
+    display: flex;
+    flex-flow: row nowrap;
+    &:before {
+      content: '';
+      mask: yc-icon-url(fa/ellipsis-v) no-repeat center;
+      mask-size: 4px;
+      -webkit-mask: yc-icon-url(fa/ellipsis-v) no-repeat center;
+      -webkit-mask-size: 4px;
+      width: 16px;
+    }
 
+
+    &:not(.active) {
+      &> * {
+        display: none;
+      }
+    }
+    &.active { // clicking on the nav.user toggles the active class, show if set
+      &> * {
+        display: flex;
+      }
+    }
+    .profile {
+      position: absolute;
+      top: $SITE_HEADER_HEIGHT;
+      right: 0;
+      width: 182px;
+
+      flex-flow: row nowrap;
+      .profile-details {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        margin: 0 0 0 8px;
+        overflow: hidden;
+        .user-name {
+          font-size: 14px;
+          line-height: 14px;
+          opacity: 0.9;
+          @include truncate-ellipsis
+        }
+        .user-email {
+          font-size: 12px;
+          line-height: 12px;
+          opacity: 0.7;
+          @include truncate-ellipsis
+        }
+      }
+    }
+    .user-menu {
+      position: absolute;
+      top: 2 * $SITE_HEADER_HEIGHT;
+      right: 0;
+      flex-flow: column nowrap;
+      padding: 8px 16px;
+      margin: 0;
+      list-style: none;
+      width: 182px;
+      a {
+        display: block;
+        padding: 8px 0;
+        opacity: 0.7;
+        &:hover {
+          opacity: 1.0;
+        }
+      }
+    }
+    @include respond_to(tablet_landscape) {
+      &:before {
+        content: none;
+      }
+      // always show the profile for large screens even if not active
+      &:not(.active) {
+        .profile {
+          display: flex;
+        }
+      }
+      .profile {
+        // position the profile within the header
+        position: static;
+        width: auto; // let it grow
+      }
+      .user-menu {
+        // position the menu just under the header
+        top: $SITE_HEADER_HEIGHT;
+        width: 100%; // same width as the profile
+      }
+    }
+  }
 
   @include respond_to(tablet_landscape) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: $SITE_HEADER_Z_INDEX;
+    a.show-main-menu {
+      display: none;
+    }
   }
 }
 
@@ -243,11 +349,11 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
   display: none;
 }
 
-@include respond_to(tablet_landscape) {
+//@include respond_to(tablet_landscape) {
   #content_wrap {
     margin: $SITE_HEADER_HEIGHT 0 0 0;
   }
-}
+//}
 
 // hide header when in iframe
 .in-frame #header {
