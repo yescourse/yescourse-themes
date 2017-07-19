@@ -92,7 +92,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     }
     .profile {
       position: fixed;
-      z-index: $USER_MENU_DROPDOWN_Z_INDEX;
       top: $SITE_HEADER_HEIGHT;
       right: 0;
       width: 182px;
@@ -125,7 +124,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     }
     .user-menu {
       position: fixed;
-      z-index: $USER_MENU_DROPDOWN_Z_INDEX;
       top: 2 * $SITE_HEADER_HEIGHT;
       right: 0;
       flex-flow: column nowrap;
@@ -188,6 +186,14 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 #yc-root.lesson-page {
   #header {
     .academy-title, .course-title, .module-title {
+      display: none;
+    }
+  }
+}
+
+#yc-root.course-sales-page {
+  #header {
+    .course-title, .module-title, .lesson-title {
       display: none;
     }
   }

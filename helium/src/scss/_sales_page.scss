@@ -3,15 +3,14 @@
 @import "constants";
 
 .course-sales-page {
-  #header {
+  &:not(.has-page-header) #header {
     display: none; // don't show site header unless page has-page-header class
   }
   #module_nav {
     display: none; // don't show module nav for sales page (only requird for django templates)
   }
 
-  &.has-page-header #header {
-    display: block;
+  #header {
     @include respond_to(tablet_landscape) {
       position: static !important; // no fixed header for sales page
     }
