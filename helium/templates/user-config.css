@@ -13,7 +13,7 @@ a {
     color: {{ theme_config.header_text_color }} !important;
 }
 
-#header nav.user:before, #header a.show-main-menu {
+#header nav.user:after, #header a.show-main-menu {
     background-color: {{ theme_config.header_text_color }} !important;
 }
 

@@ -70,7 +70,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     position: relative; // allow menu to be positioned absolutely inside
     display: flex;
     flex-flow: row nowrap;
-    &:before {
+    &:after {
       content: '';
       mask: yc-icon-url(fa/ellipsis-v) no-repeat center;
       mask-size: 4px;
@@ -91,10 +91,16 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
     }
     .profile {
-      position: absolute;
+      position: fixed;
+      z-index: $USER_MENU_DROPDOWN_Z_INDEX;
       top: $SITE_HEADER_HEIGHT;
       right: 0;
       width: 182px;
+
+      pointer-events: none;
+      & * {
+        pointer-events: none;
+      }
 
       flex-flow: row nowrap;
       .profile-details {
@@ -118,7 +124,8 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
     }
     .user-menu {
-      position: absolute;
+      position: fixed;
+      z-index: $USER_MENU_DROPDOWN_Z_INDEX;
       top: 2 * $SITE_HEADER_HEIGHT;
       right: 0;
       flex-flow: column nowrap;
@@ -136,9 +143,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
     }
     @include respond_to(tablet_landscape) {
-      &:before {
-        content: none;
-      }
       // always show the profile for large screens even if not active
       &:not(.active) {
         .profile {
@@ -148,12 +152,11 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       .profile {
         // position the profile within the header
         position: static;
-        width: auto; // let it grow
       }
       .user-menu {
         // position the menu just under the header
+        // position is fixed as per mobile style
         top: $SITE_HEADER_HEIGHT;
-        width: 100%; // same width as the profile
       }
     }
   }
