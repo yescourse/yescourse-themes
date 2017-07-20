@@ -305,59 +305,6 @@ article {
   }
 }
 
-#yc-root aside {
-  display: none; // hide by default, show only if yc-root has class has-sidebar
-  .academy-title, .course-title, .module-title {
-    text-align: center;
-    font-size: 16px;
-    line-height: 26px;
-    padding: 8px;
-    margin: 0;
-  }
-  .course-title, .module-title {
-    font-weight: normal;
-  }
-  .course-title {
-    background-color: rgba(0,0,0,0.1);
-  }
-  .module-title {
-    background-color: rgba(0,0,0,0.2);
-  }
-  .academy-title {
-    a {
-      img {
-        display: block;
-        margin: 0 auto;
-        width: auto;
-        max-width: 64px;
-        height: auto;
-        max-height: 64px;
-      }
-    }
-  }
-}
-
-// display the sidebar only if the page needs one
-#yc-root.has-sidebar aside {
-  display: block;
-  position: fixed;  // for mobile
-  top: $SITE_HEADER_HEIGHT;
-  left: 0;
-  bottom: 0;
-  max-width: 80%;
-  z-index: $MODAL_DIALOG_Z_INDEX;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform: translateX(-100%);  // hidden to left by default
-  transition: transform 0.3s ease-in-out; // slide in from left when revealed
-}
-
-#yc-root.show-main-menu.has-sidebar aside {
-  // reveal aside
-  transform: translateX(0);
-
-}
-
 .social {
   margin: 24px 0;
   .fb-like {
@@ -428,33 +375,11 @@ iframe {
 }
 
 @include respond_to(tablet_landscape) {
-  #yc-root.has-sidebar aside {
-    position: static;
-    transform: none; // visible always
-    transition: unset; //prevent IE11 from always transitioning
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
   #profile_picture {
     float: right;
   }
 }
 
-// TODO refactor base to consolidate aside styling
-#yc_root aside {
-  a {
-    outline: none;
-  }
-
-  h2, ul {
-      margin: 0;
-  }
-
-  @include respond_to(tablet_landscape) {
-    padding: 0;
-  }
-}
 
 // ensure that images within the description area maintain aspect ratio
 #yc-root .description, #all_resources {
