@@ -2,28 +2,46 @@
 @import "ycthemelib/images/mixins";
 @import "constants";
 
-.course-sales-page {
-  &:not(.has-page-header) #header {
-    display: none; // don't show site header unless page has-page-header class
-  }
-  #module_nav {
-    display: none; // don't show module nav for sales page (only requird for django templates)
-  }
-
-  #header {
-    @include respond_to(tablet_landscape) {
-      position: static !important; // no fixed header for sales page
+#yc-root.course-sales-page {
+  #yc-wrap {  // ensure specificity overrides styles from base
+    #yc-page {
+      height: auto; // no scrolling sections within on sales page
+      #header {
+        .show-main-menu {
+          display: none;
+        }
+      }
+      #sales_banner {}
+      .main-content {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0 auto;
+        width: $MAX_CONTENT_WIDTH;
+        max-width: 100%;
+        .content {
+          flex: 1 1 auto;
+          max-width: 100%;
+        }
+        .sidebar {
+          flex: 0 0 240px;
+          display: none;
+        }
+      }
     }
   }
 
+  &:not(.has-page-header) #header {
+    display: none; // don't show site header unless page has-page-header class
+  }
+
   &.guest {
-    #user_links {
+    #user_links, nav.user {
       display: none; // don't show the user login links to unauthenticated user
     }
   }
 
   #prebanner {
-    padding: 12px 0;
+    padding: 16px 0;
     @include respond_to(tablet_landscape) {
       width: $MAX_CONTENT_WIDTH;
       margin: 0 auto;
@@ -156,69 +174,17 @@
     }
   }
 
-  #content_wrap {
-    @include respond_to(tablet_landscape) {
-      max-width: $MAX_CONTENT_WIDTH;
-      margin: 0 auto 40px auto;
-      > div.wrap {
-        margin-top: 30px;
-        display: table;
-        width: 100%;
-        min-height: 400px;
+  &.has-sidebar  {
+    #yc-wrap {  // ensure specificity overrides styles from base
+      #yc-page {
+        .main-content {
+          .sidebar {
+            @include respond_to(tablet_landscape) {
+              display: block;
+            }
+          }
+        }
       }
-    }
-  }
-
-  article {
-
-    h2 {
-        border: none;
-    }
-
-    @include respond_to(tablet_landscape) {
-      display: table-cell;
-      vertical-align: top;
-      padding-left: 10px;
-      margin-bottom: 70px;
-    }
-  }
-
-  .description {
-    margin: 0 auto;
-    .yc-rego-button {
-      a {
-        border: none !important; // need important as this needs to override the
-        // local custom style
-      }
-    }
-
-    ol li {
-      list-style: decimal outside;
-      div {
-        padding-top: 0 !important;
-        vertical-align: top;
-        display: inline-block;
-        width: 100%;
-      }
-    }
-    h2 {
-      margin-bottom: 0;
-    }
-
-  }
-
-  aside {
-    display: none; // only show if page has-sidebar
-  }
-
-  &.has-sidebar aside {
-    display: block;
-    position: static;
-    padding-top: 0;
-    margin-bottom: 70px;
-    @include respond_to(tablet_landscape) {
-      display: table-cell;
-      width: 240px;
     }
   }
 
