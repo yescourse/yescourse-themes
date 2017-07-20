@@ -25,7 +25,7 @@ article a.coupon_code_link {
     color: {{ theme_config.text_color }} !important;
 }
 
-.description a, #description a {
+.description a {
     border-bottom: 1px dotted {{ theme_config.link_text_color }} !important;
 }
 

@@ -156,6 +156,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 
   @include respond_to(tablet_landscape) {
     a.show-main-menu {
+      // hide main menu icon for desktop
       display: none;
     }
   }
@@ -210,6 +211,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
   }
 }
 
+// TODO: remove once current version is deployed
 #user_links {
   display: inline-block;
   height: $SITE_HEADER_HEIGHT;
@@ -352,12 +354,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 .offline #user_links {
   display: none;
 }
-
-//@include respond_to(tablet_landscape) {
-//  #content_wrap {
-//    margin: $SITE_HEADER_HEIGHT 0 0 0;
-//  }
-//}
 
 // hide header when in iframe
 .in-frame #header {

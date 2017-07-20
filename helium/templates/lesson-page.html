@@ -5,46 +5,43 @@
 {% include "-site-header" %}
 
 <div id="content_wrap">
-    <nav id="module_nav">{% course_banner %}</nav>
-    <div id="lesson_header" class="page_header">
-        <h1>{{ lesson.title }}</h1>
-    </div>
-
-    <div class="wrap">
-        <article>
-            <section id="lesson_contents">
+    <article>
+        <nav id="module_nav">{% course_banner %}</nav>
+        <div id="lesson_header" class="page_header">
+            <h1>{{ lesson.title }}</h1>
+        </div>
+        <div class="content">
+            <div class="lesson-content">
                 <div class="description">{% page_content %}</div>
                 {% course_social %}
                 {% lesson_media %}
-            </section>
-
+            </div>
             {% comments %}
             {% course_social %}
+        </div>
+    </article>
 
-        </article>
-
-        <aside>
-            {% breadcrumbs %}
-            <h1 class="academy-title">
-                <a href="#!" id="academy_title">
-                    <img class="academy-logo" src="{{ academy.logo_url }}">
-                    {{ academy.title }}
-                </a>
-            </h1>
-            <h2 class="course-title">
-                <a href="{% course_url %}">
-                    {{ course.title }}
-                </a>
-            </h2>
-            <h3 class="module-title">
-                <a href="{% module_url onlyIf=course.is_modular %}">
-                    {{ module.title }}
-                </a>
-            </h3>
-            {% module_lessons_menu %}
-            {% modules_menu %}
-        </aside>
-    </div>
+    <aside>
+        {% breadcrumbs %}
+        <h1 class="academy-title">
+            <a href="#!" id="academy_title">
+                <img class="academy-logo" src="{{ academy.logo_url }}">
+                {{ academy.title }}
+            </a>
+        </h1>
+        <h2 class="course-title">
+            <a href="{% course_url %}">
+                {{ course.title }}
+            </a>
+        </h2>
+        <h3 class="module-title">
+            <a href="{% module_url onlyIf=course.is_modular %}">
+                {{ module.title }}
+            </a>
+        </h3>
+        {% module_lessons_menu %}
+        {% modules_menu %}
+    </aside>
 </div>
 
 {% include "-site-footer" %}

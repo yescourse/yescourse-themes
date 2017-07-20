@@ -5,20 +5,19 @@
 {% include "-site-header" %}
 
 <div id="content_wrap">
-    <div class="wrap">
-        <article>
-            {% post_image %}
-            <div id="blog-post">
-                <h1>{{ blog.title }}</h1>
-                {% blog_author_profiles %}
-                <section id="post" class="description">
-                    {% page_content %}
-                </section>
-            </div>
+    <article>
+        {% post_image %}
+        <div id="blog-post">
+            <h1>{{ blog.title }}</h1>
+            {% blog_author_profiles %}
+            <section id="post" class="description">
+                {% page_content %}
+            </section>
+        </div>
 
-            {% post_comments %}
+        {% post_comments %}
 
-        </article>
+    </article>
 </div>
 
 {% include "-site-footer" %}

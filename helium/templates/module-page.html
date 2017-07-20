@@ -4,33 +4,32 @@
 {% include "-site-header" %}
 
 <div id="content_wrap">
-    <nav id="module_nav">{% course_banner %}</nav>
-    <div class="page_header">
-        <h1>{{ module.title }}</h1>
-    </div>
-
-    <div class="wrap">
-        <article>
+    <article>
+        <nav id="module_nav">{% course_banner %}</nav>
+        <div class="page_header">
+            <h1>{{ module.title }}</h1>
+        </div>
+        <div class="content">
             <div class="description">{% page_content %}</div>
             <h4>Module Structure</h4>
             <div class="course_tree">{% module_lessons_menu %}</div>
-        </article>
-        <aside>
-            {% breadcrumbs %}
-            <h1 class="academy-title">
-                <a href="#!" id="academy_title">
-                    <img class="academy-logo" src="{{ academy.logo_url }}">
-                    {{ academy.title }}
-                </a>
-            </h1>
-            <h2 class="course-title">
-                <a href="{% course_url %}">
-                    {{ course.title }}
-                </a>
-            </h2>
-            {% trainer_profiles %}
-        </aside>
-    </div>
+        </div>
+    </article>
+    <aside>
+        {% breadcrumbs %}
+        <h1 class="academy-title">
+            <a href="#!" id="academy_title">
+                <img class="academy-logo" src="{{ academy.logo_url }}">
+                {{ academy.title }}
+            </a>
+        </h1>
+        <h2 class="course-title">
+            <a href="{% course_url %}">
+                {{ course.title }}
+            </a>
+        </h2>
+        {% trainer_profiles %}
+    </aside>
 </div>
 
 {% include "-site-footer" %}

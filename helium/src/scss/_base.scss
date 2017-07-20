@@ -20,6 +20,7 @@ html, body {
   background-image: none;
 }
 
+// Overall flex layout
 #yc-root {
   #yc-wrap {
     height: 100%;
@@ -37,8 +38,18 @@ html, body {
       }
       #content_wrap {
         flex: 1 1 auto;
+        display: flex;
+        flex-flow: row nowrap;
         overflow-x: hidden;
         overflow-y: auto;
+        article {
+          flex: 1 1 auto;
+          order: 2;
+        }
+        aside {
+          flex: 0 0 $ASIDE_WIDTH;
+          order: 1;
+        }
       }
       #yc-site-footer {
         flex: 0 0 auto;
@@ -94,6 +105,7 @@ html, body {
 
 .show-main-menu, .show-user-menu {
   #header {
+    // ensure menus don't get hidden behind other stacking contexts
     position: relative;
     z-index: $SITE_HEADER_Z_INDEX;
   }
@@ -186,9 +198,13 @@ a {
 }
 
 article {
-  padding: 10px;
-  margin-bottom: 70px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .content {
+    padding: 16px;
+    max-width: $MAX_CONTENT_WIDTH;
+  }
 
   h2 {
     border-bottom: 2px solid rgba(0,0,0,0.2);
@@ -291,8 +307,6 @@ article {
 
 #yc-root aside {
   display: none; // hide by default, show only if yc-root has class has-sidebar
-  background-color: #4C4C54;
-  color: #ffffff;
   .academy-title, .course-title, .module-title {
     text-align: center;
     font-size: 16px;
@@ -326,11 +340,10 @@ article {
 // display the sidebar only if the page needs one
 #yc-root.has-sidebar aside {
   display: block;
-  position: fixed;
+  position: fixed;  // for mobile
   top: $SITE_HEADER_HEIGHT;
   left: 0;
   bottom: 0;
-  width: $ASIDE_WIDTH+8px;
   max-width: 80%;
   z-index: $MODAL_DIALOG_Z_INDEX;
   overflow-x: hidden;
@@ -351,21 +364,6 @@ article {
     iframe {
       margin: 0;
     }
-  }
-}
-
-#description {
-  ol li {
-    list-style: decimal outside;
-    div {
-      padding-top: 0 !important;
-      vertical-align: top;
-      display: inline-block;
-      width: 100%;
-    }
-  }
-  h2 {
-    margin-bottom: 0;
   }
 }
 
@@ -430,42 +428,21 @@ iframe {
 }
 
 @include respond_to(tablet_landscape) {
-  #content_wrap > div.wrap {
-    margin-top: $CONTENT_SEPARATION_MARGIN;
-    position: relative;
-  }
-
-  .has-sidebar article {
-    padding-left: $ASIDE_WIDTH+36px;
-    max-width: 1024px+$ASIDE_WIDTH;
-  }
-
   #yc-root.has-sidebar aside {
+    position: static;
     transform: none; // visible always
     transition: unset; //prevent IE11 from always transitioning
-    bottom: $ACADEMY_FOOTER_HEIGHT;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: $COURSE_HEADER_Z_INDEX+10;
-  }
-
-  ul.messages {
-    text-align: center;
-    background-color: #96B46A !important;
-    color: #ffffff;
   }
 
   #profile_picture {
     float: right;
   }
-
 }
 
 // TODO refactor base to consolidate aside styling
 #yc_root aside {
-  padding: 10px;
-  background-color: #4C4C54;
-
   a {
     outline: none;
   }

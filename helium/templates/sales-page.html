@@ -9,13 +9,13 @@
 {% include "-banner" onlyIf=theme_config.show_banner %}
 
 <div id="content_wrap">
-    <div class="wrap">
-        <article>
+    <article>
+        <div class="content">
             <div class="description">{% page_content %}</div>
             {% rego_button onlyIf=theme_config.registration_button_at_bottom %}
-        </article>
+        </div>
+    </article>
 
-        <aside>{% trainer_profiles onlyIf=theme_config.show_sidebar %}</aside>
-    </div>
+    <aside>{% trainer_profiles onlyIf=theme_config.show_sidebar %}</aside>
 </div>
 {% include "-site-footer" %}

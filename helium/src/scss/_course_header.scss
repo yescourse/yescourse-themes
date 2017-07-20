@@ -3,6 +3,7 @@
 
 #module_nav {
   display: none; // hide on mobile
+  padding: 4px 16px;
   background: #fff linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.196) 100%);
@@ -11,30 +12,12 @@
     padding: 0 4px;
     margin: 0 auto;
     a {
-      color: #1a1a1a;
-    }
-  }
-
-  .banner_link {
-    display: block;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-    max-width: 100%;
-    img {
-      display: block;
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
+      border: none;
     }
   }
 
   @include respond_to(tablet_landscape) {
     display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
 
     h1 {
       height: $COURSE_HEADER_HEIGHT;
@@ -48,29 +31,14 @@
   }
 }
 
-.course-page, .lesson-page, .module-page {
-  #module_nav {
-    @include respond_to(tablet_landscape) {
-      h1, h2 {
-        padding-left: $ASIDE_WIDTH + 36px;
-      }
-      .banner_link {
-        padding-left: $ASIDE_WIDTH+10px;
-        width: 1024px + $ASIDE_WIDTH+10px;
-        overflow: hidden;
-      }
-    }
-  }
-}
-
 #yc-root .page_header {
   display: none; // hide on mobile
-  height: $SITE_HEADER_HEIGHT;
+  padding: 4px 16px;
   color: #007C72;
   background: rgba(0, 0, 0, 0.067);
   h1 {
     font-size: 22px;
-    line-height: $SITE_HEADER_HEIGHT;
+    line-height: 22px;
     padding-top: 4px;
     padding-bottom: 4px;
     width: 100%;
@@ -85,27 +53,4 @@
 
 #lesson_header {
   background: rgba(0,0,0,0.067);
-}
-
-//#scrollheader {
-//  display: none;
-//  @include respond_to(tablet_landscape) {
-//    display: block;
-//    position: fixed;
-//    z-index: $COURSE_HEADER_Z_INDEX + 1;
-//    top: 0;
-//    left: 0;
-//    right: 0;
-//    width: 100%;
-//  }
-//}
-
-.has-sidebar {
-  @include respond_to(tablet_landscape) {
-    #module_nav, .page_header {
-      h1 {
-        padding-left: 340px;
-      }
-    }
-  }
 }
