@@ -1,13 +1,9 @@
 (function() {
     var root_element = document.getElementById('yc-root');
-    var user_menu = root_element.querySelector('nav.user');
     root_element.addEventListener('click', function(e) {
         var target = e.target;
         if (target.tagName === 'NAV' && target.classList.contains('user')) {
-            if (!user_menu) {
-                user_menu = target;
-            }
-            user_menu.classList.toggle('active');
+            target.classList.toggle('active');
             root_element.classList.toggle('show-user-menu');
         }
         else if (target.tagName === 'A' &&
@@ -20,6 +16,7 @@
             }
             if (root_element.classList.contains('show-user-menu')) {
                 root_element.classList.remove('show-user-menu');
+                var user_menu = root_element.querySelector('nav.user');
                 if (user_menu) {
                     user_menu.classList.remove('active');
                 }

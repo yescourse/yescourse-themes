@@ -9,24 +9,16 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 // mobile first
 
 #header {
-  //position: fixed;
-  //top: 0;
-  //left: 0;
-  //right: 0;
-  //width: 100%;
-  //z-index: $SITE_HEADER_Z_INDEX;
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  //height: $SITE_HEADER_HEIGHT;
   padding: 0 8px 0 0;
-  overflow: hidden;
 
   a.show-main-menu {
     flex: 0 0 32px;
     display: block;
     cursor: pointer;
+    // add the icon as a mask, this allows its colour to be customised
     mask: yc-icon-url(fa/reorder) no-repeat center;
     mask-size: 16px;
     -webkit-mask: yc-icon-url(fa/reorder) no-repeat center;
@@ -73,6 +65,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     flex-flow: row nowrap;
     cursor: pointer;
     &:after {
+      // add the icon as a mask, this allows its colour to be customised
       content: '';
       mask: yc-icon-url(fa/ellipsis-v) no-repeat center;
       mask-size: 4px;
