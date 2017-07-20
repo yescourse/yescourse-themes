@@ -36,7 +36,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: $COURSE_HEADER_Z_INDEX;
+    //z-index: $COURSE_HEADER_Z_INDEX;
 
     h1 {
       height: $COURSE_HEADER_HEIGHT;
@@ -89,18 +89,18 @@
   background: rgba(0,0,0,0.067);
 }
 
-#scrollheader {
-  display: none;
-  @include respond_to(tablet_landscape) {
-    display: block;
-    position: fixed;
-    z-index: $COURSE_HEADER_Z_INDEX + 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-}
+//#scrollheader {
+//  display: none;
+//  @include respond_to(tablet_landscape) {
+//    display: block;
+//    position: fixed;
+//    z-index: $COURSE_HEADER_Z_INDEX + 1;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    width: 100%;
+//  }
+//}
 
 .has-sidebar {
   @include respond_to(tablet_landscape) {

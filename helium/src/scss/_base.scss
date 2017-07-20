@@ -3,8 +3,48 @@
 @import "ycthemelib/images/mixins";
 @import "ycthemelib/typography/mixins";
 
-body {
-  height: auto;
+html, body {
+  height: 100%;
+}
+
+#yc-root {
+  // apply a natural box layout model to all elements
+  // NOTE: this will affect ALL layout, so remember that all widths/heights are
+  // inclusive of border and padding
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  background-image: none;
+}
+
+#yc-root {
+  #yc-wrap {
+    height: 100%;
+    #theme-data {
+      display: none;
+    }
+    #yc-page {
+      display: flex;
+      flex-flow: column nowrap;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100%;
+      #header {
+        flex: 1 0 auto;
+      }
+      #content_wrap {
+        flex: 1 1 auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      #yc-site-footer {
+        flex: 1 0 auto;
+      }
+    }
+  }
 }
 
 #veil {
@@ -35,10 +75,6 @@ body {
       text-align: center;
     }
   }
-}
-
-#yc-root {
-  background-image: none;
 }
 
 #yc-root.loading {
@@ -134,17 +170,6 @@ iframe.dialog {
       flex-grow: 1;
       align-self: stretch;
     }
-  }
-}
-
-#yc-root {
-  // apply a natural box layout model to all elements
-  // NOTE: this will affect ALL layout, so remember that all widths/heights are
-  // inclusive of border and padding
-  *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
   }
 }
 

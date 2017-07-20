@@ -9,17 +9,17 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 // mobile first
 
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: $SITE_HEADER_Z_INDEX;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //width: 100%;
+  //z-index: $SITE_HEADER_Z_INDEX;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  height: $SITE_HEADER_HEIGHT;
+  //height: $SITE_HEADER_HEIGHT;
   padding: 0 8px 0 0;
   overflow: hidden;
 
@@ -93,7 +93,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
     }
     .profile {
-      position: fixed;
+      position: absolute;
       top: $SITE_HEADER_HEIGHT;
       right: 0;
       width: 182px;
@@ -125,7 +125,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
     }
     .user-menu {
-      position: fixed;
+      position: absolute;
       top: 2 * $SITE_HEADER_HEIGHT;
       right: 0;
       flex-flow: column nowrap;
@@ -361,9 +361,9 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 }
 
 //@include respond_to(tablet_landscape) {
-  #content_wrap {
-    margin: $SITE_HEADER_HEIGHT 0 0 0;
-  }
+//  #content_wrap {
+//    margin: $SITE_HEADER_HEIGHT 0 0 0;
+//  }
 //}
 
 // hide header when in iframe
