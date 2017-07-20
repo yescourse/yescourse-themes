@@ -324,6 +324,25 @@ a {
   }
 }
 
+.profile {
+  img.profile-img {
+    // constrain within 40px while maintaining aspect ratio
+    width: auto;
+    height: auto;
+    max-width: 40px;
+    max-height: 40px;
+  }
+  span.char {
+    background: rgba(0,0,0,0.4);
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+  }
+}
+
 .eula {
   max-height: 200px;
   overflow-y: scroll;

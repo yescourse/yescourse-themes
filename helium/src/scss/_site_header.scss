@@ -97,6 +97,10 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       }
 
       flex-flow: row nowrap;
+
+      .profile-icon {
+        max-height: $SITE_HEADER_HEIGHT;
+      }
       .profile-details {
         display: flex;
         flex-flow: column nowrap;
