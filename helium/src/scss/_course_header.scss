@@ -7,13 +7,14 @@
           to bottom,
           rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.196) 100%);
 
-  h1, h2 {
+  h1 {
     padding: 4px 16px;
     margin: 0 auto;
-  }
-
-  a {
-    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 36px;
+    line-height: 40px;
   }
 
   img {
@@ -24,16 +25,6 @@
 
   @include respond_to(tablet_landscape) {
     display: block;
-
-    h1 {
-      height: $COURSE_HEADER_HEIGHT;
-    }
-
-    h1, h2 {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
   }
 }
 
