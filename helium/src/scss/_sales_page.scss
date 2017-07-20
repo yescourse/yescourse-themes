@@ -195,3 +195,7 @@
   }
 }
 
+// ensure that the sales page is seen through the register iframe
+#yc-root.register {
+  background: transparent !important;
+}
