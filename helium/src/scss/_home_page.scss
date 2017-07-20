@@ -2,7 +2,7 @@
 @import "ycthemelib/responsive";
 
 #yc-root.academy-page {
-  article {
+  .content, .courses {
     max-width: $MAX_CONTENT_WIDTH;
     margin: 0 auto;
     h2 {
