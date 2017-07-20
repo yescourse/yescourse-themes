@@ -260,14 +260,42 @@ article {
   }
 }
 
-aside {
+#yc-root aside {
   display: none; // hide by default, show only if yc-root has class has-sidebar
   background-color: #4C4C54;
   color: #ffffff;
+  .academy-title, .course-title, .module-title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 8px;
+    margin: 0;
+  }
+  .course-title, .module-title {
+    font-weight: normal;
+  }
+  .course-title {
+    background-color: rgba(0,0,0,0.1);
+  }
+  .module-title {
+    background-color: rgba(0,0,0,0.2);
+  }
+  .academy-title {
+    a {
+      img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        max-width: 64px;
+        height: auto;
+        max-height: 64px;
+      }
+    }
+  }
 }
 
 // display the sidebar only if the page needs one
-.has-sidebar aside {
+#yc-root.has-sidebar aside {
   display: block;
   position: fixed;
   top: $SITE_HEADER_HEIGHT;
@@ -282,7 +310,7 @@ aside {
   transition: transform 0.3s ease-in-out; // slide in from left when revealed
 }
 
-.show-main-menu.has-sidebar aside {
+#yc-root.show-main-menu.has-sidebar aside {
   // reveal aside
   transform: translateX(0);
 
@@ -383,12 +411,9 @@ iframe {
     max-width: 1024px+$ASIDE_WIDTH;
   }
 
-  .has-sidebar aside {
+  #yc-root.has-sidebar aside {
     transform: none; // visible always
     transition: unset; //prevent IE11 from always transitioning
-    //position: fixed;
-    //top: 36px;
-    //left: 0;
     bottom: $ACADEMY_FOOTER_HEIGHT;
     overflow-x: hidden;
     overflow-y: auto;

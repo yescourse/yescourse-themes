@@ -29,51 +29,55 @@
   }
 
   aside {
-    h2 {
-      color: #fffffd;
-      text-align: center;
-      font-size: 22px;
-      line-height: 26px;
+    .module-title {
+      display: none;
     }
 
-    h2.module-title {
-      position: relative;
-      margin: 0 16px 24px 16px;
-      visibility: hidden;
-      height: yc-image-height('lesson.png');
-
-      a {
-        color: $DEFAULT_BACKGROUND;
+    @include respond_to(tablet_landscape) {
+      .academy-title, .course-title {
+        display: none;
       }
-    }
 
-    h2.module-title, ul.yc-modules-menu {
-      &::before {
-        content: '';
-        position: relative;
-        margin: 24px auto;
+      .module-title {
         display: block;
-        visibility: visible;
-        border-radius: 50%;
+        position: relative;
+        margin: 0 16px 24px 16px;
+        padding: 0;
+        visibility: hidden;
+        height: yc-image-height('lesson.png');
+        font-size: 22px;
+        font-weight: bold;
+        background-color: transparent;
       }
-    }
 
-    h2.module-title::before {
-      width: yc-image-width('lesson.png');
-      height: yc-image-height('lesson.png');
-      background: yc-image-url('lesson.png') no-repeat 50% #0999d6;
-    }
+      .module-title, ul.yc-modules-menu {
+        &::before {
+          content: '';
+          position: relative;
+          margin: 24px auto;
+          display: block;
+          visibility: visible;
+          border-radius: 50%;
+        }
+      }
 
-    ul.yc-modules-menu::before {
-      width: yc-image-width('modules_icon.png');
-      height: yc-image-height('modules_icon.png');
-      background: yc-image-url('modules_icon.png') no-repeat 50% #0999d6;
+      .module-title::before {
+        width: yc-image-width('lesson.png');
+        height: yc-image-height('lesson.png');
+        background: yc-image-url('lesson.png') no-repeat 50% #0999d6;
+      }
+
+      ul.yc-modules-menu::before {
+        width: yc-image-width('modules_icon.png');
+        height: yc-image-height('modules_icon.png');
+        background: yc-image-url('modules_icon.png') no-repeat 50% #0999d6;
+      }
     }
   }
 
   &#yc-root.is-modular {
     aside {
-      h2.module-title {
+      .module-title {
         visibility: visible;
         height: auto;
       }

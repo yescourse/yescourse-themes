@@ -26,6 +26,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
   a.show-main-menu {
     flex: 0 0 32px;
     display: block;
+    cursor: pointer;
     mask: yc-icon-url(fa/reorder) no-repeat center;
     mask-size: 16px;
     -webkit-mask: yc-icon-url(fa/reorder) no-repeat center;
@@ -70,6 +71,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
     position: relative; // allow menu to be positioned absolutely inside
     display: flex;
     flex-flow: row nowrap;
+    cursor: pointer;
     &:after {
       content: '';
       mask: yc-icon-url(fa/ellipsis-v) no-repeat center;

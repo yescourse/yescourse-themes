@@ -15,6 +15,17 @@
         </article>
         <aside>
             {% breadcrumbs %}
+            <h1 class="academy-title">
+                <a href="#!" id="academy_title">
+                    <img class="academy-logo" src="{{ academy.logo_url }}">
+                    {{ academy.title }}
+                </a>
+            </h1>
+            <h2 class="course-title">
+                <a href="{% course_url %}">
+                    {{ course.title }}
+                </a>
+            </h2>
             {% trainer_profiles %}
         </aside>
     </div>

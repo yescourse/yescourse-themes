@@ -1,4 +1,5 @@
 {% setTitle "{{ academy.title }} - Home Page" %}
+{% addClasses "has-sidebar" %}
 
 {% include "-site-header" %}
 
@@ -9,6 +10,14 @@
             <h2>Courses</h2>
             {% course_list %}
         </article>
+        <aside>
+            <h1 class="academy-title">
+                <a href="#!" id="academy_title">
+                    <img class="academy-logo" src="{{ academy.logo_url }}">
+                    {{ academy.title }}
+                </a>
+            </h1>
+        </aside>
     </div>
 </div>
 {% include "-site-footer" %}

@@ -124,7 +124,8 @@ aside .breadcrumbs a {
     color: {{ theme_config.menu_text_color }} !important;
 }
 
-aside ul a, .yc-course-tree ul a, .tutor_info a, .tutor_info .username, aside h2 {
+aside ul a, .yc-course-tree ul a, .tutor_info a, .tutor_info .username,
+aside h1 a, aside h2 a, aside h3 a {
     color: {{ theme_config.menu_text_color }} !important;
 }
 
@@ -144,7 +145,7 @@ aside ul li, li.yc-menu-entry, .tutor_info {
     color: {{ theme_config.menu_selected_text_color }} !important;
 }
 
-aside h2.module-title::before, aside ul.yc-modules-menu::before {
+aside .module-title::before, aside ul.yc-modules-menu::before {
     background-color: {{ theme_config.menu_selected_background_color }} !important;
 }
 

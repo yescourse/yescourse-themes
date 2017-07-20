@@ -25,9 +25,22 @@
 
         <aside>
             {% breadcrumbs %}
-            <h2 class="module-title">
-                <a href="{% module_url onlyIf=course.is_modular %}">{{ module.title }}</a>
+            <h1 class="academy-title">
+                <a href="#!" id="academy_title">
+                    <img class="academy-logo" src="{{ academy.logo_url }}">
+                    {{ academy.title }}
+                </a>
+            </h1>
+            <h2 class="course-title">
+                <a href="{% course_url %}">
+                    {{ course.title }}
+                </a>
             </h2>
+            <h3 class="module-title">
+                <a href="{% module_url onlyIf=course.is_modular %}">
+                    {{ module.title }}
+                </a>
+            </h3>
             {% module_lessons_menu %}
             {% modules_menu %}
         </aside>

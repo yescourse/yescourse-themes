@@ -1,4 +1,5 @@
 @import "constants";
+@import "ycthemelib/responsive";
 
 #yc-root.academy-page {
   article {
@@ -6,6 +7,11 @@
     margin: 0 auto;
     h2 {
       margin: 32px 0;
+    }
+  }
+  @include respond_to(tablet_landscape) {
+    aside {
+      display: none;
     }
   }
 }
