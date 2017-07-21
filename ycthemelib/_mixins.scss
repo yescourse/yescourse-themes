@@ -10,7 +10,6 @@ $YC_ORANGE: #e38f13;
   border-bottom: 1px solid #915107;
   @include yc_orange_gradient;
 
-  display: inline-block;
   align-self: flex-start;  // don't stretch full width if in a flex layout
 
   color: #000000 !important;
