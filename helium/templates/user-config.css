@@ -17,6 +17,13 @@ a {
     background-color: {{ theme_config.header_text_color }} !important;
 }
 
+@media screen and (min-width: 1024px) {
+    #header .login {
+        background-color: {{ theme_config.header_text_color }} !important;
+        color: {{ theme_config.header_background_color }} !important;
+    }
+}
+
 #yc-site-footer a {
     background-color: {{ theme_config.header_background_color }} !important;
     color: {{ theme_config.header_text_color }} !important;

@@ -74,7 +74,6 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       width: 16px;
     }
 
-
     &:not(.active) {
       &> * {
         display: none;
@@ -85,6 +84,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
         display: flex;
       }
     }
+
     .profile {
       position: absolute;
       top: $SITE_HEADER_HEIGHT;
@@ -121,14 +121,11 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
         }
       }
     }
-    .user-menu {
+    .user-menu, .login {
       position: absolute;
-      top: 2 * $SITE_HEADER_HEIGHT;
       right: 0;
-      flex-flow: column nowrap;
       padding: 8px 16px;
       margin: 0;
-      list-style: none;
       width: 182px;
       a {
         display: block;
@@ -139,14 +136,30 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
         }
       }
     }
+    .user-menu {
+      top: 2 * $SITE_HEADER_HEIGHT;
+      flex-flow: column nowrap;
+      list-style: none;
+    }
+    .login {
+      top: $SITE_HEADER_HEIGHT;
+    }
+
     @include respond_to(tablet_landscape) {
-      // always show the profile for large screens even if not active
+      // always show the profile or login button for large screens even if
+      // not active
       &:not(.active) {
-        .profile {
+        .profile, .login {
           display: flex;
         }
       }
-      .profile {
+      &:not(.auth) {
+        // hide the menu icon if not logged in
+        &:after {
+          content: none;
+        }
+      }
+      .profile, .login {
         // position the profile within the header
         position: static;
       }
@@ -154,6 +167,13 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
         // position the menu just under the header
         // position is fixed as per mobile style
         top: $SITE_HEADER_HEIGHT;
+      }
+      .login {
+        width: auto;
+        padding: 0 4px;
+        flex: 0 0 auto;
+        height: 24px;
+        align-self: center;
       }
     }
   }
