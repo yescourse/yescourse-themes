@@ -213,48 +213,7 @@ p.poster{
   }
 }
 
-#yc-root {
-  #yc-completion {
-    display: inline-block;
 
-    .mark_lesson_read {
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      input[type=submit] {
-        display: inline-block;
-        font-size: 14px;
-        line-height: 14px;
-        height: auto;
-        width: auto;
-        padding: 8px;
-        margin: 0;
-        border-radius: 0;
-      }
-    }
-    a#mark_lesson_read {
-      font-size: 14px;
-      line-height: 14px;
-      height: auto;
-      width: auto;
-      padding: 8px;
-      margin: 0 4px;
-      border-radius: 0;
-      border: 1px solid #3b3b3b;
-    }
-    #yc-time-display {
-      margin: 0 4px;
-    }
-  }
-}
-
-#yc-root.next-locked #yc-completion .mark_lesson_read {
-  display: none;
-}
-
-#yc-root.next-locked.should-be-unlocked #yc-completion .mark_lesson_read {
-  display: inline-block;
-}
 
 .quiz {
   ol {
