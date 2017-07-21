@@ -1,11 +1,85 @@
 @import "constants";
 @import "ycthemelib/responsive";
 @import "ycthemelib/images/mixins";
+@import "ycthemelib/svgicons/icons";
 
 #yc-site-footer {
   display: flex;
   flex-flow: row wrap;
   padding: 2px 4px;
+
+  .yc-footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 32px 0 16px;
+  }
+
+  .academy-footer {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    &> * {
+      margin: 4px;
+      @include respond_to(tablet_landscape) {
+        margin: 0;
+      }
+    }
+
+    .yc-course-certificate-link {}
+
+    .yc-completion {
+      .yc-mark-lesson-read {
+        display: block;
+      }
+    }
+
+    #yc-time-display {
+      display: none; // only show if has-time-tracker class present on yc-root
+    }
+
+    .legal-block {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      li {
+        display: inline-block;
+        margin: 0 8px;
+      }
+      @include respond_to(tablet_landscape) {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .yc-course-certificate-link, .yc-mark-lesson-read, #yc-time-display {
+    font-size: 14px;
+    line-height: 14px;
+    height: auto;
+    width: auto;
+    padding: 8px;
+    margin: 0 4px;
+    border-radius: 0;
+    border: 1px solid rgba(255,255,255,0.3);
+    opacity: 0.95;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .yc-course-certificate-link {
+    @include yc-left-icon(fa/certificate);
+  }
+
+  .yc-mark-lesson-read {
+    @include yc-left-icon(fa/check);
+  }
+
+  #yc-time-display {
+    font-weight: bold;
+  }
 
   .promote-course {
     display: block;
@@ -19,7 +93,7 @@
   .legals {
     // FIXME need better solution for mobile
     // hide on mobile
-    display: none;
+    //display: none;
     @include respond_to(tablet_landscape) {
       display: block;
     }
@@ -54,8 +128,6 @@
                                         #efc62c 5%, #e38f13 100%);
   }
 
-  #course_settings_link, .yc-mark-lesson-read, .command {}
-
   .command {
     // adjust command boxes to fit footer
     padding-top: 6px;
@@ -64,50 +136,36 @@
   }
 
   .powered {
-    // FIXME need better solution for mobile
+    // FIXME: is there a better way
     // hide on mobile
     display: none;
     @include respond_to(tablet_landscape) {
       display: block;
     }
     //-------------
-    padding: 0 0 0 24px;
+    padding: 0 16px 0 24px;
+    font-size: 14px;
+    line-height: 32px;
     background: yc-image-url('logo20.png') no-repeat left center;
     font-weight: bold;
     margin: 0 auto;
-    width: 210px;
     text-decoration: underline;
   }
 
   @include respond_to(tablet_landscape) {
-    min-height: $ACADEMY_FOOTER_HEIGHT;
     margin: 0;
 
     a.as-admin {
       display: block;
     }
+  }
+}
 
-
-    #yc_footer {
-      text-align: right;
-      font-size: 12px;
-      .legals {
-        display: inline-block;
-        ul, li {
-          display: inline-block;
-        }
-        a {
-          text-decoration: underline !important;
-          margin-right: 3px;
-        }
-      }
-      .powered {
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 160px;
+#yc-root.has-time-tracker {
+  #yc-site-footer {
+    .academy-footer {
+      #yc-time-display {
+        display: block;
       }
     }
   }

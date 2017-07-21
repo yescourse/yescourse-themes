@@ -216,3 +216,9 @@ textarea {
 .course_list a.course {
     color: {{ theme_config.text_color }} !important;
 }
+
+#yc-site-footer .yc-course-certificate-link,
+#yc-site-footer .yc-mark-lesson-read {
+    color: {{ theme_config.header_background_color }} !important;
+    background-color: {{ theme_config.header_text_color }} !important;
+}

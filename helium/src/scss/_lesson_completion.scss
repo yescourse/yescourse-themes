@@ -1,40 +1,5 @@
 
 
-#yc-root {
-  .yc-completion {
-    display: inline-block;
-
-    .yc-mark-lesson-read {
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      input[type=submit] {
-        display: inline-block;
-        font-size: 14px;
-        line-height: 14px;
-        height: auto;
-        width: auto;
-        padding: 8px;
-        margin: 0;
-        border-radius: 0;
-      }
-    }
-    .yc-mark-lesson-read {
-      font-size: 14px;
-      line-height: 14px;
-      height: auto;
-      width: auto;
-      padding: 8px;
-      margin: 0 4px;
-      border-radius: 0;
-      border: 1px solid #3b3b3b;
-    }
-    #yc-time-display {
-      margin: 0 4px;
-    }
-  }
-}
-
 #yc-root.next-locked .yc-completion .yc-mark-lesson-read {
   display: none;
 }

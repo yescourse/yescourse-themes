@@ -1,12 +1,12 @@
 <footer id="yc-site-footer">
-    <div id="yc_footer">
-        {% view_as_admin %}
+    <div class="yc-footer">
         {% powered_by_yc %}
+        {% view_as_admin %}
     </div>
-    <div id="academy_footer">
+    <div class="academy-footer">
+        {% lesson_timer %}
         {% course_certificate_link %}
         {% lesson_completion %}
-        {% lesson_timer %}
         <div class="legal-block">
             {% legal_pages %}
         </div>
