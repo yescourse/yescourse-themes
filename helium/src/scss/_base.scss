@@ -352,37 +352,6 @@ a {
   margin: 20px 0;
 }
 
-.command {
-  display: inline-block;
-  color: #000000 !important;
-  font-size: 14px;
-  line-height: 28px;
-  text-transform: none;
-  padding: 0 10px 0 4px;
-  margin: 6px;
-  height: auto;
-  width: auto;
-  border: 1px solid #da920c;
-  border-bottom: 1px solid #915107;
-  background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
-                                      #efc62c 5%, #e38f13 100%);
-
-  // common styling for command button icons
-  // we add the icon before the button text
-  &:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 28px;
-    height: 21px;
-  }
-
-  &.view:before {
-    @include yc-replace-text('cmd_view.png');
-  }
-
-}
-
 .hidden {
   visibility: hidden;
 }

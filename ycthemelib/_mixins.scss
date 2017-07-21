@@ -1,0 +1,28 @@
+$YC_ORANGE: #e38f13;
+
+@mixin yc_orange_gradient {
+  background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
+                                      #efc62c 5%, $YC_ORANGE 100%);
+}
+
+@mixin yc-button-style() {
+  border: 1px solid #da920c;
+  border-bottom: 1px solid #915107;
+  @include yc_orange_gradient;
+
+  display: inline-block;
+  align-self: flex-start;  // don't stretch full width if in a flex layout
+
+  color: #000000 !important;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: none;
+  text-decoration: none;
+  padding: 0 8px;
+  height: auto;
+  width: auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

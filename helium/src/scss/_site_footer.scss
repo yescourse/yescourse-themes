@@ -1,4 +1,5 @@
 @import "constants";
+@import "ycthemelib/mixins";
 @import "ycthemelib/responsive";
 @import "ycthemelib/images/mixins";
 @import "ycthemelib/svgicons/icons";
@@ -114,25 +115,7 @@
 
   a.as-admin {
     display: none; // hide on mobile, still available via user menu
-  }
-
-  a.as-admin {
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: bold;
-    color: #000000;
-    padding: 8px;
-    border: 1px solid #3b3b3b;
-    text-align: center;
-    background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
-                                        #efc62c 5%, #e38f13 100%);
-  }
-
-  .command {
-    // adjust command boxes to fit footer
-    padding-top: 6px;
-    padding-bottom: 3px;
-    margin: 0 0 0 6px;
+    @include yc-button-style;
   }
 
   .powered {
