@@ -17,6 +17,11 @@ a {
     background-color: {{ theme_config.header_text_color }} !important;
 }
 
+#yc-site-footer a {
+    background-color: {{ theme_config.header_background_color }} !important;
+    color: {{ theme_config.header_text_color }} !important;
+}
+
 article a, article h1, article h2, article h3, article h4, article h5, #yc-dialog a, #yc-dialog h4 {
     color: {{ theme_config.link_text_color }} !important;
 }

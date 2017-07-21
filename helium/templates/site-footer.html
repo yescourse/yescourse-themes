@@ -1,14 +1,14 @@
 <footer id="yc-site-footer">
-<div class="wrap">
+    <div id="yc_footer">
+        {% view_as_admin %}
+        {% powered_by_yc %}
+    </div>
     <div id="academy_footer">
-        {% course_settings_link %}
         {% course_certificate_link %}
         {% lesson_completion %}
+        {% lesson_timer %}
+        <div class="legal-block">
+            {% legal_pages %}
+        </div>
     </div>
-    <div id="yc_footer">
-        {% legal_pages %}
-        <a class="powered" href="{% yescourse_url %}" target="_self"
-           title="Create your own Course">Powered by YesCourse</a>
-    </div>
-</div>
 </footer>

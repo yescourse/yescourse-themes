@@ -3,18 +3,9 @@
 @import "ycthemelib/images/mixins";
 
 #yc-site-footer {
-  @include respond_to(tablet_landscape) {
-    & > .wrap {
-      max-width: $MAX_CONTENT_WIDTH;
-      margin: 0 auto;
-    }
-  }
-  background: #0e0e0e;
-  box-shadow: 0 2px 5px #000;
+  display: flex;
+  flex-flow: row wrap;
   padding: 2px 4px;
-  a {
-    color: #c0c0c0;
-  }
 
   .promote-course {
     display: block;
@@ -26,6 +17,14 @@
   }
 
   .legals {
+    // FIXME need better solution for mobile
+    // hide on mobile
+    display: none;
+    @include respond_to(tablet_landscape) {
+      display: block;
+    }
+    //-------------
+
     text-align: center;
     padding-bottom: 4px;
     ul {
@@ -34,28 +33,28 @@
       margin: 0;
     }
     a {
-      color: #777;
+      opacity: 0.5;
       font-size: 0.8em;
     }
   }
 
-  @include respond_to(tablet_landscape) {
-    clear: both;
-    min-height: 56px;
+  a.as-admin {
+    display: none; // hide on mobile, still available via user menu
   }
 
-  a.as_admin, #course_settings_link, #mark_lesson_read, .command {
+  a.as-admin {
     font-size: 14px;
     line-height: 14px;
     font-weight: bold;
     color: #000000;
-    display: inline-block;
     padding: 8px;
     border: 1px solid #3b3b3b;
     text-align: center;
     background: #f9e59c linear-gradient(to bottom, #f9e59c 0%, #f1d351 3%,
                                         #efc62c 5%, #e38f13 100%);
   }
+
+  #course_settings_link, #mark_lesson_read, .command {}
 
   .command {
     // adjust command boxes to fit footer
@@ -65,43 +64,33 @@
   }
 
   .powered {
+    // FIXME need better solution for mobile
+    // hide on mobile
+    display: none;
+    @include respond_to(tablet_landscape) {
+      display: block;
+    }
+    //-------------
     padding: 0 0 0 24px;
     background: yc-image-url('logo20.png') no-repeat left center;
     font-weight: bold;
-    display: block;
     margin: 0 auto;
     width: 210px;
     text-decoration: underline;
   }
 
   @include respond_to(tablet_landscape) {
-    clear: both;
-    height: $ACADEMY_FOOTER_HEIGHT;
     min-height: $ACADEMY_FOOTER_HEIGHT;
-    //position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: $ACADEMY_FOOTER_Z_INDEX;
     margin: 0;
-    display: table;
-    width: 100%;
 
-    & > .wrap {
-      margin: 0 auto;
-      max-width: 100%; //override setting for basic footer
-      display: table-row;
-      width: 100%;
+    a.as-admin {
+      display: block;
     }
 
-    #academy_footer {
-      display: table-cell;
-    }
 
     #yc_footer {
       text-align: right;
       font-size: 12px;
-      display: table-cell;
       .legals {
         display: inline-block;
         ul, li {
@@ -126,7 +115,7 @@
 
 // hide as admin button when inside frame
 .in-frame #yc-site-footer {
-  a.as_admin {
+  a.as-admin {
     display: none;
   }
 }
