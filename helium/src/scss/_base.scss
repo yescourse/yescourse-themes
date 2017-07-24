@@ -245,19 +245,19 @@ a {
     padding: 24px 32px;
     background-color: rgba(0, 0, 0, 0.0157);
 
-    li {
+    &> li {
       list-style: decimal outside;
     }
 
     ol {
       border: none;
 
-      li {
+      &> li {
         list-style: lower-alpha outside;
       }
 
       ol {
-        li {
+        &> li {
           list-style: lower-roman outside;
           padding: 16px 0;
           border-bottom: 1px dashed inherit;

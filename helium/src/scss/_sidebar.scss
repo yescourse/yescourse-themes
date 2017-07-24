@@ -61,6 +61,7 @@
     transition: unset; //prevent IE11 from always transitioning
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 0; // ensure that we don't obscure anything
   }
 }
 
