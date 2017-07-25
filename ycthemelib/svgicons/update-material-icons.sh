@@ -5,6 +5,11 @@
 # run this script and pass the path to the downloaded repo as well as the path
 # to the output scss file
 
+if [[ $# -ne 2 ]]
+then
+	echo "Usage: $0 <path/to/material-design-icons> <path/to/_material.scss>"
+	exit 1
+fi
 
 material_repo=$(readlink -f $1)
 output_file=$(readlink -f $2)
