@@ -1,7 +1,9 @@
-@import "fa";
+@import "./fa";
+@import "./material";
 
 $YC_ICON_DATA: (
-  fa: $YC-FA-DATA
+  fa: $YC-FA-DATA,
+  material: $YC-MATERIAL_ICON__DATA
 );
 
 @function yc-get-icon-data($path) {
