@@ -52,12 +52,11 @@
 
   #sales_banner {
     display: block;
-    margin: 10px 0 0 0;
+    margin: 0;
     background: no-repeat 50% 0;
     overflow: hidden;
 
     @include respond_to(tablet_landscape) {
-      margin: 0;
       padding: 80px 0 (80px - 24px) 0;
     }
 
