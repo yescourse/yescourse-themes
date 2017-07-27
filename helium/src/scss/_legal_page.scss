@@ -1,0 +1,15 @@
+
+#yc-root.legal-page {
+  header.actions {
+    // FIXME, this action bar should be styled by learbuild or similar
+    display: flex;
+    flex-flow: row wrap;
+    padding: 4px;
+    justify-content: space-around;
+    a {
+      padding: 2px;
+      border: 1px solid;
+      margin: 8px;
+    }
+  }
+}
