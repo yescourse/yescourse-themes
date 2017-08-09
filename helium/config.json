@@ -16,6 +16,7 @@
     "blog-page": "blog-page.html",
     "course-thank-you-page": "course-thank-you-page.html",
     "user-config-css": "user-config.css",
+    "403-page": "403.html",
     "404-page": "404.html",
     "-site-header": "site-header.html",
     "-site-footer": "site-footer.html",
