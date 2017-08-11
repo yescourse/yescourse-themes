@@ -115,6 +115,19 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
+  .tel_number {
+    input {
+      background-image: yc-icon-url('fa/phone');
+    }
+  }
+
+  .city, .state, .post_code {
+    input {
+      background-image: yc-icon-url('fa/map-marker');
+      background-size: 1.4em;
+    }
+  }
+
   .country {
     //select {
       //background-image: yc-icon-url('fa/globe');
@@ -134,6 +147,12 @@ $FIELD_MAX_WIDTH: 800px;
   .timezone {
     select {
       margin-top: 0;
+    }
+  }
+
+  .website {
+    input {
+      background-image: yc-icon-url('fa/internet-explorer');
     }
   }
 
