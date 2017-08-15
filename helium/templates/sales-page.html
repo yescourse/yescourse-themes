@@ -1,20 +1,38 @@
 {% setTitle "{{ course.title }}" %}
 {% addClasses "course-sales-page" %}
-{% addClasses "has-page-header" onlyIf=theme_config.show_page_header %}
-{% addClasses "has-sidebar" onlyIf=theme_config.show_sidebar %}
 
-{% include "-site-header" onlyIf=theme_config.show_page_header %}
 
-{% theme_html "pre_banner_text" id="prebanner" onlyIf=theme_config.show_pre_banner_text %}
-{% include "-banner" onlyIf=theme_config.show_banner %}
+{% include "-site-header" %}
+
+{% theme_html "pre_banner_text" id="prebanner" %}
+<div id="sales_banner">
+    <div class="wrap">
+        {% sales_page_visual %}
+
+        <div class="banner_text std">
+            <div class="course_headline" itemscope
+                 itemtype="http://schema.org/Product">
+                <h1 itemprop="name">{{ course.title }}</h1>
+                <p class="tag_line">{{ sales_page.tag_line }}</p>
+            </div>
+            <div id="rego-btn-banner">
+                {% rego_button %}
+            </div>
+            {% course_social %}
+        </div>
+        {% theme_html "banner_text" class="banner_text custom" %}
+    </div>
+</div>
 
 <div class="main-content">
     <div class="content">
         <div class="description">{% page_content %}</div>
-        {% rego_button onlyIf=theme_config.registration_button_at_bottom %}
+        <div id="rego-btn-bottom">
+            {% rego_button %}
+        </div>
     </div>
     <div class="sidebar">
-        {% trainer_profiles onlyIf=theme_config.show_sidebar %}
+        {% trainer_profiles %}
     </div>
 </div>
 

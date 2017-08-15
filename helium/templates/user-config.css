@@ -229,3 +229,7 @@ textarea {
     color: {{ theme_config.header_background_color }} !important;
     background-color: {{ theme_config.header_text_color }} !important;
 }
+
+#sales_banner {
+    background-image: {{ theme_config.banner_background_image }};
+}

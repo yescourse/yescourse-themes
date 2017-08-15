@@ -6,12 +6,6 @@
   }
 }
 
-.has-sidebar.course-sales-page {
-  article {
-    padding-left: 10px;
-  }
-}
-
 .yc-free-course-enrol-button {
   display:block;
   @include yc-replace-text-with-dimensions('free_course_enrol.png');

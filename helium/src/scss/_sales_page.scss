@@ -29,11 +29,16 @@
           display: none;
         }
       }
+      &.show_sidebar {
+        .main-content {
+          .sidebar {
+            @include respond_to(tablet_landscape) {
+              display: block;
+            }
+          }
+        }
+      }
     }
-  }
-
-  &:not(.has-page-header) #header {
-    display: none; // don't show site header unless page has-page-header class
   }
 
   &.guest {
@@ -41,6 +46,51 @@
       display: none; // don't show the user login links to unauthenticated user
     }
   }
+
+  // show hide elements as per the theme config
+  #yc-page {
+    &:not(.show_page_header) #header {
+      display: none;
+    }
+
+    &:not(.show_pre_banner_text) {
+      #prebanner {
+        display: none;
+      }
+    }
+
+    &:not(.show_banner) {
+      #sales_banner {
+        display: none;
+      }
+    }
+    &:not(.registration_button_at_bottom) {
+      #rego-btn-bottom {
+        display: none;
+      }
+    }
+    &.banner_has_custom_text {
+      .banner_text.std {
+        display: none;
+      }
+    }
+    &:not(.banner_has_custom_text) {
+      .banner_text.custom {
+        display: none;
+      }
+    }
+    &:not(.registration_button_in_banner) {
+      #rego-btn-banner {
+        display: none;
+      }
+    }
+    &:not(.banner_show_visual) {
+      .course_visual {
+        display: none;
+      }
+    }
+  }
+
 
   #prebanner {
     padding: 16px 0;
@@ -176,19 +226,6 @@
     }
   }
 
-  &.has-sidebar  {
-    #yc-wrap {  // ensure specificity overrides styles from base
-      #yc-page {
-        .main-content {
-          .sidebar {
-            @include respond_to(tablet_landscape) {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
 
   // ------- Widgets ----------------
 
