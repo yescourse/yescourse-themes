@@ -169,6 +169,10 @@ aside .module-title::before, aside ul.yc-modules-menu::before {
     background-color: {{ theme_config.banner_background_color }} !important;
 }
 
+.sales-page #sales_banner {
+    background-image: {{ theme_config.banner_background_image }} !important;
+}
+
 #sales_banner .banner_text.custom {
     background-color: {{ theme_config.banner_custom_text_background_color }} !important;
 }
@@ -228,8 +232,4 @@ textarea {
 #yc-site-footer .yc-mark-lesson-read {
     color: {{ theme_config.header_background_color }} !important;
     background-color: {{ theme_config.header_text_color }} !important;
-}
-
-#sales_banner {
-    background-image: {{ theme_config.banner_background_image }};
 }
