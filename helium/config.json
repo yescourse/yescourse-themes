@@ -158,7 +158,7 @@
     "banner_background_image": {
       "type": "image",
       "levels": ["S"],
-      "default": null
+      "default": "none"
     }
   },
   "build_ui": {
