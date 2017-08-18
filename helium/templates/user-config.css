@@ -136,7 +136,7 @@ aside .breadcrumbs a {
     color: {{ theme_config.menu_text_color }} !important;
 }
 
-aside ul a, .yc-course-tree ul a, .tutor_info a, .tutor_info .username,
+aside ul a, .yc-course-tree ul a, .yc-module-lessons-menu a, .tutor_info a, .tutor_info .username,
 aside h1 a, aside h2 a, aside h3 a {
     color: {{ theme_config.menu_text_color }} !important;
 }
