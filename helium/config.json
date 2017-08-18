@@ -206,21 +206,8 @@
                 "label": "Banner Text Position"
               },
               {
-                "var": "banner_has_custom_text",
-                "label": "Custom Banner Text"
-              },
-              {
-                "var": "banner_text",
-                "label": "Banner Text",
-                "show-if-true": "banner_has_custom_text"
-              },
-              {
                 "var": "banner_text_color",
                 "label": "Banner Text Colour"
-              },
-              {
-                "var": "banner_custom_text_background_color",
-                "label": "Banner Custom Text Background"
               },
               {
                 "var": "banner_background_image",
@@ -232,11 +219,25 @@
               },
               {
                 "var": "banner_background_color",
-                "label": "Banner Background"
+                "label": "Banner Background Colour"
               },
               {
                 "var": "banner_show_visual",
                 "label": "Show Image/Video in Banner"
+              },
+              {
+                "var": "banner_has_custom_text",
+                "label": "Show Custom Banner Text"
+              },
+              {
+                "var": "banner_custom_text_background_color",
+                "label": "Banner Custom Text Background",
+                "show-if-true": "banner_has_custom_text"
+              },
+              {
+                "var": "banner_text",
+                "label": "Banner Text",
+                "show-if-true": "banner_has_custom_text"
               }
             ]
           }
