@@ -126,7 +126,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       right: 0;
       padding: 8px 16px;
       margin: 0;
-      width: 182px;
+      width: 196px;
       a {
         display: block;
         padding: 8px 0;
@@ -140,6 +140,9 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
       top: 2 * $SITE_HEADER_HEIGHT;
       flex-flow: column nowrap;
       list-style: none;
+      .support-email {
+        font-size: 0.8em;
+      }
     }
     .login {
       top: $SITE_HEADER_HEIGHT;
