@@ -6,6 +6,7 @@
     "description": "A simple light weight theme - the default for YesCourse Courses"
   },
   "templates": {
+    "default-page": "default-page.html",
     "academy-page": "academy-page.html",
     "home-page": "home-page.html",
     "bundle-page": "bundle-page.html",
