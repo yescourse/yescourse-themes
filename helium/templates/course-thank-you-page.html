@@ -1,15 +1,14 @@
-{% setTitle "Thank You for Joining {{ course.title }} - Preface" %}
+{% setTitle course.title %}
 
 {% include "-site-header" %}
 
 <div id="content_wrap">
     <article>
-        <h1>Thank You!</h1>
-        <p>You have successfully joined "{{ course.title }}"</p>
-        <p>
-            Please <a href="{% course_url %}">click here</a> to start the
-            course.
-        </p>
+        <div class="content">
+            <div class="description">
+                {% page_content %}
+            </div>
+        </div>
     </article>
 </div>
 
