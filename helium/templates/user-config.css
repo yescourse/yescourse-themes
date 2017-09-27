@@ -47,8 +47,9 @@ article ul, article ol {
     border: none !important;
 }
 
-article th, #yc-dialog th {
+article th, #yc-dialog th, input[type=submit] {
     background-color: {{ theme_config.menu_selected_background_color }} !important;
+    color: {{ theme_config.menu_selected_text_color }} !important;
 }
 
 #comments {
@@ -64,10 +65,6 @@ article th, #yc-dialog th {
     background-color: {{ theme_config.background_color }} !important;
 }
 
-#comments input[type=submit], #comments .comment_cancel {
-    color: {{ theme_config.background_color }} !important;
-    background-color: {{ theme_config.text_color }} !important;
-}
 
 #module_nav {
     background-color: {{ theme_config.background_color }} !important;
@@ -209,7 +206,7 @@ textarea {
     color: {{ theme_config.text_color }} !important;
 }
 
-#yc-dialog h3 {
+#yc-dialog h1, #yc-dialog h3 {
     background: {{ theme_config.header_background_color }} !important;
     color: {{ theme_config.header_text_color }} !important;
 }
