@@ -8,38 +8,38 @@
     padding: 32px;
   }
 
-    @include panel_bg_shadow();
-    margin: 32px 0;
-    overflow: hidden;
+  @include panel_bg_shadow();
+  margin: 32px 0;
+  overflow: hidden;
 
-    h3 {
-        font-size: 24px;
-        margin-bottom: 16px;
-        margin-top: 10px;
-        margin-left: 0;
-    }
+  h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      margin-top: 10px;
+      margin-left: 0;
+  }
 
-    p.exam_attrs {
-        margin: 0;
-    }
+  p.exam_attrs {
+      margin: 0;
+  }
 
   li {
     list-style: none;
   }
 
-    .action {
-        display: inline-block;
-        padding: 16px;
-        font-size: 14px;
-        line-height: 1em;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-      margin: 16px 0 0 0;
-      &:hover {
-        opacity: 0.6;
-      }
+  .action {
+    display: inline-block;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+    &:hover {
+      opacity: 0.6;
     }
+  }
 
   #exam_pwd_block {
     padding: 8px 0;
@@ -63,193 +63,191 @@
     padding: 0 16px 0 0;
   }
 
-    .has_passed {
-        padding-left: 32px;
-    }
+  .attempt_now {
+      color: white;
+      background: #0999D6;
+  }
 
-    .attempt_now {
-        color: white;
-        background: #0999D6;
-    }
+  .has_passed {
+    padding-left: 32px;
+    border: 1px solid #7eac01;
+    background: #8fc400 yc-image-url('exam_passed_tick.png') no-repeat 10px 4px;
+  }
 
-    .has_passed {
-      border: 1px solid #7eac01;
-      background: #8fc400 yc-image-url('exam_passed_tick.png') no-repeat 10px 4px;
-    }
 
-    table {
-        border: 2px solid #dddac9;
-        border-radius: 4px;
-        margin-top: 20px;
-        thead {
-            background: #eeeeee;
-            th {
-                border: none;
-            }
-        }
-        tbody {
-            background: #f8f8f8;
-        }
-        td {
-            font-size: 12px;
-        }
-        .graph {
-            background: #d7d7d7;
-        }
-        .fail {
-            .bar {
-                background: #aa0c0d;
-            }
-            .result_str {
-                color: #ad0a0d;
-            }
-        }
-        .pass {
-            .bar {
-                background: #79c500;
-            }
-            .result_str {
-                color: #4f8002;
-            }
-        }
-    }
-
-    @include respond_to(tablet_landscape) {
-        col.date {
-            width: 124px;
-        }
-        col.result {
-            width: 100px;
-        }
-
-        .graph {
-            display: inline-block;
-            width: 248px;
-            height: 4px;
-            vertical-align: middle;
-        }
-        .bar {
-            height: 4px;
-        }
-    }
-
-    #exam_questions {
-      background: $DEFAULT_BACKGROUND;
-      display: none;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      max-width: 1024px;
-      margin: 0 auto;
-      z-index: $EXAM_Z_INDEX;
-
-      header, footer {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 36px;
-        background-color: $DEFAULT_TEXT_COLOUR;
-        color: $DEFAULT_BACKGROUND;
-      }
-
-      header {
-        top: 0;
-        h3 {
-          margin: 0 0 0 26px;
-          line-height: 36px;
-        }
-      }
-
-      footer {
-        bottom: 0;
-        display: table;
-        width: 100%;
-        padding: 2px 4px;
-      }
-
-      #exam_questions_body {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 36px;
-        bottom: 36px;
-        overflow-y: scroll;
-        ol ul li.selected {
-          background-color: black;
-          color: #ffffff;
-        }
-      }
-      .question_text {
-        // ensure that the question text appears in same line as the number
-        display: inline-block;
-      }
-      .graph {
-        margin: 0 16px;
-        background-color: #ffffff;
-        border: 1px solid #ffffff;
-        height: 20px;
-        position: relative;
-        text-align: center;
-        .bar {
-          height: 100%;
-          background-color: #000000;
-          min-width: 2px;
-        }
-        p.count {
-          background-color: $DEFAULT_BACKGROUND;
-          position: absolute;
-          display: inline-block;
-          top: 2px;
-          left: auto;
-          right: auto;
-          margin: 0 auto;
-          height: 14px;
-          color: black;
-          text-align: center;
-          font-size: 11px;
-          line-height: 14px;
-          padding: 0 4px;
-        }
-      }
-      .remaining {
-        font-size: 18px;
-        font-weight: bold;
-        margin-right: 16px;
-        padding: 0 4px;
-        background-color: white;
-        color: black;
-        vertical-align: middle;
+  table {
+    border: 2px solid #dddac9;
+    border-radius: 4px;
+    margin-top: 20px;
+    thead {
+      background: #eeeeee;
+      th {
+        border: none;
       }
     }
+    tbody {
+      background: #f8f8f8;
+    }
+    td {
+      font-size: 12px;
+    }
+    .graph {
+      background: #d7d7d7;
+    }
+    .fail {
+      .bar {
+        background: #aa0c0d;
+      }
+      .result_str {
+        color: #ad0a0d;
+      }
+    }
+    .pass {
+      .bar {
+        background: #79c500;
+      }
+      .result_str {
+        color: #4f8002;
+      }
+    }
+  }
 
-    #submit_box, #exam_questions_status {
-      display: table-cell;
+  @include respond_to(tablet_landscape) {
+    col.date {
+      width: 124px;
+    }
+    col.result {
+      width: 100px;
+    }
+
+    .graph {
+      display: inline-block;
+      width: 248px;
+      height: 4px;
       vertical-align: middle;
     }
+    .bar {
+      height: 4px;
+    }
+  }
 
-    #submit_box {
-      text-align: left;
+  #exam_questions {
+    background: $DEFAULT_BACKGROUND;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    z-index: $EXAM_Z_INDEX;
+
+    header, footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 36px;
+      background-color: $DEFAULT_TEXT_COLOUR;
+      color: $DEFAULT_BACKGROUND;
     }
 
-    #exam_questions_status {
-      text-align: right;
-      &> div {
+    header {
+      top: 0;
+      h3 {
+        margin: 0 0 0 26px;
+        line-height: 36px;
+      }
+    }
+
+    footer {
+      bottom: 0;
+      display: table;
+      width: 100%;
+      padding: 2px 4px;
+    }
+
+    #exam_questions_body {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 36px;
+      bottom: 36px;
+      overflow-y: scroll;
+      ol ul li.selected {
+        background-color: black;
+        color: #ffffff;
+      }
+    }
+    .question_text {
+      // ensure that the question text appears in same line as the number
+      display: inline-block;
+    }
+    .graph {
+      margin: 0 16px;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      height: 20px;
+      position: relative;
+      text-align: center;
+      .bar {
+        height: 100%;
+        background-color: #000000;
+        min-width: 2px;
+      }
+      p.count {
+        background-color: $DEFAULT_BACKGROUND;
+        position: absolute;
         display: inline-block;
-      }
-      .hhmmss.warn {
-        color: red;
+        top: 2px;
+        left: auto;
+        right: auto;
+        margin: 0 auto;
+        height: 14px;
+        color: black;
+        text-align: center;
+        font-size: 11px;
+        line-height: 14px;
+        padding: 0 4px;
       }
     }
+    .remaining {
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 16px;
+      padding: 0 4px;
+      background-color: white;
+      color: black;
+      vertical-align: middle;
+    }
+  }
 
-    .fitb {
-      select, input {
-        display: inline-block;
-        width: auto;
-      }
+  #submit_box, #exam_questions_status {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #submit_box {
+    text-align: left;
+  }
+
+  #exam_questions_status {
+    text-align: right;
+    &> div {
+      display: inline-block;
     }
+    .hhmmss.warn {
+      color: red;
+    }
+  }
+
+  .fitb {
+    select, input {
+      display: inline-block;
+      width: auto;
+    }
+  }
 }
 
 .exam_in_progress {
@@ -286,7 +284,7 @@
     margin-right: 24px;
   }
   header {
-      background: rgba(0,0,0,0.3) !important;  // FIXME: move to theme
+    background: rgba(0,0,0,0.3) !important;  // FIXME: move to theme
   }
   footer {
     position: static;
