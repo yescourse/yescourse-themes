@@ -27,7 +27,7 @@
       background: #32323a yc-image-url('lesson_warn_icon.png') no-repeat 8px center;
     }
 
-    &.locked {
+    &.locked:not(.selected) {
       background-image: yc-image-url('lock.png');
       a {
         padding-left: 42px;
