@@ -149,6 +149,9 @@
     .academy-footer {
       #yc-time-display {
         display: block;
+        &:empty {
+          display: none;
+        }
       }
     }
   }
