@@ -2,6 +2,35 @@
 @import "ycthemelib/responsive";
 
 #yc-root.academy-page {
+  #yc-page {
+    &:not(.show_academy_banner) {
+      .banner {
+        display: none;
+      }
+    }
+    &[data-academy_banner_scaling='cover'] .banner {
+      background-size: cover;
+    }
+
+    &[data-academy_banner_scaling='contain'] .banner {
+      background-size: contain;
+    }
+
+    &[data-academy_banner_repeat='repeat'] .banner {
+      background-repeat: repeat;
+    }
+
+    &[data-academy_banner_repeat='no_repeat'] .banner {
+      background-repeat: no-repeat;
+    }
+  }
+
+  .banner {
+    min-height: 320px;
+    padding: 16px;
+    background-position: center;
+  }
+
   .content, .courses {
     max-width: $MAX_CONTENT_WIDTH;
     margin: 0 auto;

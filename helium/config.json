@@ -160,6 +160,47 @@
       "type": "image",
       "levels": ["S"],
       "default": "none"
+    },
+    "show_academy_banner": {
+      "type": "boolean",
+      "pages": ["academy-page"],
+      "default": true
+    },
+    "academy_banner_image": {
+      "type": "image",
+      "pages": ["academy-page"],
+      "default": "none"
+    },
+    "academy_banner_scaling": {
+      "type": "choice",
+      "choices": [
+        ["NO_SCALE", "No Scaling applied"],
+        ["COVER", "Scale Image to cover Banner"],
+        ["CONTAIN", "Scale Image to fit inside Banner"]
+      ],
+      "pages": ["academy-page"],
+      "default": "COVER"
+    },
+    "academy_banner_repeat": {
+      "type": "choice",
+      "choices": [
+        ["NO_REPEAT", "Don't repeat image"],
+        ["REPEAT", "Allow smaller image to repeat"]
+      ],
+      "default": "NO_REPEAT"
+    },
+    "academy_banner_background_color": {
+      "type": "color",
+      "default": "#424242"
+    },
+    "academy_banner_text_color": {
+      "type": "color",
+      "default": "#fff"
+    },
+    "academy_banner_text": {
+      "type": "html",
+      "pages": ["academy-page"],
+      "default": "<h1>{{academy.title}}</h1>"
     }
   },
   "build_ui": {
@@ -306,6 +347,42 @@
           {
             "var": "menu_selected_text_color",
             "label": "Selected Item Text"
+          }
+        ]
+      },
+      {
+        "name": "Academy Page Banner",
+        "pages": ["academy-page"],
+        "fields": [
+          {
+            "var": "show_academy_banner",
+            "label": "Show Banner"
+          },
+          {
+            "field-set": "banner-config",
+            "show-if-true": "show_academy_banner",
+            "fields": [
+              {
+                "var": "academy_banner_image",
+                "label": "Image"
+              },
+              {
+                "var": "academy_banner_text_color",
+                "label": "Text Color"
+              },
+              {
+                "var": "academy_banner_scaling",
+                "label": "Scaling"
+              },
+              {
+                "var": "academy_banner_repeat",
+                "label": "Image repeat"
+              },
+              {
+                "var": "academy_banner_text",
+                "label": "Banner Text"
+              }
+            ]
           }
         ]
       }
