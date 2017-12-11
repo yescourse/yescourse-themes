@@ -435,3 +435,13 @@ iframe {
     }
   }
 }
+
+// FIXME temp while migrating to using yc-blocks in ck editor
+.yc-ck-block {
+  display: none;
+}
+#yc-root.display-yc-ck-blocks {
+  .yc-ck-block {
+    display: block;
+  }
+}
