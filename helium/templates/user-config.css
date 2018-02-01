@@ -65,6 +65,19 @@ article th, #yc-dialog th, input[type=submit] {
     background-color: {{ theme_config.background_color }} !important;
 }
 
+#yc-comments {
+    color: {{ theme_config.text_color }} !important;
+}
+
+#yc-comments header, #yc-comments footer, #yc-comments .yc-comment-container {
+    background-color: {{ theme_config.background_color }} !important;
+    color: {{ theme_config.text_color }} !important;
+}
+
+#yc-comments .comment_text {
+    background-color: {{ theme_config.background_color }} !important;
+}
+
 
 #module_nav {
     background-color: {{ theme_config.background_color }} !important;

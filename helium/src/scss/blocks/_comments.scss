@@ -6,11 +6,17 @@
 
 $LEFT_INDENT_SUBCOMMENT: 24px;
 
-#comments {
+#comments, #yc-comments {
   padding: 32px;
   margin-top: 36px;
 
   @include panel_bg_shadow();
+
+  .yc-comment.replying {  // hide actions while reply form is revealed
+    .yc-action {
+      display: none;
+    }
+  }
 
   &> h3 {
     margin: 0 0 16px 0;
@@ -126,7 +132,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
       }
     }
   }
-  .comment_reply_form {
+  .comment_reply_form, .yc-reply-form {
     flex: 1 0 auto;
   }
 
@@ -169,6 +175,7 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
   a {
     text-decoration: none;
     border-bottom: none;
+    cursor: pointer;
   }
 
   ul.attachments {
@@ -216,6 +223,10 @@ $LEFT_INDENT_SUBCOMMENT: 24px;
 }
 
 .offline #comments {
+  display: none;
+}
+
+.offline #yc-comments {
   display: none;
 }
 
