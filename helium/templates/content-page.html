@@ -7,16 +7,15 @@
 <div id="content_wrap">
     <article>
         {% post_image %}
-        <div id="post-content">
+        <div class="content">
             <h1>{{ content_post.title }}</h1>
-            <section id="post" class="description">
+            <div id="post" class="description">
                 {% page_content %}
-            </section>
+            </div>
+            {% page_comments %}
         </div>
-
-
     </article>
-    {% page_comments %}
+
 </div>
 
 {% include "-site-footer" %}
