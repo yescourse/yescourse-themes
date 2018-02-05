@@ -1,0 +1,58 @@
+@import "ycthemelib/svgicons/icons";
+
+.yc-social {
+  display: inline-flex;
+  flex-flow: row wrap;
+  padding: 8px;
+  margin: 16px 0;
+  border: 1px solid rgba(0,0,0,0.1);
+
+
+  &>div {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 8px;
+  }
+
+  iframe {
+    //width: auto;
+    margin: 0;
+  }
+
+  .yc-fb-like, .yc-fb-share {
+    max-width: 56px;
+
+    &.has-count {
+      max-width: 78px;
+    }
+  }
+
+  .yc-tw-share {
+    a {
+      background: #1b95e0 yc-icon-url(fa/twitter, #fff) no-repeat 4px 50%;
+      background-size: 1em;
+      color: #fff !important;
+      height: 20px;
+      padding: 1px 10px 1px 16px;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+  }
+
+  .yc-li-share {
+    a {
+      background: rgb(0, 119, 181) yc-icon-url(fa/linkedin, #fff) no-repeat 4px 50%;
+      background-size: 1em;
+      color: #fff !important;
+      height: 20px;
+      padding: 1px 10px 1px 20px;
+      border-radius: 3px;
+      font-size: 11px;
+    }
+  }
+
+  a {
+    border: none;
+    cursor: pointer;
+  }
+}
