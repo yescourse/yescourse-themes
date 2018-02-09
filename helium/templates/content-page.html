@@ -1,6 +1,6 @@
-{% setTitle "{{ blog.title }}" %}
+{% setTitle "{{ content_post.title }}" %}
 {% addClasses "content-page" %}
-{% addClasses "has-image" onlyIf=blog.has_image %}
+{% addClasses "has-image" onlyIf=content_post.has_image %}
 
 {% include "-site-header" %}
 
