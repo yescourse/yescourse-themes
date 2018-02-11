@@ -1,0 +1,10 @@
+@import "../mixins";
+
+.media_block, .yc-media-block {
+  &.video {
+    @include panel_style;
+    .transcript {
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+}

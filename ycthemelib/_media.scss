@@ -4,9 +4,9 @@ $DOWNLOAD_VEIL_Z_INDEX: 2;
 $VIDEO_POSTER_Z_INDEX: 5;
 
 // responsive layout for embedded videos
-.video_container {
+.video_container, .yc-video-container {
   max-width: 854px;
-  margin: 0 auto;
+  margin: 16px auto;
   .wrap {
     position: relative;
     padding: 0 0 56.21% 0; /* 16:9 */
@@ -23,24 +23,40 @@ $VIDEO_POSTER_Z_INDEX: 5;
   }
 }
 
-.media_block {
-  padding: 20px;
-  margin: 20px 0;
+.media_block, .yc-media-block {
+  padding: 24px;
+  margin: 24px 0;
   overflow: hidden;
 
-  &.quiz {
-    padding: 24px; // allow more padding for the numbering to appear in
+  &.video {
+    .duration {
+      margin: 8px 0;
+    }
+  }
+
+  &.pdf {
+    .wrap {
+      position: relative;
+      height: 0;
+      margin: 0 auto;
+      object {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
   }
 }
 
 .transcript {
-  height: 300px;
+  height: 304px;
   overflow-y: scroll;
-  padding: 10px;
-  margin-bottom: 10px;
-
-  border: 1px solid #aaa;
-  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
 }
 
 iframe {
@@ -178,22 +194,6 @@ p.poster{
   }
 }
 
-.media_block.pdf {
-  .wrap {
-    position: relative;
-    height: 0;
-    margin: 0 auto;
-    object {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-  }
-}
 
 #resources {
   // display files centered
