@@ -40,7 +40,7 @@
     },
     "banner_background_color": {
       "type": "color",
-      "default": "#3C425C"
+      "default": "#424242"
     },
     "banner_text_color": {
       "type": "color",
