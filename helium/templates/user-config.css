@@ -1,4 +1,4 @@
-#yc-root {
+#yc-root, #yc-page {
     background-color: {{ theme_config.background_color }} !important;
     color: {{ theme_config.text_color }} !important;
 }
@@ -41,28 +41,14 @@ article a.coupon_code_link {
     border-bottom: 1px dotted {{ theme_config.link_text_color }} !important;
 }
 
-
-article ul, article ol {
-    color: {{ theme_config.text_color }} !important;
-    border: none !important;
-}
-
 article th, #yc-dialog th, input[type=submit] {
     background-color: {{ theme_config.menu_selected_background_color }} !important;
     color: {{ theme_config.menu_selected_text_color }} !important;
 }
 
-#comments {
-    color: {{ theme_config.text_color }} !important;
-}
-
 #comments header, #comments footer, #comments .yc-comment-container {
     background-color: {{ theme_config.background_color }} !important;
     color: {{ theme_config.text_color }} !important;
-}
-
-#comments .comment_text {
-    background-color: {{ theme_config.background_color }} !important;
 }
 
 #yc-comments {
@@ -87,9 +73,6 @@ article th, #yc-dialog th, input[type=submit] {
     color: {{ theme_config.text_color }} !important;
 }
 
-#lesson_header {
-    color: {{ theme_config.link_text_color }} !important;
-}
 
 #exams #attempt_exam {
   color: {{ theme_config.menu_selected_text_color }} !important;
