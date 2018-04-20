@@ -6,7 +6,7 @@
   }
 }
 
-.yc-free-course-enrol-button {
+.yc-free-course-enrol-button, .yc-free-product-button {  //TODO remove yc-free-course-enrol-button
   display:block;
   @include yc-replace-text-with-dimensions('free_course_enrol.png');
   border: none;
@@ -26,7 +26,7 @@
 }
 
 .yc-custom-image {
-  .yc-free-course-enrol-button {
+  .yc-free-course-enrol-button, .yc-free-product-button {  //TODO remove yc-free-course-enrol-button
     display: block;
     background: none;
     width: auto;

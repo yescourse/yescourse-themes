@@ -43,7 +43,7 @@
       background-color: transparent;
     }
 
-    &.yc-free-course {
+    &.yc-free-course, &.yc-free-product {  //TODO - remove yc-free-course
       width: auto;
       background-color: transparent;
     }
