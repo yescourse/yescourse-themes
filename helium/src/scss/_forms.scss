@@ -316,7 +316,7 @@ ul.field-errors {
     margin-left: 0 !important;
   }
 
-  .course_buy h4, .product_buy h4 {  // FIXME - remove course_buy
+  .product_buy h4 {
     margin: 24px auto 12px auto;
   }
 }
@@ -364,7 +364,7 @@ button.stripe-checkout { // copied from stripe styling
 }
 
 #yc-dialog {
-  .course_buy, .product_buy {  // FIXME - remove course_buy
+  .product_buy {
     text-align: center;
     h4 {
       text-align: center;
