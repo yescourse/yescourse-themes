@@ -85,7 +85,7 @@
       }
     }
     &:not(.banner_show_visual) {
-      .course_visual {
+      .course_visual, .product_visual { // TODO remove .course_visual in future release
         display: none;
       }
     }
@@ -117,10 +117,10 @@
       }
     }
 
-    .course_visual {
+    .course_visual, .product_visual { // TODO remove .course_visual in future release
       max-width: 854px;
       margin: 0 auto 24px;
-      img, #videobox {
+      img, #videobox, .media_container, .video_container { // TODO remove img, #videobox in future release
         display: block;
         width: 854px;
         height: auto;
@@ -130,7 +130,7 @@
       }
 
       // make the videos responsive by maintaining a ratio of 16:9
-      #videobox {
+      #videobox, .video_container { // TODO remove #videobox in future release
         position: relative; // allow the iframe to be positioned absolute within
         padding-bottom: 56.25% !important;  // 9/16*100
         height: 0 !important;  // effective height determined by padding
@@ -198,7 +198,7 @@
 
     &[data-banner_text_position='left'] #sales_banner {
       @include respond_to(tablet_landscape) {
-        .course_visual {
+        .course_visual, .product_visual { // TODO remove .course_visual in future release
           float: right;
           width: 480px;
         }
@@ -215,7 +215,7 @@
           margin: 0 0 0 538px;
         }
       }
-      .course_visual {
+      .course_visual, .product_visual { // TODO remove .course_visual in future release
         @include respond_to(tablet_landscape) {
           float: left;
           clear: none;
