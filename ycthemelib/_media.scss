@@ -269,3 +269,14 @@ p.poster{
 .has-countdown .yc-countdown {
   display: flex;
 }
+
+
+.scorm-player {
+  padding: 0;
+  margin: 0;
+  iframe {
+    display: block;
+    height: 640px;
+    padding: 0;
+  }
+}
