@@ -1,4 +1,5 @@
 @import "../mixins";
+@import "ycthemelib/responsive";
 
 #yc-root {
   .media_block, .yc-media-block {
@@ -16,5 +17,22 @@
           }
         }
       }
+  }
+}
+
+.yc-scorm-launch {
+  display: inline-block;
+  padding: 4px;
+}
+
+.yc-scorm-player {
+  @include respond_to(tablet_landscape) {
+    padding: 0 32px 32px;
+  }
+  .yc-scorm-exit {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 4px;
+    margin: 8px 0;
   }
 }

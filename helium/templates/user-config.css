@@ -236,3 +236,19 @@ textarea {
     color: {{ theme_config.header_background_color }} !important;
     background-color: {{ theme_config.header_text_color }} !important;
 }
+
+.yc-scorm-player {
+    color: {{ theme_config.text_color }} !important;
+    background-color: {{ theme_config.background_color }} !important;
+}
+
+
+.yc-scorm-exit {
+    background-color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.background_color }} !important;
+}
+
+.yc-scorm-launch {
+    background-color: {{ theme_config.text_color }} !important;
+    color: {{ theme_config.background_color }} !important;
+}

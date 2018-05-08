@@ -271,12 +271,19 @@ p.poster{
 }
 
 
-.scorm-player {
+.yc-scorm-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
   iframe {
     display: block;
-    height: 640px;
     padding: 0;
+    flex: 1 1 auto;
   }
 }
