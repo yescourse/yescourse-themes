@@ -370,7 +370,7 @@ iframe {
 
 
 // ensure that images within the description area maintain aspect ratio
-#yc-root .description, #all_resources {
+#yc-root .description, #yc-media {
   img {
     max-width: 100%;
     // need the important as ckeditor will add element level height which will
