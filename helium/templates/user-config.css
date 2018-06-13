@@ -8,7 +8,7 @@ a {
 }
 
 #header, #header a, #header .profile, #header .user-menu, header, footer,
-.course-sales-page #header #branding {
+.legal-page footer a, .course-sales-page #header #branding {
     background-color: {{ theme_config.header_background_color }} !important;
     color: {{ theme_config.header_text_color }} !important;
 }
