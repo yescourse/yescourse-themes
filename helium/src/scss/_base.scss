@@ -212,10 +212,6 @@ a {
     border-bottom: 1px dotted #f1b135;
   }
 
-  img {
-    max-width: 100%;
-  }
-
   ul {
     padding: 24px 32px;
     background-color: rgba(0, 0, 0, 0.0157);
@@ -315,11 +311,6 @@ a {
 
 .description {
   overflow: hidden;
-  img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-  }
   video {
     clear: both;
   }
@@ -370,9 +361,11 @@ iframe {
 
 
 // ensure that images within the description area maintain aspect ratio
-#yc-root .description, #yc-media {
+#yc-root .content, #yc-media {
   img {
+    display: block;
     max-width: 100%;
+    margin: 0 auto;
     // need the important as ckeditor will add element level height which will
     //cause wide elements to be stretched to maintain height
     height: auto !important;

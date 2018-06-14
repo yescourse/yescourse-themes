@@ -12,10 +12,6 @@
     color: black;
     margin-bottom: 24px;
 
-  img {
-    display: block;
-  }
-
     .veil {
         position: absolute;
         left: 0;
@@ -38,15 +34,12 @@
 
     .slidewrap {
         .hidden {
-            display: none;
+            // important added here to avoid specificity arguments
+            // as this must not be displayed
+            display: none !important;
         }
         .loading {
             visibility: hidden;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
         }
     }
 
@@ -120,7 +113,6 @@
     img {
       object-fit: contain;
       width: 95%; // 100% makes the image too big in firefox, need a better solution
-      height: auto;
     }
   }
 
