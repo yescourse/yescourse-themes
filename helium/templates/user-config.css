@@ -8,7 +8,7 @@ a {
 }
 
 #header, #header a, #header .profile, #header .user-menu, header, footer,
-.legal-page footer a, .course-sales-page #header #branding {
+.legal-page footer a, .sales-page #header #branding {
     background-color: {{ theme_config.header_background_color }} !important;
     color: {{ theme_config.header_text_color }} !important;
 }
@@ -180,7 +180,7 @@ aside .module-title::before, aside ul.yc-modules-menu::before {
     color: {{ theme_config.academy_banner_text_color }}  !important;
 }
 
-.course-sales-page .yc-rego-button .yc-rego-wrap {
+.sales-page .yc-rego-button .yc-rego-wrap {
     background-color: {{ theme_config.rego_button_background_color }} !important;
 }
 
