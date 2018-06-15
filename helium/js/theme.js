@@ -1,6 +1,11 @@
 (function() {
     var root_element = document.getElementById('yc-root');
-    root_element.addEventListener('click', function(e) {
+    var show_menu = function(e) {
+        if (e.type === 'keydown') {
+            if (e.keyCode !== 13) {
+                return;
+            }
+        }
         var target = e.target;
         if (target.tagName === 'NAV' && target.classList.contains('user')) {
             target.classList.toggle('active');
@@ -22,5 +27,7 @@
                 }
             }
         }
-    });
+    };
+    root_element.addEventListener('click', show_menu);
+    root_element.addEventListener('keydown', show_menu);
 })();
