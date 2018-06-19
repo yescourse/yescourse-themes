@@ -1,6 +1,4 @@
-{% setTitle "{{ course.title }}" %}
-{% addClasses "course-sales-page" %}
-
+{% setTitle "{{ product.title }}" %}
 
 {% include "-site-header" %}
 
@@ -10,7 +8,7 @@
         {% sales_page_visual %}
 
         <div class="banner_text std">
-            <div class="course_headline" itemscope
+            <div class="product_headline" itemscope
                  itemtype="http://schema.org/Product">
                 <h1 itemprop="name">{{ product.title }}</h1>
                 <p class="tag_line">{{ sales_page.tag_line }}</p>
