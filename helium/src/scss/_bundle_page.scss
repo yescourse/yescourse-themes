@@ -1,0 +1,14 @@
+@import "constants";
+@import "ycthemelib/images/mixins";
+@import "ycthemelib/responsive";
+
+
+#yc-root.product-bundle-page {
+  @include respond_to(tablet_landscape) {
+    aside {
+      .academy-title, .bundle-title {
+        display: none;
+      }
+    }
+  }
+}

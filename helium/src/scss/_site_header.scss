@@ -190,9 +190,17 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 }
 
 // The title in the header depends on the type of page for mobile
+#yc-root.product-bundle-page {
+  #header {
+    .academy-title, .course-title, .module-title, .lesson-title {
+      display: none;
+    }
+  }
+}
+
 #yc-root.course-page {
   #header {
-    .academy-title, .module-title, .lesson-title {
+    .academy-title, .bundle-title, .module-title, .lesson-title {
       display: none;
     }
   }
@@ -200,7 +208,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 
 #yc-root.module-page {
   #header {
-    .academy-title, .course-title, .lesson-title {
+    .academy-title, .bundle-title, .course-title, .lesson-title {
       display: none;
     }
   }
@@ -208,7 +216,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 
 #yc-root.lesson-page {
   #header {
-    .academy-title, .course-title, .module-title {
+    .academy-title, .bundle-title, .course-title, .module-title {
       display: none;
     }
   }
@@ -216,7 +224,7 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 
 #yc-root.sales-page {
   #header {
-    .course-title, .module-title, .lesson-title {
+    .course-title, .bundle-title, .module-title, .lesson-title {
       display: none;
     }
   }
@@ -224,13 +232,13 @@ $ACADEMY_TITLE_DISPLAY_TYPE: block;
 
 // For desktop always show the academy title in the header for all pages
 #yc-root {
-  &.course-page, &.module-page, &.lesson-page {
+  &.product-bundle-page, &.course-page, &.module-page, &.lesson-page {
     @include respond_to(tablet_landscape) {
       #header {
         .academy-title {
           display: $ACADEMY_TITLE_DISPLAY_TYPE;
         }
-        .course-title, .module-title, .lesson-title {
+        .bundle-title, .course-title, .module-title, .lesson-title {
           display: none;
         }
       }

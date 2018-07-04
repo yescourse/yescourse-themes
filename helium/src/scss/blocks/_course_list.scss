@@ -2,7 +2,7 @@
 @import "../constants";
 @import "../mixins";
 
-.course_list {
+.course_list, .product_list {
   text-align: left;
   margin: 32px 0;
   padding: 16px;
@@ -23,7 +23,7 @@
       opacity: 0.8;
     }
   }
-  a.course {
+  a.course, a.product {
     font-size: 18px;
     line-height: 36px;
     border: none;
@@ -77,7 +77,7 @@
   }*/
 }
 
-.course-bundle-page ul.course_list {
+.course-bundle-page ul.course_list, .product-bundle-page ul.product_list {
   background-color: transparent;
   border: none;
 }
