@@ -1,14 +1,24 @@
-{% setTitle "{{ bundle.meta.title }}" %}
+{% setTitle "{{ bundle.title }}" %}
 {% addClasses "has-sidebar" %}
 
 {% include "-site-header" %}
 
 <div id="content_wrap">
     <article>
-        <nav id="module_nav">{% bundle_banner %}</nav>
-        <div class="description">{% page_content %}</div>
-        {% social %}
-        <div class="product_list">{% product_list %}</div>
+        <nav id="module_nav">
+            {% bundle_banner %}
+        </nav>
+        <div class="content">
+            <div class="description">
+                {% page_content %}
+                {% media %}
+            </div>
+            {% social %}
+        </div>
+        <div class="product_list">
+            <h2>{% term 'BUNDLE' %} contents:</h2>
+            {% product_list %}
+        </div>
     </article>
     <aside>
         {% breadcrumbs %}
