@@ -29,7 +29,7 @@
     border: none;
     display: block;
     overflow: hidden;
-    &.free:before {
+    &.free:not(.student):before {
       content: "Free";
       font-size: 14px;
       background-color: #006600;
