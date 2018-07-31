@@ -28,6 +28,12 @@
           flex: 0 0 240px;
           display: none;
         }
+        .product_list li {
+          list-style: none;
+          a {
+            border-bottom: none !important;
+          }
+        }
       }
       &.show_sidebar {
         .main-content {
