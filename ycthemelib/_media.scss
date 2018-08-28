@@ -25,7 +25,9 @@ $VIDEO_POSTER_Z_INDEX: 5;
 
 .media_block, .yc-media-block {
   padding: 24px;
-  margin: 24px 0;
+  //margin: 24px 0;
+  // temp provide space next to video for touch scrolling bug_4342
+  margin: 24px 10% 24px 0;
   overflow: hidden;
 
   &.video {
