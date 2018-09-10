@@ -191,6 +191,32 @@
     }
   }
 
+  // Delayed reveal styling
+  &.unrevealed {
+    .yc-rego-button {
+      display: none;
+      opacity: 0;
+    }
+
+    &.hide-banner-text {
+      .banner_text {
+        display: none;
+        opacity: 0;
+      }
+      .product_visual {
+        // FIXME: update to flex
+        float: none !important;
+      }
+    }
+
+    &.hide-sales-copy {
+      .main-content {
+        display: none !important;
+        opacity: 0;
+      }
+    }
+  }
+
   // -----------------------
   // Handle banner options
   #yc-page {
@@ -205,6 +231,7 @@
     &[data-banner_text_position='left'] #sales_banner {
       @include respond_to(tablet_landscape) {
         .product_visual {
+          // FIXME: update to flex
           float: right;
           width: 480px;
         }
@@ -223,6 +250,7 @@
       }
       .product_visual {
         @include respond_to(tablet_landscape) {
+          // FIXME: update to flex
           float: left;
           clear: none;
           width: 480px;
