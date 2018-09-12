@@ -50,8 +50,13 @@
   }
 
   .yc-base-price {
-    display: block;
     text-decoration: line-through;
+  }
+  .yc-base-outr-price, .yc-base-subs-price {
+    display: block;
+  }
+  .yc-base-inst-price {
+    margin-bottom: 8px;
   }
 }
 
