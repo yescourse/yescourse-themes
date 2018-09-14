@@ -289,3 +289,10 @@ p.poster{
     flex: 1 1 auto;
   }
 }
+
+// don't apply a natural box layout model to ckeditor...
+.cke_reset_all, .cke_reset_all * {
+  -moz-box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
