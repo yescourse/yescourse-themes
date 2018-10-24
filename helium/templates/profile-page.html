@@ -1,10 +1,9 @@
-{% include "-site-header" %}
+{% setTitle "{{ profile.full_name }} Profile" %}
 
+{% include "-site-header" %}
+{% profile_banner %}
 <div id="content_wrap">
     <article class="content">
-        <section class="profile">
-            {% profile %}
-        </section>
         <section class="profile_about">
             {% page_content %}
         </section>

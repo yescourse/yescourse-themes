@@ -1,0 +1,87 @@
+@import "constants";
+@import "ycthemelib/responsive";
+
+.profile-page {
+
+  #content_wrap {
+    margin-top: 0 !important;
+
+    .content {
+      max-width: 100%;
+    }
+
+    .profile_about {
+      max-width: $MAX_CONTENT_WIDTH;
+    }
+  }
+
+  #profile_picture {
+    &>a:first-child { // contains the image
+      display: block;
+      text-align: center;
+      // the anchor points to this page, make it un-clickable
+      pointer-events: none;
+      cursor: default;
+    }
+    float: none;
+
+    a {
+      border: none;
+    }
+
+    img {
+      margin: 0;
+      @include respond_to(tablet_landscape) {
+        margin: 24px;
+      }
+      border: 8px solid #EAEAEA;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @include respond_to(tablet_landscape) {
+      float: left;
+    }
+  }
+
+  #profile-banner {
+    color: white;
+    background: #fff linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.196) 100%);
+    padding: 8px;
+    text-align: center;
+
+    h1 {
+      margin: 8px;
+      @include respond_to(tablet_landscape) {
+        margin: 24px 0;
+      }
+      padding: 0;
+      display: inline-block;
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .profile_value {
+      margin: 4px 0;
+      img {
+        margin: 0 8px 0 0;
+      }
+    }
+    @include respond_to(tablet_landscape) {
+      text-align: inherit;
+    }
+  }
+
+  article {
+    padding: 0;
+  }
+
+  .profile_about {
+    max-width: $MAX_CONTENT_WIDTH;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}

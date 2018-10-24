@@ -29,7 +29,7 @@ a {
     color: {{ theme_config.header_text_color }} !important;
 }
 
-article a, article h1, article h2, article h3, article h4, article h5, #yc-dialog a, #yc-dialog h4 {
+article a, article h1, article h2, article h3, article h4, article h5, #yc-dialog a, #yc-dialog h4, #profile-banner h1, #profile-banner a {
     color: {{ theme_config.link_text_color }} !important;
 }
 
@@ -65,11 +65,11 @@ article th, #yc-dialog th, input[type=submit] {
 }
 
 
-#module_nav {
+#module_nav, #profile-banner {
     background-color: {{ theme_config.background_color }} !important;
 }
 
-#module_nav h1 {
+#module_nav h1, #profile-banner p {
     color: {{ theme_config.text_color }} !important;
 }
 
