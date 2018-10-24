@@ -1,0 +1,14 @@
+{% include "-site-header" %}
+
+<div id="content_wrap">
+    <article class="content">
+        <section class="profile">
+            {% profile %}
+        </section>
+        <section class="profile_about">
+            {% page_content %}
+        </section>
+    </article>
+</div>
+
+{% include "-site-footer" %}
