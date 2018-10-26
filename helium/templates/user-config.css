@@ -65,7 +65,7 @@ article th, #yc-dialog th, input[type=submit] {
 }
 
 
-#module_nav, #profile-banner {
+#module_nav, #profile-banner, #upload_pic {
     background-color: {{ theme_config.background_color }} !important;
 }
 

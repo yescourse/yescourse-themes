@@ -29,6 +29,13 @@
       border: none;
     }
 
+    a#upload_pic {
+      display: block;
+      text-align: center;
+      position: relative;
+      top: -24px; // move into the img margin
+    }
+
     img {
       margin: 0;
       @include respond_to(tablet_landscape) {
@@ -72,6 +79,17 @@
     }
     @include respond_to(tablet_landscape) {
       text-align: inherit;
+    }
+
+    a.command {
+      display: inline-block;
+      background-color: #1563a5;
+      color: #000000;
+      border-radius: 4px;
+      padding: 4px;
+      width: 140px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
