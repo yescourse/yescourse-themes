@@ -3,10 +3,15 @@
 {% include "-site-header" %}
 {% profile_banner %}
 <div id="content_wrap">
-    <article class="content">
-        <section class="profile_about">
-            {% page_content %}
-        </section>
+    <article>
+        <div class="content">
+            <section class="profile_about">
+                {% page_content %}
+            </section>
+        </div>
+        <div class="products">
+            {% tutor_courses %}
+        </div>
     </article>
 </div>
 
