@@ -7,11 +7,6 @@
     .content {
       max-width: 100%;
     }
-
-    .profile_about, .products {
-      max-width: $MAX_CONTENT_WIDTH;
-      padding: 8px;
-    }
   }
 
   #profile_picture {
@@ -112,7 +107,7 @@
     padding: 0;
   }
 
-  .profile_about {
+  .profile_about, .tutor_products, .user_products {
     max-width: $MAX_CONTENT_WIDTH;
     margin: 0 auto;
     padding: 10px;
