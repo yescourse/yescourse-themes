@@ -29,7 +29,49 @@
     border: none;
     display: block;
     overflow: hidden;
-    &.free:not(.student):before {
+
+    // extra labels for academy admins
+    span {
+      &:before {
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+      }
+      &.free:before {
+        background-color: #006600;
+        content: "Free";
+        left: 34px;
+        width: 48px;
+      }
+      &.private:before {
+        background-color: #003666;
+        content: "Private";
+        left: 34px;
+        width: 60px;
+      }
+      &.unlisted:before {
+        background-color: #b0b0b0;
+        content: "Unlisted";
+        right: 34px;
+        width: 68px;
+      }
+      &.unpublished:before {
+        background-color: #c07000;
+        content: "Unpublished";
+        right: 34px;
+        top: 154px;
+        width: 96px;
+      }
+    }
+
+    // free label for anyone not a current student
+    &.free:not(.student):before {  // TODO deprecated - remove in future
       content: "Free";
       font-size: 14px;
       background-color: #006600;
@@ -44,20 +86,6 @@
       line-height: 18px;
       width: 48px;
     }
-    /*&.bundle:before {
-      content: "Bundle";
-      font-size: 14px;
-      background-color: blue;
-      border: 1px solid #ffffff;
-      border-radius: 2px;
-      margin: 0;
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      left: 34px;
-      line-height: 18px;
-      width: 64px;
-    }*/
   }
   img {
     width: 220px;
