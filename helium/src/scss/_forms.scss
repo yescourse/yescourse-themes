@@ -103,12 +103,21 @@ $FIELD_MAX_WIDTH: 800px;
   .first_name, .last_name {
     input {
       background-image: yc-icon-url('fa/user');
+      background-size: 1.3em;
+    }
+  }
+
+  .headline {
+    input {
+      background-image: yc-icon-url('fa/info');
+      background-size: 0.8em;
     }
   }
 
   .mobile_number {
     input {
       background-image: yc-icon-url('fa/mobile-phone');
+      background-size: 1.2em;
     }
   }
 
@@ -118,10 +127,10 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
-  .city, .state, .post_code {
+  .address, .city, .state, .post_code {
     input {
       background-image: yc-icon-url('fa/map-marker');
-      background-size: 1.4em;
+      background-size: 1.2em;
     }
   }
 
@@ -153,6 +162,12 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
+  .twitter_username {
+    input {
+      background-image: yc-icon-url('fa/twitter');
+    }
+  }
+
   // user_form with non user_fields - e.g. password change form (labels shown)
   div:not(.user_field) {
     margin-top: 12px;
@@ -170,6 +185,14 @@ $FIELD_MAX_WIDTH: 800px;
     text-align: center;
     padding: 0 24px;
     cursor: pointer;
+  }
+}
+
+#edit-profile-form {
+  .user_field {
+    label {
+      display: inline;
+    }
   }
 }
 
