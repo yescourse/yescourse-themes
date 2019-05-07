@@ -94,7 +94,7 @@ $FIELD_MAX_WIDTH: 800px;
     }
   }
 
-  .password, .password1, .password2 {
+  .password, .password1, .password2, .new_password1, .new_password2 {
     input {
       background-image: yc-icon-url('fa/lock');
     }
@@ -188,7 +188,7 @@ $FIELD_MAX_WIDTH: 800px;
   }
 }
 
-#edit-profile-form {
+#edit-profile-form, #forgot-password-form, #reset-password-form {
   .user_field {
     label {
       display: inline;
