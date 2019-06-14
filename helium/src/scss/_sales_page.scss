@@ -117,15 +117,18 @@
     }
 
     &> .wrap {
-      @include respond_to(tablet_landscape) {
-        width: $MAX_CONTENT_WIDTH;
-        margin: 0 auto;
-      }
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
     }
 
     .product_visual {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
       max-width: 854px;
-      margin: 0 auto 24px;
+      overflow: hidden;
       .media_container, .video_container {
         display: block;
         width: 854px;
@@ -152,7 +155,7 @@
 
     .banner_text {
       max-width: 854px;
-      margin: 0 auto;
+      //margin: 0 auto;
 
       &.custom { // custom text added by user
         padding: 14px;
@@ -230,31 +233,30 @@
 
     &[data-banner_text_position='left'] #sales_banner {
       @include respond_to(tablet_landscape) {
-        .product_visual {
-          // FIXME: update to flex
-          float: right;
-          width: 480px;
+        & .wrap {
+          flex-flow: row wrap;
         }
         .banner_text {
-          margin: 0;
-          width: 1024px - 480px - 12px;
+          order: 1;
+        }
+        .product_visual {
+          order: 2;
+          margin-left: 32px;
         }
       }
     }
 
     &[data-banner_text_position='right'] #sales_banner {
-      .banner_text {
-        @include respond_to(tablet_landscape) {
-          margin: 0 0 0 538px;
+      @include respond_to(tablet_landscape) {
+        & .wrap {
+          flex-flow: row wrap;
         }
-      }
-      .product_visual {
-        @include respond_to(tablet_landscape) {
-          // FIXME: update to flex
-          float: left;
-          clear: none;
-          width: 480px;
-          height: 270px;
+        .banner_text {
+          order: 2;
+        }
+        .product_visual {
+          order: 1;
+          margin-right: 32px;
         }
       }
     }
