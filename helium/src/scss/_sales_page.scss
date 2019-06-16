@@ -127,9 +127,13 @@
       display: flex;
       flex-flow: row;
       justify-content: center;
+      width: 100%;
       max-width: 854px;
       overflow: hidden;
-      .media_container, .video_container {
+      & > div {
+        width: 100%;
+      }
+      .media_container, .yc-video-container {
         display: block;
         width: 854px;
         height: auto;
@@ -139,7 +143,7 @@
       }
 
       // make the videos responsive by maintaining a ratio of 16:9
-      .video_container {
+      .yc-video-container {
         position: relative; // allow the iframe to be positioned absolute within
         padding-bottom: 56.25% !important;  // 9/16*100
         height: 0 !important;  // effective height determined by padding
@@ -155,7 +159,7 @@
 
     .banner_text {
       max-width: 854px;
-      //margin: 0 auto;
+      margin: 16px 0;
 
       &.custom { // custom text added by user
         padding: 14px;
@@ -233,30 +237,40 @@
 
     &[data-banner_text_position='left'] #sales_banner {
       @include respond_to(tablet_landscape) {
-        & .wrap {
+        & > .wrap {
           flex-flow: row wrap;
         }
         .banner_text {
           order: 1;
+          margin: 0;  // remove top margin
         }
         .product_visual {
           order: 2;
           margin-left: 32px;
+          width: auto;
+        }
+        .yc-video-container {
+          width: 480px;
         }
       }
     }
 
     &[data-banner_text_position='right'] #sales_banner {
       @include respond_to(tablet_landscape) {
-        & .wrap {
+        & > .wrap {
           flex-flow: row wrap;
         }
         .banner_text {
           order: 2;
+          margin: 0;  // remove top margin
         }
         .product_visual {
           order: 1;
           margin-right: 32px;
+          width: auto;
+        }
+        .yc-video-container {
+          width: 480px;
         }
       }
     }
