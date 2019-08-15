@@ -227,7 +227,7 @@ textarea {
     text-align: center;
 }
 
-.course_list a.course, .product_list a.product  {
+.yc-product-list a.product  {
     color: {{ theme_config.text_color }} !important;
 }
 
