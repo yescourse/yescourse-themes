@@ -286,7 +286,7 @@ ul.field-errors {
     display: block;
   }
 
-  table.user_details {
+  table.user_details, table.purchase_status {
     margin: 27px;
     width: auto;
 
@@ -315,6 +315,26 @@ ul.field-errors {
 
       &.mobile_number {
         background: yc-image-url('mobile_icon.png') no-repeat 10px 50%;
+      }
+
+      &.card_number, &.card_expiry {
+        background: yc-icon-url('fa/credit-card') no-repeat 10px 50%;
+        background-size: 1.5em;
+      }
+
+      &.date {
+        background: yc-icon-url('fa/calendar') no-repeat 10px 50%;
+        background-size: 1.4em;
+      }
+
+      &.count {
+        background: yc-icon-url('fa/cubes') no-repeat 10px 50%;
+        background-size: 1.5em;
+      }
+
+      &.price {
+        background: yc-icon-url('fa/university') no-repeat 10px 50%;
+        background-size: 1.5em;
       }
     }
 
