@@ -73,23 +73,6 @@
         width: 96px;
       }
     }
-
-    // free label for anyone not a current student
-    &.free:not(.student):before {  // TODO deprecated - remove in future
-      content: "Free";
-      font-size: 14px;
-      background-color: #006600;
-      color: #ffffff;
-      border: 1px solid #ffffff;
-      border-radius: 2px;
-      margin: 0;
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      left: 34px;
-      line-height: 18px;
-      width: 48px;
-    }
   }
   img {
     width: 220px;
