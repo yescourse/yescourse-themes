@@ -138,13 +138,17 @@ p.poster{
   visibility: hidden;
 }
 
-.generic_container {
+
+// Allow both typed and un-typed files to be styled
+// .generic_container can be removed once all clients are updated
+.generic_container, .generic {
   //width: 196px;
   margin: 0 auto;
   position: relative;
   padding: 0;
 
-  .generic_link {
+  // .generic_link can be removed once all clients are updated
+  .generic_link, .media_download {
     display: block;
     height: 100%;
     padding-top: 82px;
