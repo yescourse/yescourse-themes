@@ -103,6 +103,11 @@ html, body {
       }
     }
   }
+  &.register {
+    #veil {
+      z-index: $REGISTER_LOADING_VEIL_Z_INDEX;
+    }
+  }
 }
 
 .show-main-menu, .show-user-menu {
