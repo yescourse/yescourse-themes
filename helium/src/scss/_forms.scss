@@ -422,6 +422,12 @@ button.stripe-checkout { // copied from stripe styling
       display: inline;
       text-align: center;
     }
+    .yc-stripe-btn, .yc-ppc-button {
+      max-width: 232px;
+      margin: 8px auto;
+      padding: 16px;
+      border: 1px solid rgba(0,0,0,0.3);
+    }
   }
 }
 
