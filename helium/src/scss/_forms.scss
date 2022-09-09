@@ -186,6 +186,12 @@ $FIELD_MAX_WIDTH: 800px;
     padding: 0 24px;
     cursor: pointer;
   }
+
+  input[type=submit].loading {
+    background-image: yc-image-url('loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 #edit-profile-form, #forgot-password-form, #reset-password-form {
