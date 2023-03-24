@@ -34,7 +34,7 @@ def main(images_path, css_rel_path, output_path):
             image_data.append(get_scss_map_entry(image_info))
     scss_map_str = '$YC-IMAGE_DATA: (\n   {}\n);'.format(',\n   '.join(image_data))
     with open(output_path, 'w') as output_file:
-        output_file.write(scss_map_str.encode('utf-8'))
+        output_file.write(scss_map_str)
     return 0
 
 
@@ -54,7 +54,7 @@ def get_md5sum(image_file_path):
     try:
         parts = subprocess.check_output(
             ['md5sum', image_file_path]
-        ).split(' ')
+        ).decode().split(' ')
         return parts[0]
     except subprocess.CalledProcessError:
         return
@@ -65,6 +65,7 @@ def get_scss_map_entry(image_info):
         '"{path}": (width: {width}, height: {height}, '
         'url: "{url}", md5: "{md5}")'.format(**image_info)
     )
+
 
 if __name__ == '__main__':
     if len(sys.argv) < 4:
