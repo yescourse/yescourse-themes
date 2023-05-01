@@ -32,7 +32,8 @@ def main(images_path, css_rel_path, output_path):
             image_info['md5'] = md5sum
 
             image_data.append(get_scss_map_entry(image_info))
-    scss_map_str = '$YC-IMAGE_DATA: (\n   {}\n);'.format(',\n   '.join(image_data))
+    scss_map_str = \
+        '$YC-IMAGE_DATA: (\n   {}\n);'.format(",\n   ".join(sorted(image_data)))
     with open(output_path, 'w') as output_file:
         output_file.write(scss_map_str)
     return 0
