@@ -50,11 +50,12 @@
     width: auto;
     height: auto;
     &.error {
-      border-color: red;
-      &::after {
-        content: "Incorrect";
-        padding-left: 16px;
-      }
+      border: 3px solid red !important;  // specificity + important will override user-config.css
+      border-radius: 3px;
+    }
+    &.error + span::after {
+      content: "Incorrect";
+      padding-left: 8px;
     }
   }
 
